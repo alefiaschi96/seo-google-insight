@@ -3,37 +3,62 @@ import pandas as pd
 import requests
 import sys
 import os
+import csv
 
 def create_csv_string(filtered_json):
     csv_string = ""
     for item in filtered_json:
         csv_string = csv_string + item["label"].upper() + "\n"
         for head in item["headings"]:
-            csv_string = csv_string + head.upper() + ","
+            csv_string = csv_string + head.upper() + ";"
         csv_string = csv_string[:-1] + "\n"
         for sub_item in item["items"]:
             for x in sub_item:
-                csv_string = csv_string + x + ","
+                csv_string = csv_string + x + ";"
             csv_string = csv_string[:-1] + "\n"
         csv_string = csv_string + "\n"
     return csv_string
 
+def check_keys_in_headings(keys, head):
+    for key in keys:
+        if key in head.keys():
+            print("YES")
+            return True
+    return False
 
-def create_key_headings(headings):
+
+def create_headings(headings, keys, included_keys = None):
+    headings_list = []
+    url_key = None
+    print(headings)
+    for head in headings:
+        if not included_keys or check_keys_in_headings(included_keys, head):
+            print("\t\tHead: " + "\t\tHead: ".join(head))
+            for key in keys:
+                if head.get(key):
+                    if head.get(key) in ["url", "URL"]:
+                        url_key = head.get(key)
+                    else:
+                        headings_list.append(head.get(key))
+    if url_key:
+        headings_list = [url_key] + headings_list
+    return headings_list
+
+
+def create_old_headings():
     for head in headings:
         if head.get("key"):
-            key_headings.append(head["key"])
+            old_headings.append(head["key"])
 
-        if "url" in key_headings:
-            url_key = key_headings.pop(key_headings.index("url"))
-            key_headings.insert(0, url_key)
-        elif "URL" in key_headings:
-            url_key = key_headings.pop(key_headings.index("URL"))
-            key_headings.insert(0, url_key)
-    return key_headings
+        if "url" in old_headings:
+            url_key = old_headings.pop(old_headings.index("url"))
+            old_headings.insert(0, url_key)
+        elif "URL" in old_headings:
+            url_key = old_headings.pop(old_headings.index("URL"))
+            old_headings.insert(0, url_key)
 
 
-def create_label_headings():
+def create_new_headings():
     for head in headings:
         if head.get("label"):
             new_headings.append(head["label"])
@@ -49,100 +74,192 @@ def create_label_headings():
 
 
 def create_json():
+    # Creiamo un dizionario chiamato headings_dict in cui la chiave è la "key" dell'elemento
+    # in headings e il valore è il "valueType" dell'elemento
+    headings_dict = {head["key"]: head["valueType"] for head in headings}
+
+    # Iteriamo attraverso la lista items
     for item in items:
         new_sub_items = []
+
+        keys = list(sorted(item.keys()))
+        if "url" in keys:
+            url_key = keys.pop(keys.index("url"))
+            keys.insert(0, url_key)
+        if "URL" in keys:
+            url_key = keys.pop(keys.index("URL"))
+            keys.insert(0, url_key)
+
+        # Iteriamo attraverso la lista key_headings
         for new_key in key_headings:
-            if item.get(new_key):
-                text = str(item.get(new_key))
-            if next((head for head in headings if head["key"] == new_key), None)[
-                "valueType"
-            ]:
-                value_type = str(
-                        next(
-                            (head for head in headings if head["key"] == new_key),
-                            None,
-                        )["valueType"]
-                )
-                text = (
-                    text
-                )
-                if value_type != 'url' and value_type != 'URL':
-                    text = text + " " +  value_type
+
+            # Se l'item corrente ha la chiave new_key, assegniamo il valore associato a text
+            text = str(item.get(new_key)) if item.get(new_key) else ""
+
+            # Recuperiamo il valore "valueType" dalla chiave new_key nel dizionario headings_dict
+            value_type = headings_dict.get(new_key, "")
+
+            # Se il valore "valueType" non è "url", aggiungiamo il valore alla fine di "text"
+            if value_type.lower() != 'url':
+                text += " " + value_type
+
+            # Aggiungiamo "text" alla lista new_sub_items
             new_sub_items.append(text)
+            
+        # Alla fine dell'iterazione su key_headings, aggiungiamo new_sub_items alla lista new_item
         new_item.append(new_sub_items)
 
+def escape_semicolon(obj):
+    if isinstance(obj, str):
+        return obj.replace(";", "\\;")
+    elif isinstance(obj, dict):
+        return {k: escape_semicolon(v) for k, v in obj.items()}
+    elif isinstance(obj, list):
+        return [escape_semicolon(elem) for elem in obj]
+    else:
+        return obj
 
 
 api_key = 'AIzaSyA2qULRLicOP4mfMtEGreX47DLlcGON1aQ'
-google_api = 'https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url'
-print("\n\nInserire un url e premere invio.\n")
-print("Dopo l'ultimo url, digitare 'd' e premere invio\n\n")
-new_url = ""
-url_list = []
+filtered_json = []
 
-while new_url != "d":
-    new_url = input("Inserire url: ")
-    if new_url != "d":
-        url_list.append(new_url)
+print("1- Inserire url\n2- Analisi result.json")
+first_input = input("");
 
-for url in url_list:
-    response = requests.get(f'{google_api}={url}&key={api_key}')
-    if response.status_code == 200:
+if first_input == "1":
+    print("\n\nInserire un url e premere invio.\n")
+    print("Dopo l'ultimo url, digitare 'd' e premere invio\n\n")
+    new_url = ""
+    url_list = []
 
-        json_data = json.dumps(response.json()["lighthouseResult"]["audits"], indent=4)
+    while new_url != "d":
+        new_url = input("Inserire url: ")
+        if new_url != "d":
+            url_list.append(new_url)
 
-        with open('results.json', 'w') as f:
-            f.write(json_data)
+    for url in url_list:
+        response = requests.get(f'https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url={url}&key={api_key}')
+        if response.status_code == 200:
+            data = response.json()
+            data = data["lighthouseResult"]["audits"]
+            json_data = json.dumps(data, indent=4)
+            with open('results.json', 'w') as f:
+                # scrivi la stringa json nel file
+                f.write(json_data.replace("itemType", "valueType"))
 
-        filtered_json = []
+            with open("results.json", "r") as f:
+                data = json.load(f)
+                for key, audit in data.items():
+                    headings = audit.get("details", {}).get("headings", [])
+                    items = audit.get("details", {}).get("items", [])
 
-        with open("results.json", "r") as f:
+                    if headings != [] and items != []:
 
-            data = json.load(f)
-            for key, audit in data.items():
-                headings = audit.get("details", {}).get("headings", [])
-                items = audit.get("details", {}).get("items", [])
+                        filtered_item = {}
+                        filtered_item["label"] = audit["title"]
 
-                if headings != [] and items != []:
+                        new_headings = []
+                        old_headings = []
 
-                    # Creating an empty dictionary to store filtered data
-                    filtered_item = {}
-                    # Create empty lists to store new and old headers
-                    new_headings = []
-                    key_headings = []
+                        headings = [
+                            d
+                            for d in headings
+                            if (
+                                d.get("key") is not None
+                                and d.get("label") is not None 
+                                and d.get("valueType") is not None
+                            )
+                        ]
+                        headings.sort(key=lambda x: x.get("key", ""))
+                        old_headings = create_headings(headings, "key")
 
-                    # Assigning the audit title value to the dictionary "label" key
-                    filtered_item["label"] = audit["title"]                    
+                        new_headings = create_headings(headings, ["label", "text"])
 
-                    # Using a list comprehension to filter titles in "headings" which contain all the keys "key", "label" and "valueType" and are not null
-                    headings = [d for d in headings if all(k in d for k in ("key", "label", "valueType"))]
+                        filtered_item["headings"] = new_headings
 
-                    # Sorting of the "headings" list according to the key "key"
-                    headings.sort(key=lambda x: x.get("key", ""))
+                        if len(filtered_item["headings"]) > 0:
+                            keys = list(sorted(items[0].keys()))
+                            if "url" in keys:
+                                url_key = keys.pop(keys.index("url"))
+                                keys.insert(0, url_key)
+                            if "URL" in keys:
+                                url_key = keys.pop(keys.index("URL"))
+                                keys.insert(0, url_key)
 
-                    # Generation of key_headings list
-                    key_headings = create_key_headings(headings)
+                            new_item = []
 
-                    create_new_headings()
+                            create_json()
 
-                    filtered_item["headings"] = new_headings
+                            filtered_item["items"] = new_item
 
-                    if len(filtered_item["headings"]) > 0:
-                        keys = list(sorted(items[0].keys()))
-                        if "url" in keys:
-                            url_key = keys.pop(keys.index("url"))
-                            keys.insert(0, url_key)
-                        if "URL" in keys:
-                            url_key = keys.pop(keys.index("URL"))
-                            keys.insert(0, url_key)
+                            filtered_json.append(filtered_item)
 
-                        new_item = []
+            json_data = json.dumps(filtered_json, indent=4)
+            with open("new_results.json", "w") as f:
+                f.write(json_data.replace("\n", ""))
 
-                        create_json()
+            csv_string = create_csv_string(filtered_json)
+            
+            print(url)
 
-                        filtered_item["items"] = new_item
+            with open((url+".csv").replace("/", "-"), "w") as f:
+                f.write(csv_string)
+                print(os.path.abspath((url+".csv").replace("/", "-")))
+                
+            print("Generazione csv comnpletata")
+        else:
+            print(f'Errore {response.status_code}')
+            sys.exit()
+else:
+    with open("results.json", "r") as f:
+        number = 0
+        data = json.load(f)
+        data = escape_semicolon(data)
+        for key, audit in data.items():
+            headings = audit.get("details", {}).get("headings", [])
+            items = audit.get("details", {}).get("items", [])
 
-                        filtered_json.append(filtered_item)
+            if headings != [] and items != []:
+                number = number + 1
+
+                filtered_item = {}
+                filtered_item["label"] = audit["title"]
+
+                label_headings = []
+                key_headings = []
+
+                headings = [
+                    d
+                    for d in headings
+                    if (
+                        d.get("key") is not None
+                        # and d.get("label") is not None 
+                        and d.get("valueType") is not None
+                    )
+                ]
+                print("\n\n" + key + ": \n\tHeadings: " + str(len(headings)))
+                headings.sort(key=lambda x: x.get("key", ""))
+                
+                key_headings = create_headings(headings, ["key"], ["label", "text"])
+                print("\n\tKeys: ")
+                print("\t" + "\t".join(key_headings))
+
+                label_headings = create_headings(headings, ["label", "text"])
+                print("\n\tLabels: ")
+                print("\t" + "\t".join(label_headings))
+
+                filtered_item["headings"] = label_headings
+
+                if len(filtered_item["headings"]) > 0:
+                    new_item = []
+
+                    create_json()
+
+                    filtered_item["items"] = new_item
+
+                    filtered_json.append(filtered_item)
+
+        print(number)
 
         json_data = json.dumps(filtered_json, indent=4)
         with open("new_results.json", "w") as f:
@@ -150,13 +267,9 @@ for url in url_list:
 
         csv_string = create_csv_string(filtered_json)
         
-        print(url)
 
-        with open((url+".csv").replace("/", "-"), "w") as f:
+        with open(("test.csv").replace("/", "-"), "w") as f:
             f.write(csv_string)
-            print(os.path.abspath((url+".csv").replace("/", "-")))
+            print(os.path.abspath(("test.csv").replace("/", "-")))
             
         print("Generazione csv comnpletata")
-    else:
-        print(f'Errore {response.status_code}')
-        sys.exit()

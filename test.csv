@@ -1,0 +1,467 @@
+KEEP REQUEST COUNTS LOW AND TRANSFER SIZES SMALL
+RESOURCE TYPE;REQUESTS;TRANSFER SIZE
+Total text;152 numeric;4648265 bytes
+Image text;70 numeric;1585053 bytes
+Script text;39 numeric;1339210 bytes
+Font text;4 numeric;1279958 bytes
+Stylesheet text;2 numeric;298881 bytes
+Other text;35 numeric;105583 bytes
+Document text;2 numeric;39580 bytes
+Media text; numeric; bytes
+Third-party text;97 numeric;751189 bytes
+
+MINIMIZE THIRD-PARTY USAGE
+MAIN-THREAD BLOCKING TIME;THIRD-PARTY;TRANSFER SIZE
+132.18599999999998 ms;{'text': 'Adobe Tag Manager', 'url': 'https://www.adobe.com/experience-platform/', 'type': 'link'} link;215627 bytes
+5.115000000000002 ms;{'text': 'Optanon', 'url': 'https://www.cookielaw.org/', 'type': 'link'} link;150765 bytes
+ ms;{'text': 'Google Maps', 'type': 'link', 'url': 'https://www.google.com/maps'} link;190616 bytes
+ ms;{'url': 'https://marketingplatform.google.com/about/tag-manager/', 'type': 'link', 'text': 'Google Tag Manager'} link;145427 bytes
+ ms;{'text': 'Adobe Experience Cloud', 'type': 'link'} link;11848 bytes
+ ms;{'text': 'Google/Doubleclick Ads', 'url': 'https://marketingplatform.google.com/about/enterprise/', 'type': 'link'} link;6256 bytes
+ ms;{'type': 'link', 'text': 'Adobe Scene7'} link;3128 bytes
+ ms;{'type': 'link', 'text': 'Other Google APIs/SDKs', 'url': 'https://developers.google.com/apis-explorer/#p/'} link;2379 bytes
+ ms;{'url': 'https://liveramp.com/discover-identitylink/', 'text': 'LiveRamp IdentityLink', 'type': 'link'} link;1571 bytes
+ ms;{'url': 'https://www.scorecardresearch.com/', 'text': 'Scorecard Research', 'type': 'link'} link;1120 bytes
+ ms;{'text': 'Aggregate Knowledge', 'type': 'link'} link;901 bytes
+ ms;{'text': 'Clickagy Audience Lab', 'type': 'link'} link;691 bytes
+ ms;{'text': 'Datonics', 'type': 'link'} link;595 bytes
+ ms;{'text': 'Eyeota', 'type': 'link'} link;494 bytes
+ ms;{'type': 'link', 'text': 'Crowd Control'} link;339 bytes
+ ms;{'type': 'link', 'text': 'Facebook', 'url': 'https://www.facebook.com'} link;328 bytes
+ ms;{'type': 'link', 'url': 'https://33across.com/', 'text': '33 Across'} link;87 bytes
+
+AVOIDS AN EXCESSIVE DOM SIZE
+ELEMENT;STATISTIC;VALUE
+ node;Total DOM Elements text;779 numeric
+{'path': '1,HTML,1,BODY,2,HEADER,1,DIV,1,DIV,2,DIV,0,DIV,0,DIV,0,DIV,0,NAV,0,UL,1,LI,3,DIV,0,DIV,1,UL,0,LI,0,A', 'lhId': '11-128-A', 'nodeLabel': 'Panoramica', 'snippet': '<a data-analytics-item-row="0" data-analytics-destination-page-title="Hearing Aids" href="https://www.amplifon.com/it/apparecchi-acustici?icmp=mm_Panoramica" target="_self" class="third-level-link">', 'boundingRect': {'width': 0, 'right': 0, 'bottom': 0, 'top': 0, 'height': 0, 'left': 0}, 'selector': 'div.second-level-item > ul.third-level-menu > li.third-level-item > a.third-level-link', 'type': 'node'} node;Maximum DOM Depth text;16 numeric
+{'nodeLabel': 'body', 'snippet': '<body data-brand-name="AMP" data-locale="it_IT" data-domain-pin-path="https://assets.amplifon.com/content/dam/amplifon-digital-assets/commons-am…" data-brand-clientlib="https://www.amplifon.com/etc/designs/amplifonsite/amplifon-emea/clientlib-…" data-clientlib="https://www.amplifon.com/etc/designs/amplifonsite/amplifon-emea/clientlib-…" data-error-timeout="30" data-error-popup-enabled="true" data-error-redirect="https://www.amplifon.com/it/" data-error-title="Si è verificato un errore." data-error-message="Ci scusiamo per il disagio arrecato." …>', 'path': '1,HTML,1,BODY', 'type': 'node', 'boundingRect': {'left': 0, 'top': 0, 'right': 1350, 'height': 940, 'bottom': 940, 'width': 1350}, 'lhId': '11-129-BODY', 'selector': 'body'} node;Maximum Child Elements text;55 numeric
+
+ENABLE TEXT COMPRESSION
+URL;TRANSFER SIZE;POTENTIAL SAVINGS
+https://smetrics.amplifon.com/b/ss/amplifon.global/10/JS-2.12.0-LCXS/s5220948619691?AQB=1&ndh=1&pf=1&callback=s_c_il[1].doPostbacks&et=1&t=14%2F0%2F2023%2014%3A6%3A39%206%20480&d.&nsid=0&jsonv=1&.d&sdid=2377565B76DB3A1D-36F1D0218D9C5A21&mid=80530576067045731990186285761054963988&aamlh=9&ce=UTF-8&ns=amplifongroup&pageName=Homepage&g=https%3A%2F%2Fwww.amplifon.com%2Fit%2F&cc=EUR&server=www.amplifon.com&events=event1&aamb=6G1ynYcLPuiQxYZrsz_pkqfLG9yMXBpb2zX5dvJdYQJzPXImdj0y&c1=Homepage&v1=Homepage&v5=it-Production&c6=https%3A%2F%2Fwww.amplifon.com%2Fit%2F&c7=https%3A%2F%2Fwww.amplifon.com%2Fit%2F&v7=https%3A%2F%2Fwww.amplifon.com%2Fit%2F&c9=New&v9=New&c10=it&v10=it&c11=amplifon.com&v11=amplifon.com&c12=IT&v12=IT&c16=Mozilla%2F5.0%20%28Macintosh%3B%20Intel%20Mac%20OS%20X%2010_15_7%29%20AppleWebKit%2F537.36%20%28KHTML%2C%20like%20Gecko%29%20Chrome%2F98.0.4695.0%20Safari%2F537.36%20Chrome-Lighthouse&v16=Mozilla%2F5.0%20%28Macintosh%3B%20Intel%20Mac%20OS%20X%2010_15_7%29%20AppleWebKit%2F537.36%20%28KHTML%2C%20like%20Gecko%29%20Chrome%2F98.0.4695.0%20Safari%2F537.36%20Chrome-Lighthouse&c20=2%3A06PM%2C2%3A00PM%2CSaturday%2CWeekend&v20=2%3A06PM%2C2%3A00PM%2CSaturday%2CWeekend&c21=2%3A06PM&v21=2%3A06PM&c22=Saturday&v22=Saturday&c23=Weekend&v23=Weekend&c26=Homepage&v26=Homepage&c27=0&v27=0&c28=1531999523468&c31=false&v31=false&c36=it&v49=Cookie%20Not%20Accepted&c52=Publish&v52=Publish&c56=page-config%2CG10%2CG12%2CG11%2CG13%2CG14%2CG1%2CH54%2CE17%2CE21%2CH53%2CE25%2CE23%2CE26%2CE28%2CE36%2CG15%2CG15b&c63=Desktop&v63=Desktop&c66=page-config%2CG10%2CG12%2CG11%2CG13%2CG14%2CG1%2CH54%2CE17%2CE21%2CH53%2CE25%2CE23%2CE26%2CE28%2CE36%2CG15%2CG15b&v79=false&v158=External&v237=Homepage&s=800x600&c=24&j=1.6&v=N&k=Y&bw=1350&bh=940&mcorgid=82324161584EB31F0A495DB8%40AdobeOrg&AQE=1;5504 bytes;3800 bytes
+
+REDUCE UNUSED CSS
+URL;TRANSFER SIZE;POTENTIAL SAVINGS
+https://www.amplifon.com/etc/designs/amplifonsite/amplifon-emea/clientlib-amplifon-emea.min.css;272469 bytes;259755 bytes
+https://www.amplifon.com/etc/designs/amplifonsite/amplifon-emea/clientlib-amplifon-emea-vendor.min.css;26412 bytes;25746 bytes
+#onetrust-banner-sdk{-ms-text-size-adjust:100%\;-webkit-text-size-adjust:100%} ...;18671 bytes;15581 bytes
+
+AVOID SERVING LEGACY JAVASCRIPT TO MODERN BROWSERS
+URL;POTENTIAL SAVINGS
+https://cdn.cookielaw.org/scripttemplates/6.33.0/otBannerSdk.js;6545 bytes
+https://www.amplifon.com/etc/designs/amplifonsite/amplifon-emea/clientlib-amplifon-emea-vendor.min.js;5606 bytes
+https://www.amplifon.com/etc/designs/amplifonsite/amplifon-emea/clientlib-amplifon-emea.min.js;4633 bytes
+https://assets.adobedtm.com/launch-ENaae529a6352043f5884362eb63ccd197.min.js;48 bytes
+
+PROPERLY SIZE IMAGES
+URL;RESOURCE SIZE;POTENTIAL SAVINGS
+https://www.amplifon.com/content/dam/content-factory/photos/Store/shooting/unbranded/_DSC9058.jpg/jcr:content/renditions/cq5dam.web.1440.1440.jpeg;135106 bytes;16360 bytes
+https://www.amplifon.com/content/dam/amplifon-emea/global/Icons/amplifon-logo@3x.png;8378 bytes;6967 bytes
+https://i.ibb.co/k4H9hcW/icon-white.png;5193 bytes;5174 bytes
+
+SERVE STATIC ASSETS WITH AN EFFICIENT CACHE POLICY
+URL;CACHE TTL;TRANSFER SIZE
+https://www.amplifon.com/etc/designs/amplifonsite/amplifon-emea/clientlib-amplifon-emea/fonts/Noto_Sans/NotoSans-Bold.ttf; ms;579009 bytes
+https://www.amplifon.com/etc/designs/amplifonsite/amplifon-emea/clientlib-amplifon-emea/fonts/Noto_Sans/NotoSans-Regular.ttf; ms;577845 bytes
+https://www.amplifon.com/etc/designs/amplifonsite/amplifon-emea/clientlib-amplifon-emea-vendor.min.js; ms;292851 bytes
+https://www.amplifon.com/etc/designs/amplifonsite/amplifon-emea/clientlib-amplifon-emea.min.css; ms;272469 bytes
+https://www.amplifon.com/etc/designs/amplifonsite/amplifon-emea/clientlib-amplifon-emea.min.js; ms;231428 bytes
+https://www.amplifon.com/content/dam/content-factory/photos/Store/shooting/unbranded/_DSC9058.jpg/jcr:content/renditions/cq5dam.web.1440.1440.jpeg; ms;154147 bytes
+https://www.amplifon.com/content/dam/content-factory/photos/tvc-campaign/smile/ita/smile_2022/Amplifon2022_Testimonial11_1142.jpg/jcr:content/renditions/cq5dam.web.1440.1440.jpeg; ms;152769 bytes
+https://www.amplifon.com/content/dam/content-factory/photos/products/reel/OL_WP_Energy_04.jpg/jcr:content/renditions/cq5dam.web.1280.1280.jpeg; ms;114378 bytes
+https://www.amplifon.com/content/dam/content-factory/photos/lifestyle-stock/507654337.jpg/jcr:content/renditions/cq5dam.web.640.640.jpeg; ms;63692 bytes
+https://www.amplifon.com/etc/designs/amplifonsite/amplifon-emea/clientlib-amplifon-emea/fonts/Value-Regular-Web.woff2; ms;61714 bytes
+https://www.amplifon.com/etc/designs/amplifonsite/amplifon-emea/clientlib-amplifon-emea/fonts/Value-Bold-Web.woff2; ms;61390 bytes
+https://www.amplifon.com/etc.clientlibs/clientlibs/granite/jquery.min.js; ms;57991 bytes
+https://www.amplifon.com/content/dam/content-factory/photos/products/reel/Ampli%20Easy_WithoutOyster_Capuccino.jpg/jcr:content/renditions/cq5dam.web.640.640.jpeg; ms;55311 bytes
+https://www.amplifon.com/content/dam/content-factory/photos/covid/reel/2019-09-24-AMPLIFON-DSC4315_NO%20COLOR.jpg/jcr:content/renditions/cq5dam.web.700.700.jpeg; ms;52284 bytes
+https://www.amplifon.com/content/dam/content-factory/photos/products/reel/Ampli%20Connect_WithoutOyster_Smartphone.jpg/jcr:content/renditions/cq5dam.web.640.640.jpeg; ms;48105 bytes
+https://www.amplifon.com/etc/designs/amplifonsite/amplifon-emea/clientlib-amplifon-emea/img/loaders/loading-white-bg.gif; ms;46159 bytes
+https://www.amplifon.com/content/dam/content-factory/photos/tvc-campaign/sp/audiologist_client_hearing_test_woman.jpg/jcr:content/renditions/cq5dam.web.640.640.jpeg; ms;43998 bytes
+https://www.amplifon.com/content/dam/content-factory/photos/lifestyle-stock/507654337.jpg/jcr:content/renditions/cq5dam.web.700.700.jpeg; ms;42757 bytes
+https://www.amplifon.com/content/dam/content-factory/photos/products/reel/Ampli%20Mini_WithoutOyster_Bedside.jpg/jcr:content/renditions/cq5dam.web.640.640.jpeg; ms;41459 bytes
+https://www.amplifon.com/content/dam/content-factory/photos/tvc-campaign/smile/ita/smile_2022/Amplifon2022_Testimonial11_1142.jpg/jcr:content/renditions/cq5dam.web.700.700.jpeg; ms;40836 bytes
+https://www.amplifon.com/content/dam/content-factory/photos/products/reel/OL_WP_Energy_04.jpg/jcr:content/renditions/cq5dam.web.700.700.jpeg; ms;39782 bytes
+https://www.amplifon.com/content/dam/content-factory/photos/Store/shooting/unbranded/_DSC9058.jpg/jcr:content/renditions/cq5dam.web.700.700.jpeg; ms;38622 bytes
+https://www.amplifon.com/content/dam/content-factory/photos/products/reel/Ampli%20Easy_WithoutOyster_Capuccino.jpg/jcr:content/renditions/cq5dam.web.700.700.jpeg; ms;37277 bytes
+https://www.amplifon.com/content/dam/content-factory/photos/covid/reel/2019-09-24-AMPLIFON-DSC4315_NO%20COLOR.jpg/jcr:content/renditions/cq5dam.web.420.420.jpeg; ms;37112 bytes
+https://www.amplifon.com/content/dam/content-factory/photos/tvc-campaign/it/amplifon-noi/amplifon_noi_rosso.jpg/jcr:content/renditions/cq5dam.web.800.800.jpeg; ms;36766 bytes
+https://www.amplifon.com/content/dam/content-factory/photos/products/reel/Ampli%20Connect_WithoutOyster_Smartphone.jpg/jcr:content/renditions/cq5dam.web.700.700.jpeg; ms;33247 bytes
+https://www.amplifon.com/content/dam/content-factory/photos/tvc-campaign/sp/audiologist_client_hearing_test_woman.jpg/jcr:content/renditions/cq5dam.web.700.700.jpeg; ms;33225 bytes
+https://www.amplifon.com/content/dam/content-factory/photos/products/reel/Ampli%20Mini_WithoutOyster_Bedside.jpg/jcr:content/renditions/cq5dam.web.700.700.jpeg; ms;30613 bytes
+https://www.amplifon.com/content/dam/amplifon-emea/global/Icons/amplifon-logo@3x.png; ms;30010 bytes
+https://www.amplifon.com/content/dam/content-factory/photos/tvc-campaign/it/amplifon-noi/amplifon_noi_rosso.jpg/jcr:content/renditions/cq5dam.web.700.700.jpeg; ms;28604 bytes
+https://www.amplifon.com/etc/designs/amplifonsite/amplifon-emea/clientlib-amplifon-emea-vendor.min.css; ms;26412 bytes
+https://www.amplifon.com/etc.clientlibs/clientlibs/granite/utils.min.js; ms;25033 bytes
+https://www.amplifon.com/etc.clientlibs/clientlibs/granite/jquery/granite.min.js; ms;23300 bytes
+https://www.amplifon.com/etc/designs/amplifonsite/amplifon-emea/clientlib-amplifon-emea/img/header/bg-header-waves-L.svg; ms;23111 bytes
+https://www.amplifon.com/etc/designs/amplifonsite/amplifon-emea/clientlib-amplifon-emea/img/icons/icon-phone-red.svg; ms;23074 bytes
+https://www.amplifon.com/content/dam/amplifon-emea/global/Icons/header/icon-phone-red.svg; ms;23071 bytes
+https://www.amplifon.com/etc/designs/amplifonsite/amplifon-emea/clientlib-amplifon-emea/img/icons/book-appointment-grey-big.svg; ms;22638 bytes
+https://www.amplifon.com/content/dam/amplifon-emea/global/Icons/header/book-appointment-red-small.svg; ms;22584 bytes
+https://www.amplifon.com/etc/designs/amplifonsite/amplifon-emea/clientlib-amplifon-emea/img/icons/find-store-grey-big.svg; ms;22407 bytes
+https://www.amplifon.com/etc/designs/amplifonsite/amplifon-emea/clientlib-amplifon-emea/img/icons/hearing-test-grey-big.svg; ms;22300 bytes
+https://www.amplifon.com/content/dam/amplifon-emea/global/Icons/header/find-store-red-small.svg; ms;22189 bytes
+https://www.amplifon.com/etc/designs/amplifonsite/amplifon-emea/clientlib-amplifon-emea/img/icons/icon-close.svg; ms;22172 bytes
+https://www.amplifon.com/content/dam/amplifon-emea/global/Icons/header/hearing-test-red-small.svg; ms;22151 bytes
+https://www.amplifon.com/etc/designs/amplifonsite/amplifon-emea/clientlib-amplifon-emea/img/icons/footer-email.png; ms;22048 bytes
+https://www.amplifon.com/etc/designs/amplifonsite/amplifon-emea/clientlib-amplifon-emea/img/icons/search.svg; ms;22039 bytes
+https://www.amplifon.com/content/dam/amplifon-emea/global/Icons/footer/youtube.png; ms;21996 bytes
+https://www.amplifon.com/etc/designs/amplifonsite/amplifon-emea/clientlib-amplifon-emea/img/icons/chevron-small-white-dx.svg; ms;21987 bytes
+https://www.amplifon.com/etc/designs/amplifonsite/amplifon-emea/clientlib-amplifon-emea/img/icons/dropdown-down-red.svg; ms;21955 bytes
+https://www.amplifon.com/content/dam/amplifon-emea/global/Icons/footer/facebook.png; ms;21907 bytes
+https://www.amplifon.com/etc/designs/amplifonsite/generic-scripts/optanonWrapper.js; ms;21654 bytes
+https://www.amplifon.com/etc/designs/amplifonsite/generic-scripts/satellitePageBottom.js; ms;21649 bytes
+https://www.amplifon.com/etc.clientlibs/foundation/clientlibs/jquery.min.js; ms;21641 bytes
+https://www.everestjs.net/static/le/last-event-tag-latest.min.js; ms;3128 bytes
+https://mwzeom.zeotap.com/mw?cid=80332121346132063820156595812174698357&zpartnerid=314&env=mWeb&eventType=map&id_mid_14=&id_mid_4=426ddca4-a6c4-4cf9-7eda-17b3fcfd33a8&reqId=c548698a-98d0-402d-7c4b-3927387a0619&zdid=314; ms;620 bytes
+https://www.facebook.com/tr/?id=783242902039842&ev=Adobe-Audience-Manager-Segment&cd[segID]=11050064&noscript=1; ms;328 bytes
+https://collector-3507.tvsquared.com/tv2track.php?action_name=Apparecchi%20acustici%2C%20test%20dell%27udito%20e%20esame%20audiometrico%20%7C%20Amplifon&idsite=TV-63459027-1&rec=1&r=995416&h=14&m=6&s=38&url=https%3A%2F%2Fwww.amplifon.com%2Fit%2F&_id=40db8d24ba227b67&_idts=1673733998&_idvc=0&_idn=1&_viewts=&cookie=1&res=800x600&gt_ms=122; ms;276 bytes
+https://collector-3507.tvsquared.com/tv2track.js;600000 ms;8838 bytes
+https://maps.googleapis.com/maps/api/js?v=3.45&key=AIzaSyBB2TlZT_ZnO_mLBsf9QIyVSZSSyob7QBg&libraries=places&callback=googleMapController.initAutoCompleteLanding&_=1673733997332;1800000 ms;56187 bytes
+https://assets.adobedtm.com/launch-ENaae529a6352043f5884362eb63ccd197.min.js;3600000 ms;149898 bytes
+https://assets.adobedtm.com/b49280b51bff/d5144f01550b/a668dfa14583/EX20c573f61824422ba7b5674bec35f91a-libraryCode_source.min.js;3600000 ms;21434 bytes
+https://assets.adobedtm.com/b49280b51bff/d5144f01550b/a668dfa14583/RC6929286f33854cbaad364fa51a34d453-source.min.js;3600000 ms;2759 bytes
+https://assets.adobedtm.com/b49280b51bff/d5144f01550b/a668dfa14583/RCa1712ecf91b7442eb894c1315b35a8ef-source.min.js;3600000 ms;2053 bytes
+https://assets.adobedtm.com/b49280b51bff/d5144f01550b/a668dfa14583/RC6e3b458007f94e6d9343acf06b6366cd-source.min.js;3600000 ms;1783 bytes
+https://assets.adobedtm.com/b49280b51bff/d5144f01550b/a668dfa14583/RC368afad5c27d455382a110477f886ad0-source.min.js;3600000 ms;1632 bytes
+https://assets.adobedtm.com/b49280b51bff/d5144f01550b/a668dfa14583/RCa32ee2f45ba14f30beb69176a06eff80-source.min.js;3600000 ms;1043 bytes
+https://assets.adobedtm.com/b49280b51bff/d5144f01550b/a668dfa14583/RC82ef9e2a886e42d8b0cfcd7676d48deb-source.min.js;3600000 ms;1027 bytes
+https://assets.adobedtm.com/b49280b51bff/d5144f01550b/a668dfa14583/RC0c62e92da66d46ab91fe9c4ab233c6be-source.min.js;3600000 ms;1018 bytes
+https://assets.adobedtm.com/b49280b51bff/d5144f01550b/a668dfa14583/RC9ebcf3e55864434aabdc381f08c68ddd-source.min.js;3600000 ms;930 bytes
+https://assets.adobedtm.com/b49280b51bff/d5144f01550b/a668dfa14583/RCa01c4ba4f9aa412f8273798810231986-source.min.js;3600000 ms;930 bytes
+https://assets.adobedtm.com/b49280b51bff/d5144f01550b/a668dfa14583/RCfd5f07521faf4d1489804c9f629cad6c-source.min.js;3600000 ms;923 bytes
+https://assets.adobedtm.com/b49280b51bff/d5144f01550b/a668dfa14583/RC2439f9eb539b4a50b3077ca3b252947d-source.min.js;3600000 ms;896 bytes
+https://assets.adobedtm.com/b49280b51bff/d5144f01550b/a668dfa14583/RCa69e245ce93b48ccb49a5fc037de04b8-source.min.js;3600000 ms;861 bytes
+https://assets.adobedtm.com/b49280b51bff/d5144f01550b/a668dfa14583/RCbfa4176e2cf249119e096ff0c49e7c81-source.min.js;3600000 ms;844 bytes
+https://assets.adobedtm.com/b49280b51bff/d5144f01550b/a668dfa14583/RC12eab42c9c1940598d1a7c4b088380fe-source.min.js;3600000 ms;799 bytes
+https://assets.adobedtm.com/b49280b51bff/d5144f01550b/a668dfa14583/RCf02aa540d7694bf7a9f2cca5174aa4e8-source.min.js;3600000 ms;768 bytes
+https://cdn.cookielaw.org/scripttemplates/6.33.0/otBannerSdk.js;86400000 ms;82234 bytes
+https://cdn.cookielaw.org/consent/067d50e6-4d71-437c-bad3-940821337049/otSDKStub.js;86400000 ms;8124 bytes
+https://cdn.cookielaw.org/consent/067d50e6-4d71-437c-bad3-940821337049/OtAutoBlock.js;86400000 ms;6380 bytes
+https://cdn.cookielaw.org/logos/static/powered_by_logo.svg;86400000 ms;2817 bytes
+
+INITIAL SERVER RESPONSE TIME WAS SHORT
+URL;TIME SPENT
+https://www.amplifon.com/it/;121.123 timespanMs
+
+NETWORK REQUESTS
+URL;END TIME;MIME TYPE;PROTOCOL;RESOURCE SIZE;RESOURCE TYPE;START TIME;STATUS CODE;TRANSFER SIZE
+https://www.amplifon.com/it/;120.13299996033311 ms;text/html text;h2 text;103783 bytes;Document text; ms;200 text;36107 bytes
+https://www.amplifon.com/etc/designs/amplifonsite/amplifon-emea/clientlib-amplifon-emea-vendor.min.css;236.79499980062246 ms;text/css text;h2 text;43715 bytes;Stylesheet text;137.8549998626113 ms;200 text;26412 bytes
+https://www.amplifon.com/etc/designs/amplifonsite/amplifon-emea/clientlib-amplifon-emea.min.css;331.0030000284314 ms;text/css text;h2 text;3233311 bytes;Stylesheet text;138.13900016248226 ms;200 text;272469 bytes
+https://www.amplifon.com/content/dam/amplifon-emea/global/Icons/amplifon-logo@3x.png;229.6429998241365 ms;image/png text;h2 text;8378 bytes;Image text;152.38900016993284 ms;200 text;30010 bytes
+https://www.amplifon.com/content/dam/amplifon-emea/global/Icons/header/book-appointment-red-small.svg;231.6950000822544 ms;image/svg+xml text;h2 text;967 bytes;Image text;152.61099999770522 ms;200 text;22584 bytes
+https://www.amplifon.com/content/dam/amplifon-emea/global/Icons/header/find-store-red-small.svg;232.69800003618002 ms;image/svg+xml text;h2 text;572 bytes;Image text;152.7619999833405 ms;200 text;22189 bytes
+https://www.amplifon.com/content/dam/amplifon-emea/global/Icons/header/hearing-test-red-small.svg;258.89999978244305 ms;image/svg+xml text;h2 text;534 bytes;Image text;152.94599998742342 ms;200 text;22151 bytes
+https://www.amplifon.com/content/dam/amplifon-emea/global/Icons/header/icon-phone-red.svg;214.14399985224009 ms;image/svg+xml text;h2 text;1453 bytes;Image text;153.1500001437962 ms;200 text;23071 bytes
+https://www.amplifon.com/etc/designs/amplifonsite/amplifon-emea/clientlib-amplifon-emea/img/loaders/loading-white-bg.gif;243.85799979791045 ms;image/gif text;h2 text;56754 bytes;Image text;153.36500015109777 ms;200 text;46159 bytes
+https://www.amplifon.com/etc/designs/amplifonsite/amplifon-emea/clientlib-amplifon-emea/img/icons/footer-email.png;203.11899995431304 ms;image/png text;h2 text;365 bytes;Image text;153.49099971354008 ms;200 text;22048 bytes
+https://www.amplifon.com/content/dam/amplifon-emea/global/Icons/footer/facebook.png;219.1400001756847 ms;image/png text;h2 text;228 bytes;Image text;153.66100007668138 ms;200 text;21907 bytes
+https://www.amplifon.com/content/dam/amplifon-emea/global/Icons/footer/youtube.png;248.89699975028634 ms;image/png text;h2 text;313 bytes;Image text;153.81699986755848 ms;200 text;21996 bytes
+https://cdn.cookielaw.org/consent/067d50e6-4d71-437c-bad3-940821337049/OtAutoBlock.js;206.32300013676286 ms;application/x-javascript text;h2 text;36074 bytes;Script text;154.29400000721216 ms;200 text;6380 bytes
+https://cdn.cookielaw.org/consent/067d50e6-4d71-437c-bad3-940821337049/otSDKStub.js;191.1760000512004 ms;application/x-javascript text;h2 text;19612 bytes;Script text;154.56699999049306 ms;200 text;8124 bytes
+https://www.amplifon.com/etc/designs/amplifonsite/generic-scripts/optanonWrapper.js;247.64399975538254 ms;application/javascript text;h2 text;29 bytes;Script text;154.78699980303645 ms;200 text;21654 bytes
+https://www.amplifon.com/etc/designs/amplifonsite/amplifon-emea/clientlib-amplifon-emea/fonts/Value-Regular-Web.woff2;234.21499971300364 ms;application/octet-stream text;h2 text;40124 bytes;Font text;140.881999861449 ms;200 text;61714 bytes
+https://www.amplifon.com/etc/designs/amplifonsite/amplifon-emea/clientlib-amplifon-emea/fonts/Value-Bold-Web.woff2;237.64599999412894 ms;application/octet-stream text;h2 text;39800 bytes;Font text;141.0699998959899 ms;200 text;61390 bytes
+https://www.amplifon.com/etc.clientlibs/clientlibs/granite/jquery.min.js;246.42300000414252 ms;application/javascript text;h2 text;104959 bytes;Script text;151.1419997550547 ms;200 text;57991 bytes
+https://www.amplifon.com/etc.clientlibs/clientlibs/granite/utils.min.js;245.06699992343783 ms;application/javascript text;h2 text;8118 bytes;Script text;151.88900008797646 ms;200 text;25033 bytes
+https://www.amplifon.com/etc.clientlibs/clientlibs/granite/jquery/granite.min.js;215.29199974611402 ms;application/javascript text;h2 text;3681 bytes;Script text;152.07300009205937 ms;200 text;23300 bytes
+https://www.amplifon.com/etc.clientlibs/foundation/clientlibs/jquery.min.js;257.63100013136864 ms;application/javascript text;h2 text;16 bytes;Script text;152.21400000154972 ms;200 text;21641 bytes
+https://www.amplifon.com/etc/designs/amplifonsite/amplifon-emea/clientlib-amplifon-emea-vendor.min.js;275.61500016599894 ms;application/javascript text;h2 text;1071712 bytes;Script text;155.08299972862005 ms;200 text;292851 bytes
+https://www.amplifon.com/etc/designs/amplifonsite/amplifon-emea/clientlib-amplifon-emea.min.js;268.8670000061393 ms;application/javascript text;h2 text;1038071 bytes;Script text;155.63199995085597 ms;200 text;231428 bytes
+https://assets.adobedtm.com/launch-ENaae529a6352043f5884362eb63ccd197.min.js;187.37699976190925 ms;application/x-javascript text;h2 text;627641 bytes;Script text;155.9219998307526 ms;200 text;149898 bytes
+https://www.amplifon.com/etc/designs/amplifonsite/generic-scripts/satellitePageBottom.js;200.69799991324544 ms;application/javascript text;h2 text;24 bytes;Script text;156.11599991098046 ms;200 text;21649 bytes
+https://www.amplifon.com/libs/granite/csrf/token.json;538.9660000801086 ms;application/json text;h2 text;2 bytes;XHR text;512.7510000020266 ms;200 text;21642 bytes
+https://www.amplifon.com/etc/designs/amplifonsite/amplifon-emea/clientlib-amplifon-emea/img/header/bg-header-waves-L.svg;568.3559998869896 ms;image/svg+xml text;h2 text;1493 bytes;Image text;545.5769998952746 ms;200 text;23111 bytes
+https://www.amplifon.com/etc/designs/amplifonsite/amplifon-emea/clientlib-amplifon-emea/img/icons/icon-close.svg;567.3309997655451 ms;image/svg+xml text;h2 text;555 bytes;Image text;546.0600000806153 ms;200 text;22172 bytes
+https://www.amplifon.com/etc/designs/amplifonsite/amplifon-emea/clientlib-amplifon-emea/img/icons/dropdown-down-red.svg;663.5070000775158 ms;image/svg+xml text;h2 text;338 bytes;Image text;548.4909997321665 ms;200 text;21955 bytes
+https://www.amplifon.com/content/dam/content-factory/photos/tvc-campaign/smile/ita/smile_2022/Amplifon2022_Testimonial11_1142.jpg/jcr:content/renditions/cq5dam.web.700.700.jpeg;600.0500000081956 ms;image/jpeg text;h2 text;20059 bytes;Image text;553.6170001141727 ms;200 text;40836 bytes
+https://www.amplifon.com/content/dam/content-factory/photos/products/reel/Ampli%20Mini_WithoutOyster_Bedside.jpg/jcr:content/renditions/cq5dam.web.700.700.jpeg;586.3700001500547 ms;image/jpeg text;h2 text;13011 bytes;Image text;555.0090000033379 ms;200 text;30613 bytes
+https://www.amplifon.com/content/dam/content-factory/photos/products/reel/OL_WP_Energy_04.jpg/jcr:content/renditions/cq5dam.web.700.700.jpeg;643.9379998482764 ms;image/jpeg text;h2 text;18961 bytes;Image text;555.4800000973046 ms;200 text;39782 bytes
+https://www.amplifon.com/content/dam/content-factory/photos/products/reel/Ampli%20Connect_WithoutOyster_Smartphone.jpg/jcr:content/renditions/cq5dam.web.700.700.jpeg;585.1579997688532 ms;image/jpeg text;h2 text;15508 bytes;Image text;555.952999740839 ms;200 text;33247 bytes
+https://www.amplifon.com/content/dam/content-factory/photos/products/reel/Ampli%20Easy_WithoutOyster_Capuccino.jpg/jcr:content/renditions/cq5dam.web.700.700.jpeg;597.9889999143779 ms;image/jpeg text;h2 text;17513 bytes;Image text;556.3880000263453 ms;200 text;37277 bytes
+https://www.amplifon.com/etc/designs/amplifonsite/amplifon-emea/clientlib-amplifon-emea/img/icons/search.svg;596.6420001350343 ms;image/svg+xml text;h2 text;422 bytes;Image text;557.3149998672307 ms;200 text;22039 bytes
+https://www.amplifon.com/content/dam/content-factory/photos/Store/shooting/unbranded/_DSC9058.jpg/jcr:content/renditions/cq5dam.web.700.700.jpeg;601.9049999304116 ms;image/jpeg text;h2 text;18358 bytes;Image text;558.4339997731149 ms;200 text;38622 bytes
+https://www.amplifon.com/etc/designs/amplifonsite/amplifon-emea/clientlib-amplifon-emea/img/icons/book-appointment-grey-big.svg;589.4599999301136 ms;image/svg+xml text;h2 text;1020 bytes;Image text;559.326000045985 ms;200 text;22638 bytes
+https://www.amplifon.com/etc/designs/amplifonsite/amplifon-emea/clientlib-amplifon-emea/img/icons/hearing-test-grey-big.svg;582.6269998215139 ms;image/svg+xml text;h2 text;683 bytes;Image text;560.0450001657009 ms;200 text;22300 bytes
+https://www.amplifon.com/etc/designs/amplifonsite/amplifon-emea/clientlib-amplifon-emea/img/icons/find-store-grey-big.svg;595.4200001433492 ms;image/svg+xml text;h2 text;790 bytes;Image text;560.4440001770854 ms;200 text;22407 bytes
+https://www.amplifon.com/etc/designs/amplifonsite/amplifon-emea/clientlib-amplifon-emea/img/icons/chevron-small-white-dx.svg;610.3169997222722 ms;image/svg+xml text;h2 text;370 bytes;Image text;561.3890001550317 ms;200 text;21987 bytes
+https://www.amplifon.com/etc/designs/amplifonsite/amplifon-emea/clientlib-amplifon-emea/fonts/Noto_Sans/NotoSans-Regular.ttf;689.3139998428524 ms;application/x-font-ttf text;h2 text;556216 bytes;Font text;564.3500001169741 ms;200 text;577845 bytes
+https://www.amplifon.com/etc/designs/amplifonsite/amplifon-emea/clientlib-amplifon-emea/fonts/Noto_Sans/NotoSans-Bold.ttf;606.9649998098612 ms;application/x-font-ttf text;h2 text;557380 bytes;Font text;565.1259999722242 ms;200 text;579009 bytes
+https://cdn.cookielaw.org/consent/067d50e6-4d71-437c-bad3-940821337049/067d50e6-4d71-437c-bad3-940821337049.json;647.4669999442995 ms;application/x-javascript text;h2 text;3291 bytes;XHR text;611.8069998919964 ms;200 text;2359 bytes
+https://dpm.demdex.net/id?d_visid_ver=5.4.0&d_fieldgroup=MC&d_rtbd=json&d_ver=2&d_orgid=82324161584EB31F0A495DB8%40AdobeOrg&d_nsid=0&ts=1673733997625;1619.5879997685552 ms;application/json text;http/1.1 text;4977 bytes;XHR text;799.2770001292229 ms;200 text;2379 bytes
+https://assets.adobedtm.com/b49280b51bff/d5144f01550b/a668dfa14583/EX20c573f61824422ba7b5674bec35f91a-libraryCode_source.min.js;832.8769998624921 ms;application/x-javascript text;h2 text;60400 bytes;Script text;808.7570001371205 ms;200 text;21434 bytes
+https://collector-3507.tvsquared.com/tv2track.js;1089.7550000809133 ms;application/javascript text;http/1.1 text;20818 bytes;Script text;925.8590000681579 ms;200 text;8838 bytes
+https://www.googletagmanager.com/gtag/js?id=AW-971585412;946.3539998978376 ms;application/javascript text;h2 text;139743 bytes;Script text;930.5969998240471 ms;200 text;54445 bytes
+https://assets.adobedtm.com/b49280b51bff/d5144f01550b/a668dfa14583/RC12eab42c9c1940598d1a7c4b088380fe-source.min.js;966.1429999396205 ms;application/x-javascript text;h2 text;714 bytes;Script text;944.4030001759529 ms;200 text;799 bytes
+https://assets.adobedtm.com/b49280b51bff/d5144f01550b/a668dfa14583/RC82ef9e2a886e42d8b0cfcd7676d48deb-source.min.js;969.8000000789762 ms;application/x-javascript text;h2 text;1328 bytes;Script text;947.4039999768138 ms;200 text;1027 bytes
+https://assets.adobedtm.com/b49280b51bff/d5144f01550b/a668dfa14583/RCbfa4176e2cf249119e096ff0c49e7c81-source.min.js;974.6070001274347 ms;application/x-javascript text;h2 text;721 bytes;Script text;952.7590000070632 ms;200 text;844 bytes
+https://assets.adobedtm.com/b49280b51bff/d5144f01550b/a668dfa14583/RC6929286f33854cbaad364fa51a34d453-source.min.js;974.0860001184046 ms;application/x-javascript text;h2 text;6275 bytes;Script text;953.8420001044869 ms;200 text;2759 bytes
+https://assets.adobedtm.com/b49280b51bff/d5144f01550b/a668dfa14583/RCf02aa540d7694bf7a9f2cca5174aa4e8-source.min.js;976.3810001313686 ms;application/x-javascript text;h2 text;480 bytes;Script text;954.7549998387694 ms;200 text;768 bytes
+https://assets.adobedtm.com/b49280b51bff/d5144f01550b/a668dfa14583/RC9ebcf3e55864434aabdc381f08c68ddd-source.min.js;1004.2200000025332 ms;application/x-javascript text;h2 text;760 bytes;Script text;979.871999938041 ms;200 text;930 bytes
+https://assets.adobedtm.com/b49280b51bff/d5144f01550b/a668dfa14583/RC0c62e92da66d46ab91fe9c4ab233c6be-source.min.js;1004.9769999459386 ms;application/x-javascript text;h2 text;1338 bytes;Script text;983.0869999714196 ms;200 text;1018 bytes
+https://assets.adobedtm.com/b49280b51bff/d5144f01550b/a668dfa14583/RC6e3b458007f94e6d9343acf06b6366cd-source.min.js;1012.4369999393821 ms;application/x-javascript text;h2 text;7483 bytes;Script text;988.6289997957647 ms;200 text;1783 bytes
+https://assets.adobedtm.com/b49280b51bff/d5144f01550b/a668dfa14583/RC2439f9eb539b4a50b3077ca3b252947d-source.min.js;1015.0359999388456 ms;application/x-javascript text;h2 text;842 bytes;Script text;992.5389997661114 ms;200 text;896 bytes
+https://assets.adobedtm.com/b49280b51bff/d5144f01550b/a668dfa14583/RCa32ee2f45ba14f30beb69176a06eff80-source.min.js;1016.2760000675917 ms;application/x-javascript text;h2 text;1701 bytes;Script text;994.5390000939369 ms;200 text;1043 bytes
+https://assets.adobedtm.com/b49280b51bff/d5144f01550b/a668dfa14583/RCa01c4ba4f9aa412f8273798810231986-source.min.js;1015.453000087291 ms;application/x-javascript text;h2 text;761 bytes;Script text;995.6020000390708 ms;200 text;930 bytes
+https://assets.adobedtm.com/b49280b51bff/d5144f01550b/a668dfa14583/RCa1712ecf91b7442eb894c1315b35a8ef-source.min.js;1019.1139997914433 ms;application/x-javascript text;h2 text;8964 bytes;Script text;997.363000176847 ms;200 text;2053 bytes
+https://geolocation.onetrust.com/cookieconsentpub/v1/geo/location;1084.4069998711348 ms;application/json text;h2 text;59 bytes;XHR text;1061.3239998929203 ms;200 text;447 bytes
+https://www.amplifon.com/content/dam/content-factory/photos/tvc-campaign/smile/ita/smile_2022/Amplifon2022_Testimonial11_1142.jpg/jcr:content/renditions/cq5dam.web.1440.1440.jpeg;1174.5400000363588 ms;image/jpeg text;h2 text;132735 bytes;Image text;1129.3069999665022 ms;200 text;152769 bytes
+https://www.amplifon.com/content/dam/content-factory/photos/products/reel/Ampli%20Mini_WithoutOyster_Bedside.jpg/jcr:content/renditions/cq5dam.web.640.640.jpeg;1162.5789999961853 ms;image/jpeg text;h2 text;20892 bytes;Image text;1130.4910001344979 ms;200 text;41459 bytes
+https://www.amplifon.com/content/dam/content-factory/photos/products/reel/OL_WP_Energy_04.jpg/jcr:content/renditions/cq5dam.web.1280.1280.jpeg;1176.9360001198947 ms;image/jpeg text;h2 text;94013 bytes;Image text;1131.6649997606874 ms;200 text;114378 bytes
+https://www.amplifon.com/content/dam/content-factory/photos/products/reel/Ampli%20Connect_WithoutOyster_Smartphone.jpg/jcr:content/renditions/cq5dam.web.640.640.jpeg;1173.0590001679957 ms;image/jpeg text;h2 text;27088 bytes;Image text;1132.6999999582767 ms;200 text;48105 bytes
+https://www.amplifon.com/content/dam/content-factory/photos/products/reel/Ampli%20Easy_WithoutOyster_Capuccino.jpg/jcr:content/renditions/cq5dam.web.640.640.jpeg;1166.846000123769 ms;image/jpeg text;h2 text;33886 bytes;Image text;1134.4909998588264 ms;200 text;55311 bytes
+https://maps.googleapis.com/maps/api/js?v=3.45&key=AIzaSyBB2TlZT_ZnO_mLBsf9QIyVSZSSyob7QBg&libraries=places&callback=googleMapController.initAutoCompleteLanding&_=1673733997332;1175.6449998356402 ms;text/javascript text;h2 text;170944 bytes;Script text;1154.6809999272227 ms;200 text;56187 bytes
+https://www.amplifon.com/content/dam/content-factory/photos/tvc-campaign/it/amplifon-noi/amplifon_noi_rosso.jpg/jcr:content/renditions/cq5dam.web.700.700.jpeg;1201.5439998358488 ms;image/jpeg text;h2 text;10733 bytes;Image text;1178.0699999071658 ms;200 text;28604 bytes
+https://www.amplifon.com/content/dam/content-factory/photos/covid/reel/2019-09-24-AMPLIFON-DSC4315_NO%20COLOR.jpg/jcr:content/renditions/cq5dam.web.700.700.jpeg;1220.1970000751317 ms;image/jpeg text;h2 text;30809 bytes;Image text;1178.5969999618828 ms;200 text;52284 bytes
+https://www.amplifon.com/content/dam/content-factory/photos/tvc-campaign/sp/audiologist_client_hearing_test_woman.jpg/jcr:content/renditions/cq5dam.web.700.700.jpeg;1222.0399999059737 ms;image/jpeg text;h2 text;13215 bytes;Image text;1178.7069998681545 ms;200 text;33225 bytes
+https://www.amplifon.com/content/dam/content-factory/photos/lifestyle-stock/507654337.jpg/jcr:content/renditions/cq5dam.web.700.700.jpeg;1223.3509998768568 ms;image/jpeg text;h2 text;21712 bytes;Image text;1178.8829998113215 ms;200 text;42757 bytes
+https://cdn.cookielaw.org/scripttemplates/6.33.0/otBannerSdk.js;1468.747999984771 ms;application/javascript text;h2 text;343588 bytes;Script text;1441.6700000874698 ms;200 text;82234 bytes
+https://collector-3507.tvsquared.com/tv2track.php?action_name=Apparecchi%20acustici%2C%20test%20dell%27udito%20e%20esame%20audiometrico%20%7C%20Amplifon&idsite=TV-63459027-1&rec=1&r=995416&h=14&m=6&s=38&url=https%3A%2F%2Fwww.amplifon.com%2Fit%2F&_id=40db8d24ba227b67&_idts=1673733998&_idvc=0&_idn=1&_viewts=&cookie=1&res=800x600&gt_ms=122;1621.0010000504553 ms;image/gif text;http/1.1 text;42 bytes;Image text;1454.9420000985265 ms;200 text;276 bytes
+https://googleads.g.doubleclick.net/pagead/viewthroughconversion/971585412/?random=1673733998336&cv=11&fst=1673733998336&bg=ffffff&guid=ON&async=1&gtm=2oa1a1&u_w=800&u_h=600&hn=www.googleadservices.com&frm=0&url=https%3A%2F%2Fwww.amplifon.com%2Fit%2F&tiba=Apparecchi%20acustici%2C%20test%20dell%27udito%20e%20esame%20audiometrico%20%7C%20Amplifon&auid=2062864841.1673733998&data=event%3Dgtag.config&rfmt=3&fmt=4;1553.5969999618828 ms;text/javascript text;h2 text;1987 bytes;Script text;1540.614000055939 ms;200 text;1831 bytes
+https://googleads.g.doubleclick.net/pagead/viewthroughconversion/971585412/?random=1673733998409&cv=11&fst=1673733998409&bg=ffffff&guid=ON&async=1&gtm=2oa1a1&u_w=800&u_h=600&hn=www.googleadservices.com&frm=0&url=https%3A%2F%2Fwww.amplifon.com%2Fit%2F&tiba=Apparecchi%20acustici%2C%20test%20dell%27udito%20e%20esame%20audiometrico%20%7C%20Amplifon&auid=2062864841.1673733998&uaa=x86&uap=macOS&uapv=10.15.7&uaw=0&data=event%3Dgtag.config&rfmt=3&fmt=4;1608.0680000595748 ms;text/javascript text;h2 text;1987 bytes;Script text;1595.2579998411238 ms;200 text;2000 bytes
+https://www.googletagmanager.com/gtag/js?id=DC-8076233&l=dataLayer&cx=c;1605.9449999593198 ms;application/javascript text;h2 text;114677 bytes;Script text;1598.859999794513 ms;200 text;45505 bytes
+https://assets.adobedtm.com/b49280b51bff/d5144f01550b/a668dfa14583/RC368afad5c27d455382a110477f886ad0-source.min.js;1666.74799984321 ms;application/x-javascript text;h2 text;4857 bytes;Script text;1646.7599999159575 ms;200 text;1632 bytes
+https://www.everestjs.net/static/le/last-event-tag-latest.min.js;1776.837000157684 ms;application/javascript text;http/1.1 text;7028 bytes;Script text;1651.0569998063147 ms;200 text;3128 bytes
+https://maps.googleapis.com/maps/api/mapsjs/gen_204?csp_test=true;1685.1389999501407 ms;application/json text;h2 text;3 bytes;XHR text;1679.3499998748302 ms;200 text;672 bytes
+https://amplifon.demdex.net/dest5.html?d_nsid=0;3032.1949999779463 ms;text/html text;http/1.1 text;6983 bytes;Document text;1706.8969998508692 ms;200 text;3473 bytes
+https://cm.everesttech.net/cm/dd?d_uuid=80332121346132063820156595812174698357;1994.5049998350441 ms;text/plain text;http/1.1 text; bytes; text;1717.5630000419915 ms;302 text;541 bytes
+https://amplifongroup.tt.omtrdc.net/m2/amplifongroup/mbox/json?mbox=target-global-mbox&mboxSession=f3f0a1531fcb4d50ab748083297ec28c&mboxPC=&mboxPage=aec5c3ad74b9449385780219bc6da51e&mboxRid=7fe3f54b283847f383f0f1768da3fe52&mboxVersion=1.8.3&mboxCount=1&mboxTime=1673705197721&mboxHost=www.amplifon.com&mboxURL=https%3A%2F%2Fwww.amplifon.com%2Fit%2F&mboxReferrer=&browserHeight=940&browserWidth=1350&browserTimeOffset=-480&screenHeight=600&screenWidth=800&colorDepth=24&devicePixelRatio=1&screenOrientation=landscape&webGLRenderer=ANGLE%20(Google%2C%20Vulkan%201.3.0%20(SwiftShader%20Device%20(Subzero)%20(0x0000C0DE))%2C%20SwiftShader%20driver)&mboxMCSDID=2377565B76DB3A1D-36F1D0218D9C5A21&mboxMCGVID=80530576067045731990186285761054963988&mboxAAMB=6G1ynYcLPuiQxYZrsz_pkqfLG9yMXBpb2zX5dvJdYQJzPXImdj0y&mboxMCGLH=9;1824.5159997604787 ms;application/json text;h2 text;134747 bytes;XHR text;1719.804999884218 ms;200 text;11848 bytes
+https://cdn.cookielaw.org/consent/067d50e6-4d71-437c-bad3-940821337049/57125e34-ab9a-422e-bcc0-9cd06871ac20/it.json;1783.3110000938177 ms;application/x-javascript text;h2 text;120431 bytes;Fetch text;1739.9999997578561 ms;200 text;24491 bytes
+https://www.google.com/pagead/1p-user-list/971585412/?random=1673733998336&cv=11&fst=1673733600000&bg=ffffff&guid=ON&async=1&gtm=2oa1a1&u_w=800&u_h=600&frm=0&url=https%3A%2F%2Fwww.amplifon.com%2Fit%2F&tiba=Apparecchi%20acustici%2C%20test%20dell%27udito%20e%20esame%20audiometrico%20%7C%20Amplifon&data=event%3Dgtag.config&fmt=3&is_vtc=1&random=3490983239&rmt_tld=0&ipr=y;1757.4259997345507 ms;image/gif text;h2 text;42 bytes;Image text;1748.2070000842214 ms;200 text;736 bytes
+https://www.google.it/pagead/1p-user-list/971585412/?random=1673733998336&cv=11&fst=1673733600000&bg=ffffff&guid=ON&async=1&gtm=2oa1a1&u_w=800&u_h=600&frm=0&url=https%3A%2F%2Fwww.amplifon.com%2Fit%2F&tiba=Apparecchi%20acustici%2C%20test%20dell%27udito%20e%20esame%20audiometrico%20%7C%20Amplifon&data=event%3Dgtag.config&fmt=3&is_vtc=1&random=3490983239&rmt_tld=1&ipr=y;1760.863000061363 ms;image/gif text;h2 text;42 bytes;Image text;1748.4109997749329 ms;200 text;736 bytes
+https://www.google.com/pagead/1p-user-list/971585412/?random=1673733998409&cv=11&fst=1673733600000&bg=ffffff&guid=ON&async=1&gtm=2oa1a1&u_w=800&u_h=600&frm=0&url=https%3A%2F%2Fwww.amplifon.com%2Fit%2F&tiba=Apparecchi%20acustici%2C%20test%20dell%27udito%20e%20esame%20audiometrico%20%7C%20Amplifon&data=event%3Dgtag.config&fmt=3&is_vtc=1&random=2787442602&rmt_tld=0&ipr=y;1763.139999937266 ms;image/gif text;h2 text;42 bytes;Image text;1752.4919998832047 ms;200 text;736 bytes
+https://www.google.it/pagead/1p-user-list/971585412/?random=1673733998409&cv=11&fst=1673733600000&bg=ffffff&guid=ON&async=1&gtm=2oa1a1&u_w=800&u_h=600&frm=0&url=https%3A%2F%2Fwww.amplifon.com%2Fit%2F&tiba=Apparecchi%20acustici%2C%20test%20dell%27udito%20e%20esame%20audiometrico%20%7C%20Amplifon&data=event%3Dgtag.config&fmt=3&is_vtc=1&random=2787442602&rmt_tld=1&ipr=y;1764.1349998302758 ms;image/gif text;h2 text;42 bytes;Image text;1753.2319999299943 ms;200 text;736 bytes
+https://cdn.cookielaw.org/scripttemplates/6.33.0/assets/otCenterRounded.json;1869.1150001250207 ms;application/json text;h2 text;9507 bytes;Fetch text;1831.5840000286698 ms;200 text;3446 bytes
+https://cdn.cookielaw.org/scripttemplates/6.33.0/assets/v2/otPcTab.json;1883.6159999482334 ms;application/json text;h2 text;47936 bytes;Fetch text;1832.551000174135 ms;200 text;12793 bytes
+https://cdn.cookielaw.org/scripttemplates/6.33.0/assets/otCookieSettingsButton.json;1852.037999778986 ms;application/json text;h2 text;4753 bytes;Fetch text;1833.695000037551 ms;200 text;2653 bytes
+https://cdn.cookielaw.org/scripttemplates/6.33.0/assets/otCommonStyles.css;1864.4260000437498 ms;text/css text;h2 text;21595 bytes;Fetch text;1834.4390001147985 ms;200 text;5021 bytes
+https://lasteventf-tm.everesttech.net/?_les_imsOrgId=82324161584EB31F0A495DB8@AdobeOrg&_les_sdid=2377565B76DB3A1D-36F1D0218D9C5A21&_les_last_search_click=&_les_rsid=amplifon.global&_les_mid=80530576067045731990186285761054963988&_les_url=https%3A%2F%2Fwww.amplifon.com%2Fit%2F;1886.921999976039 ms;text/plain text;h2 text; bytes;XHR text;1841.7440000921488 ms;200 text;365 bytes
+https://www.googletagmanager.com/gtag/js?id=DC-8076233;1860.597999766469 ms;application/javascript text;h2 text;114656 bytes;Script text;1850.205000024289 ms;200 text;45477 bytes
+https://i.ibb.co/k4H9hcW/icon-white.png;1966.9419997371733 ms;image/png text;h2 text;5193 bytes;Image text;1938.1689997389913 ms;200 text;5547 bytes
+https://www.amplifon.com/etc/designs/amplifonsite/amplifon-emea/clientlib-amplifon-emea/img/icons/icon-phone-red.svg;1997.3669997416437 ms;image/svg+xml text;h2 text;1456 bytes;Image text;1974.6420001611114 ms;200 text;23074 bytes
+https://dpm.demdex.net/ibs:dpid=411&dpuuid=Y8MnbgAAANyHogN6;2820.534999947995 ms;image/gif text;http/1.1 text;42 bytes;Image text;1994.9019998311996 ms;200 text;942 bytes
+https://www.amplifon.com/content/dam/content-factory/photos/tvc-campaign/it/amplifon-noi/amplifon_noi_rosso.jpg/jcr:content/renditions/cq5dam.web.800.800.jpeg;2060.1759999990463 ms;image/jpeg text;h2 text;20277 bytes;Image text;2006.4769997261465 ms;200 text;36766 bytes
+https://www.amplifon.com/content/dam/content-factory/photos/covid/reel/2019-09-24-AMPLIFON-DSC4315_NO%20COLOR.jpg/jcr:content/renditions/cq5dam.web.420.420.jpeg;2035.1999998092651 ms;image/jpeg text;h2 text;15579 bytes;Image text;2008.382000029087 ms;200 text;37112 bytes
+https://www.amplifon.com/content/dam/content-factory/photos/Store/shooting/unbranded/_DSC9058.jpg/jcr:content/renditions/cq5dam.web.1440.1440.jpeg;2047.9409997351468 ms;image/jpeg text;h2 text;135106 bytes;Image text;2012.2179999016225 ms;200 text;154147 bytes
+https://www.amplifon.com/content/dam/content-factory/photos/tvc-campaign/sp/audiologist_client_hearing_test_woman.jpg/jcr:content/renditions/cq5dam.web.640.640.jpeg;2046.1209998466074 ms;image/jpeg text;h2 text;22743 bytes;Image text;2014.9570000357926 ms;200 text;43998 bytes
+https://www.amplifon.com/content/dam/content-factory/photos/lifestyle-stock/507654337.jpg/jcr:content/renditions/cq5dam.web.640.640.jpeg;2059.0099999681115 ms;image/jpeg text;h2 text;42261 bytes;Image text;2017.562999855727 ms;200 text;63692 bytes
+https://cdn.cookielaw.org/logos/static/powered_by_logo.svg;2221.6010000556707 ms;image/svg+xml text;h2 text;5194 bytes;Image text;2197.995000053197 ms;200 text;2817 bytes
+https://smetrics.amplifon.com/b/ss/amplifon.global/10/JS-2.12.0-LCXS/s5220948619691?AQB=1&ndh=1&pf=1&callback=s_c_il[1].doPostbacks&et=1&t=14%2F0%2F2023%2014%3A6%3A39%206%20480&d.&nsid=0&jsonv=1&.d&sdid=2377565B76DB3A1D-36F1D0218D9C5A21&mid=80530576067045731990186285761054963988&aamlh=9&ce=UTF-8&ns=amplifongroup&pageName=Homepage&g=https%3A%2F%2Fwww.amplifon.com%2Fit%2F&cc=EUR&server=www.amplifon.com&events=event1&aamb=6G1ynYcLPuiQxYZrsz_pkqfLG9yMXBpb2zX5dvJdYQJzPXImdj0y&c1=Homepage&v1=Homepage&v5=it-Production&c6=https%3A%2F%2Fwww.amplifon.com%2Fit%2F&c7=https%3A%2F%2Fwww.amplifon.com%2Fit%2F&v7=https%3A%2F%2Fwww.amplifon.com%2Fit%2F&c9=New&v9=New&c10=it&v10=it&c11=amplifon.com&v11=amplifon.com&c12=IT&v12=IT&c16=Mozilla%2F5.0%20%28Macintosh%3B%20Intel%20Mac%20OS%20X%2010_15_7%29%20AppleWebKit%2F537.36%20%28KHTML%2C%20like%20Gecko%29%20Chrome%2F98.0.4695.0%20Safari%2F537.36%20Chrome-Lighthouse&v16=Mozilla%2F5.0%20%28Macintosh%3B%20Intel%20Mac%20OS%20X%2010_15_7%29%20AppleWebKit%2F537.36%20%28KHTML%2C%20like%20Gecko%29%20Chrome%2F98.0.4695.0%20Safari%2F537.36%20Chrome-Lighthouse&c20=2%3A06PM%2C2%3A00PM%2CSaturday%2CWeekend&v20=2%3A06PM%2C2%3A00PM%2CSaturday%2CWeekend&c21=2%3A06PM&v21=2%3A06PM&c22=Saturday&v22=Saturday&c23=Weekend&v23=Weekend&c26=Homepage&v26=Homepage&c27=0&v27=0&c28=1531999523468&c31=false&v31=false&c36=it&v49=Cookie%20Not%20Accepted&c52=Publish&v52=Publish&c56=page-config%2CG10%2CG12%2CG11%2CG13%2CG14%2CG1%2CH54%2CE17%2CE21%2CH53%2CE25%2CE23%2CE26%2CE28%2CE36%2CG15%2CG15b&c63=Desktop&v63=Desktop&c66=page-config%2CG10%2CG12%2CG11%2CG13%2CG14%2CG1%2CH54%2CE17%2CE21%2CH53%2CE25%2CE23%2CE26%2CE28%2CE36%2CG15%2CG15b&v79=false&v158=External&v237=Homepage&s=800x600&c=24&j=1.6&v=N&k=Y&bw=1350&bh=940&mcorgid=82324161584EB31F0A495DB8%40AdobeOrg&AQE=1;2803.8709997199476 ms;application/x-javascript text;h2 text;5504 bytes;Script text;2263.6560001410544 ms;200 text;6159 bytes
+https://www.facebook.com/tr/?id=783242902039842&ev=Adobe-Audience-Manager-Segment&cd[segID]=11050064&noscript=1;2917.3489999957383 ms;text/plain text;h2 text; bytes;Image text;2910.0629999302328 ms;200 text;328 bytes
+https://assets.adobedtm.com/b49280b51bff/d5144f01550b/a668dfa14583/RCa69e245ce93b48ccb49a5fc037de04b8-source.min.js;3080.5469998158514 ms;application/x-javascript text;h2 text;629 bytes;Script text;3058.7720000185072 ms;200 text;861 bytes
+https://assets.adobedtm.com/b49280b51bff/d5144f01550b/a668dfa14583/RCfd5f07521faf4d1489804c9f629cad6c-source.min.js;3082.190999761224 ms;application/x-javascript text;h2 text;781 bytes;Script text;3059.768000151962 ms;200 text;923 bytes
+https://googleads.g.doubleclick.net/pagead/viewthroughconversion/971585412/?value=0&guid=ON&script=0&data=aam=11050065\;aam=11050064;3079.208000097424 ms;image/gif text;http/1.1 text; bytes; text;3067.251999862492 ms;302 text;881 bytes
+https://www.google.com/pagead/1p-user-list/971585412/?value=0&guid=ON&script=0&data=aam=11050065\;aam=11050064&is_vtc=1&random=4232521868;3088.8299997895956 ms;image/gif text;http/1.1 text; bytes; text;3079.605999868363 ms;302 text;907 bytes
+https://www.google.it/pagead/1p-user-list/971585412/?value=0&guid=ON&script=0&data=aam=11050065\;aam=11050064&is_vtc=1&random=4232521868&ipr=y;3100.713000167161 ms;image/gif text;h2 text;42 bytes;Image text;3089.1709998250008 ms;200 text;736 bytes
+https://googleads.g.doubleclick.net/pagead/viewthroughconversion/836359550/?value=0&guid=ON&script=0&data=aam=11050065\;aam=7279577;3176.529999822378 ms;image/gif text;h2 text;42 bytes;Image text;3168.0049998685718 ms;200 text;713 bytes
+https://aa.agkn.com/adscores/g.pixel?sid=9211132908&aam=80332121346132063820156595812174698357;3374.75399998948 ms;text/plain text;http/1.1 text; bytes; text;3269.1999999806285 ms;302 text;901 bytes
+https://idsync.rlcdn.com/365868.gif?partner_uid=80332121346132063820156595812174698357;3384.2190001159906 ms;text/plain text;http/1.1 text; bytes; text;3371.108999941498 ms;307 text;779 bytes
+https://dpm.demdex.net/ibs:dpid=21&dpuuid=214630604396015778547;4197.493999730796 ms;image/gif text;http/1.1 text;42 bytes;Image text;3375.080000143498 ms;200 text;942 bytes
+https://idsync.rlcdn.com/1000.gif?memo=CKyqFhIxCi0IARCYEhomODAzMzIxMjEzNDYxMzIwNjM4MjAxNTY1OTU4MTIxNzQ2OTgzNTcQABoNCPDOjJ4GEgUI6AcQAEIASgA;3501.0139998048544 ms;text/plain text;http/1.1 text; bytes; text;3384.6599999815226 ms;307 text;792 bytes
+https://dpm.demdex.net/ibs:dpid=477&dpuuid=374dbb5f7d8c77bb457782772e1823c51430adb2a08f29b1d7f7dc05652f31e9b0da87c991749652;4324.36400000006 ms;image/gif text;http/1.1 text;42 bytes;Image text;3501.6239997930825 ms;200 text;942 bytes
+https://dp2.33across.com/ps/?pid=897&random=2135418959;3882.3850001208484 ms;text/plain text;h2 text; bytes;Image text;3577.4030000902712 ms;204 text;87 bytes
+https://cm.g.doubleclick.net/pixel?google_nid=adobe_dmp&google_cm&gdpr=0&gdpr_consent=&google_hm=ODAzMzIxMjEzNDYxMzIwNjM4MjAxNTY1OTU4MTIxNzQ2OTgzNTc=;3685.9269998967648 ms;text/html text;http/1.1 text; bytes; text;3678.0149997211993 ms;302 text;831 bytes
+https://dpm.demdex.net/ibs:dpid=771&dpuuid=CAESEPv_MH5dJ4RmKYukmPOS5CA&google_cver=1?gdpr=0&gdpr_consent=;4504.1040000505745 ms;image/gif text;http/1.1 text;42 bytes;Image text;3686.3130000419915 ms;200 text;942 bytes
+https://ps.eyeota.net/match?bid=6j5b2cv&uid=80332121346132063820156595812174698357&r=https%3A%2F%2Fdpm.demdex.net%2Fibs%3Adpid%3D30064%26dpuuid%3D%7BUUID_6j5b2cv%7D;3884.8469997756183 ms;text/plain text;http/1.1 text; bytes; text;3779.9359997734427 ms;302 text;494 bytes
+https://fei.pro-market.net/engine?site=141472\;size=1x1\;mimetype=img\;du=67\;csync=80332121346132063820156595812174698357;3892.6969999447465 ms;image/gif text;http/1.1 text; bytes; text;3881.4920000731945 ms;302 text;595 bytes
+https://dpm.demdex.net/ibs:dpid=30064&dpuuid=%7BUUID_6j5b2cv%7D;4706.445999909192 ms;image/gif text;http/1.1 text;42 bytes;Image text;3885.2709997445345 ms;200 text;960 bytes
+https://dpm.demdex.net/ibs:dpid=575&dpuuid=-5183178273906929688;4857.460000086576 ms;image/gif text;http/1.1 text;42 bytes;Image text;3893.1410000659525 ms;200 text;942 bytes
+https://mm.markandmini.com/Pixel/8tthgyykyv; ms; text; text; bytes;Image text;3982.078999746591 ms;-1 text; bytes
+https://ads.scorecardresearch.com/p?c1=9&c2=6034944&c3=2&cs_xi=80332121346132063820156595812174698357&rn=1673733998369&r=https%3A%2F%2Fdpm.demdex.net%2Fibs%3Adpid%3D73426%26dpuuid%3D80332121346132063820156595812174698357;4126.352000050247 ms;text/plain text;http/1.1 text; bytes; text;4084.4250000081956 ms;302 text;670 bytes
+https://ads.scorecardresearch.com/p2?c1=9&c2=6034944&c3=2&cs_xi=80332121346132063820156595812174698357&rn=1673733998369&r=https%3A%2F%2Fdpm.demdex.net%2Fibs%3Adpid%3D73426%26dpuuid%3D80332121346132063820156595812174698357;4174.0170000121 ms;text/plain text;http/1.1 text; bytes; text;4126.689999829978 ms;302 text;450 bytes
+https://dpm.demdex.net/ibs:dpid=73426&dpuuid=80332121346132063820156595812174698357;4983.736000023782 ms;image/gif text;http/1.1 text;42 bytes;Image text;4174.437999725342 ms;200 text;942 bytes
+https://aorta.clickagy.com/pixel.gif?ch=124&cm=80332121346132063820156595812174698357&redir=https%3A%2F%2Fdpm.demdex.net%2Fibs%3Adpid%3D79908%26dpuuid%3D%7Bvisitor_id%7D;4284.936999902129 ms;text/plain text;http/1.1 text; bytes; text;4186.12700002268 ms;302 text;691 bytes
+https://dpm.demdex.net/ibs:dpid=79908&dpuuid=c:c8464b3872ad7d7526e893a0c94c7aff;4740.321999881417 ms;image/gif text;http/1.1 text;42 bytes;Image text;4285.306999925524 ms;200 text;956 bytes
+https://sync.crwdcntrl.net/map/c=9828/tp=ADBE/gdpr=0/gdpr_consent=/tpid=80332121346132063820156595812174698357?https%3A%2F%2Fdpm.demdex.net%2Fibs%3Adpid%3D121998%26dpuuid%3D${profile_id};4445.110999979079 ms;image/gif text;h2 text;49 bytes;Image text;4287.248000036925 ms;404 text;339 bytes
+https://sync-tm.everesttech.net/upi/pid/5w3jqr4k?redir=https%3A%2F%2Fcm.g.doubleclick.net%2Fpixel%3Fgoogle_nid%3Dg8f47s39e399f3fe%26google_push%26google_sc%26google_hm%3D%24%7BTM_USER_ID_BASE64ENC_URLENC%7D;4476.764999795705 ms;text/plain text;http/1.1 text; bytes; text;4389.066000003368 ms;302 text;841 bytes
+https://sync-tm.everesttech.net/ct/upi/pid/5w3jqr4k?redir=https%3A%2F%2Fcm.g.doubleclick.net%2Fpixel%3Fgoogle_nid%3Dg8f47s39e399f3fe%26google_push%26google_sc%26google_hm%3D%24%7BTM_USER_ID_BASE64ENC_URLENC%7D&_test=Y8MncQALrr00JQAZ;4487.042000051588 ms;image/png text;h2 text;85 bytes;Image text;4477.134000044316 ms;200 text;420 bytes
+https://sync-tm.everesttech.net/upi/pid/btu4jd3a?redir=https%3A%2F%2Fpixel.rubiconproject.com%2Ftap.php%3Fv%3D7941%26nid%3D2243%26put%3D%24%7BUSER_ID%7D%26expires%3D90;4580.316999927163 ms;text/plain text;http/1.1 text; bytes; text;4491.080999840051 ms;302 text;779 bytes
+https://sync-tm.everesttech.net/ct/upi/pid/btu4jd3a?redir=https%3A%2F%2Fpixel.rubiconproject.com%2Ftap.php%3Fv%3D7941%26nid%3D2243%26put%3D%24%7BUSER_ID%7D%26expires%3D90&_test=Y8MncQALres2AAAZ;4590.363000053912 ms;image/png text;h2 text;85 bytes;Image text;4580.856999848038 ms;200 text;420 bytes
+https://sync-tm.everesttech.net/upi/pid/ZMAwryCI?redir=https%3A%2F%2Fdsum-sec.casalemedia.com%2Frum%3Fcm_dsp_id%3D88%26external_user_id%3D%24%7BTM_USER_ID%7D;4682.091999799013 ms;text/plain text;http/1.1 text; bytes; text;4592.714999802411 ms;302 text;784 bytes
+https://sync-tm.everesttech.net/ct/upi/pid/ZMAwryCI?redir=https%3A%2F%2Fdsum-sec.casalemedia.com%2Frum%3Fcm_dsp_id%3D88%26external_user_id%3D%24%7BTM_USER_ID%7D&_test=Y8MncQAADtGf4QAe;4699.519000016153 ms;image/png text;h2 text;85 bytes;Image text;4682.537000160664 ms;200 text;420 bytes
+https://sync-tm.everesttech.net/upi/pid/UH6TUt9n?redir=https%3A%2F%2Fib.adnxs.com%2Fsetuid%3Fentity%3D158%26code%3D%24%7BTM_USER_ID%7D;4783.454000018537 ms;text/plain text;http/1.1 text; bytes; text;4694.83399996534 ms;302 text;769 bytes
+https://sync-tm.everesttech.net/ct/upi/pid/UH6TUt9n?redir=https%3A%2F%2Fib.adnxs.com%2Fsetuid%3Fentity%3D158%26code%3D%24%7BTM_USER_ID%7D&_test=Y8MncQAAARk5bwAZ;4795.026999898255 ms;image/png text;h2 text;85 bytes;Image text;4783.994999714196 ms;200 text;412 bytes
+https://sync-tm.everesttech.net/upi/pid/ny75r2x0?redir=https%3A%2F%2Fus-u.openx.net%2Fw%2F1.0%2Fsd%3Fid%3D537148856%26val%3D%24%7BTM_USER_ID%7D;4885.346999857575 ms;text/plain text;http/1.1 text; bytes; text;4796.575000043958 ms;302 text;770 bytes
+https://sync-tm.everesttech.net/ct/upi/pid/ny75r2x0?redir=https%3A%2F%2Fus-u.openx.net%2Fw%2F1.0%2Fsd%3Fid%3D537148856%26val%3D%24%7BTM_USER_ID%7D&_test=Y8MncQALx0-iMAAp;4895.112999714911 ms;image/png text;h2 text;85 bytes;Image text;4885.741999838501 ms;200 text;412 bytes
+https://sync-tm.everesttech.net/upi/pid/b9pj45k4?redir=https%3A%2F%2Fimage2.pubmatic.com%2FAdServer%2FPug%3Fvcode%3Dbz0yJnR5cGU9MSZqcz0xJmNvZGU9MjE5MSZ0bD0yNTkyMDA%3D%26piggybackCookie%3D%24%7BUSER_ID%7D;4986.674000043422 ms;text/plain text;http/1.1 text; bytes; text;4897.92999997735 ms;302 text;830 bytes
+https://sync-tm.everesttech.net/ct/upi/pid/b9pj45k4?redir=https%3A%2F%2Fimage2.pubmatic.com%2FAdServer%2FPug%3Fvcode%3Dbz0yJnR5cGU9MSZqcz0xJmNvZGU9MjE5MSZ0bD0yNTkyMDA%3D%26piggybackCookie%3D%24%7BUSER_ID%7D&_test=Y8MncQAAASc89AAZ;4996.243000030518 ms;image/png text;h2 text;85 bytes;Image text;4987.08500014618 ms;200 text;420 bytes
+https://sync-tm.everesttech.net/upi/pid/h0r58thg?redir=https%3A%2F%2Fsync.search.spotxchange.com%2Fpartner%3Fadv_id%3D6409%26uid%3D%24%7BUSER_ID%7D%26img%3D1;5089.271999895573 ms;text/plain text;http/1.1 text; bytes; text;4999.578000046313 ms;302 text;784 bytes
+https://sync-tm.everesttech.net/ct/upi/pid/h0r58thg?redir=https%3A%2F%2Fsync.search.spotxchange.com%2Fpartner%3Fadv_id%3D6409%26uid%3D%24%7BUSER_ID%7D%26img%3D1&_test=Y8MncQALu6EYiwAF;5101.493000052869 ms;image/png text;h2 text;85 bytes;Image text;5089.7269998677075 ms;200 text;420 bytes
+https://sync-tm.everesttech.net/upi/pid/r7ifn0SL?redir=https%3A%2F%2Fwww.facebook.com%2Ffr%2Fb.php%3Fp%3D1531105787105294%26e%3D%24%7BTM_USER_ID%7D%26t%3D2592000%26o%3D0;5192.555000074208 ms;text/plain text;http/1.1 text; bytes; text;5102.448999881744 ms;302 text;789 bytes
+https://sync-tm.everesttech.net/ct/upi/pid/r7ifn0SL?redir=https%3A%2F%2Fwww.facebook.com%2Ffr%2Fb.php%3Fp%3D1531105787105294%26e%3D%24%7BTM_USER_ID%7D%26t%3D2592000%26o%3D0&_test=Y8MncQALr5lAhQAZ;5201.413999777287 ms;image/png text;h2 text;85 bytes;Image text;5192.904999945313 ms;200 text;412 bytes
+https://data.audiens.com/adobe-initiated/;5244.248999748379 ms; text; text; bytes;Image text;5203.094999771565 ms;-1 text; bytes
+https://pixel.onaudience.com/?partner=130&mapped=80332121346132063820156595812174698357&redirect=https%3A%2F%2Fdpm.demdex.net%2Fibs%3Adpid%3D161033%26dpuuid%3D%25m;5359.883000142872 ms;text/plain text;http/1.1 text; bytes; text;5305.437000002712 ms;302 text;311 bytes
+https://dpm.demdex.net/ibs:dpid=161033&dpuuid=;6205.742999911308 ms;image/gif text;http/1.1 text;42 bytes;Image text;5360.547999851406 ms;200 text;960 bytes
+https://spl.zeotap.com/?env=mWeb&zdid=314;5436.819000169635 ms;text/html text;http/1.1 text; bytes; text;5407.577000092715 ms;302 text;1217 bytes
+https://dpm.demdex.net/ibs:dpid=199624&dpuuid=426ddca4-a6c4-4cf9-7eda-17b3fcfd33a8&redir=https%3A%2F%2Fmwzeom.zeotap.com%2Fmw%3Fcid%3D%24%7BDD_UUID%7D%26zpartnerid%3D314%26env%3DmWeb%26eventType%3Dmap%26id_mid_14%3D%26id_mid_4%3D426ddca4-a6c4-4cf9-7eda-17b3fcfd33a8%26reqId%3Dc548698a-98d0-402d-7c4b-3927387a0619%26zdid%3D314;6247.343000024557 ms;text/plain text;http/1.1 text; bytes; text;5437.256999779493 ms;302 text;1061 bytes
+https://mwzeom.zeotap.com/mw?cid=80332121346132063820156595812174698357&zpartnerid=314&env=mWeb&eventType=map&id_mid_14=&id_mid_4=426ddca4-a6c4-4cf9-7eda-17b3fcfd33a8&reqId=c548698a-98d0-402d-7c4b-3927387a0619&zdid=314;6281.318000052124 ms;image/png text;h2 text;95 bytes;Image text;6247.851999942213 ms;200 text;620 bytes
+https://maps.googleapis.com/maps-api-v3/api/js/50/12a/common.js;6690.816999878734 ms;text/javascript text;h2 text;253994 bytes;Script text;6684.6280000172555 ms;200 text;70517 bytes
+https://maps.googleapis.com/maps-api-v3/api/js/50/12a/util.js;6691.666000057012 ms;text/javascript text;h2 text;169553 bytes;Script text;6685.666000004858 ms;200 text;63240 bytes
+
+AVOID LONG MAIN-THREAD TASKS
+URL;DURATION;START TIME
+https://cdn.cookielaw.org/consent/067d50e6-4d71-437c-bad3-940821337049/OtAutoBlock.js;198 ms;4310 ms
+https://assets.adobedtm.com/launch-ENaae529a6352043f5884362eb63ccd197.min.js;111 ms;5204 ms
+https://www.amplifon.com/etc/designs/amplifonsite/amplifon-emea/clientlib-amplifon-emea.min.css;99 ms;910 ms
+https://www.googletagmanager.com/gtag/js?id=AW-971585412;99 ms;5077 ms
+https://www.amplifon.com/etc/designs/amplifonsite/amplifon-emea/clientlib-amplifon-emea-vendor.min.js;94 ms;3997 ms
+https://cdn.cookielaw.org/scripttemplates/6.33.0/otBannerSdk.js;73 ms;5367 ms
+https://www.amplifon.com/etc.clientlibs/clientlibs/granite/jquery.min.js;63 ms;2150 ms
+https://www.googletagmanager.com/gtag/js?id=AW-971585412;59 ms;5018 ms
+
+LARGEST CONTENTFUL PAINT ELEMENT
+ELEMENT
+{'snippet': '<div class="focuspoint-bg xs-flex-row flex-column justify-content-end d-flex lazy-back…" data-aem-asset-id="b9ac7aaa-1240-4027-a098-2af786bb2c3e" data-trackable="true" style="background-image: url(&quot\\;/content/dam/content-factory/photos/tvc-campaign/sm…&quot\\;)\\;" data-focus-x="0.37" data-focus-y="0.34" data-image-w="1440" data-image-h="960" data-images="[{&quot\\;url&quot\\;:&quot\\;/content/dam/content-factory/photos/tvc-campaign/smile/ita/smile_…">', 'nodeLabel': 'Fai prevenzione: il controllo è gratuito\nPrenditi cura di te e del tuo benesser…', 'lhId': 'page-25-DIV', 'path': '1,HTML,1,BODY,3,MAIN,1,DIV,0,SECTION,1,DIV,0,DIV,0,DIV,0,DIV', 'selector': 'div.m-001-stage-home-wrapper > div.container-full > div.m-001-bg-container > div.focuspoint-bg', 'type': 'node', 'boundingRect': {'top': 97, 'height': 376, 'right': 1350, 'width': 1350, 'bottom': 473, 'left': 0}} node
+
+ELIMINATE RENDER-BLOCKING RESOURCES
+URL;TRANSFER SIZE;POTENTIAL SAVINGS
+https://www.amplifon.com/etc/designs/amplifonsite/amplifon-emea/clientlib-amplifon-emea-vendor.min.css;26412 bytes;80 timespanMs
+https://www.amplifon.com/etc/designs/amplifonsite/amplifon-emea/clientlib-amplifon-emea.min.css;272469 bytes;200 timespanMs
+
+TASKS
+END TIME;START TIME
+17.993 ms;131.436 ms
+99.297 ms;342.975 ms
+35.63 ms;442.299 ms
+62.787 ms;481.089 ms
+60.617 ms;543.988 ms
+396.08 ms;606.889 ms
+6.533 ms;1003.623 ms
+9.958 ms;1041.876 ms
+8.451 ms;1065.531 ms
+79.275 ms;1078.28 ms
+13.576 ms;1157.613 ms
+187.503 ms;1186.303 ms
+12.457 ms;1374.018 ms
+32.634 ms;1406.923 ms
+9.222 ms;1446.769 ms
+14.363 ms;1457.551 ms
+9.322 ms;1473.671 ms
+59.332 ms;1487.234 ms
+98.926 ms;1555.925 ms
+28.405 ms;1659.902 ms
+5.279 ms;1689.086 ms
+25.395 ms;1695.589 ms
+13.526 ms;1727.586 ms
+5.301 ms;1742.215 ms
+21.882 ms;1764.622 ms
+37.76 ms;1798.117 ms
+22.477 ms;1835.979 ms
+110.604 ms;1860.175 ms
+24.805 ms;1970.82 ms
+7.35 ms;2018.753 ms
+9.885 ms;2037.999 ms
+145.868 ms;2052.965 ms
+8.121 ms;2199 ms
+18.587 ms;2210.775 ms
+14.419 ms;2233.817 ms
+16.639 ms;2248.706 ms
+7.86 ms;2265.736 ms
+53.725 ms;2277.506 ms
+15.743 ms;2332.257 ms
+8.103 ms;3037.574 ms
+12.754 ms;3051.742 ms
+18.838 ms;6703.408 ms
+17.544 ms;6723.719 ms
+
+JAVASCRIPT EXECUTION TIME
+URL;SCRIPT PARSE;SCRIPT EVALUATION;TOTAL CPU TIME
+https://assets.adobedtm.com/launch-ENaae529a6352043f5884362eb63ccd197.min.js;20.343999999999998 ms;471.51500000000004 ms;534.953 ms
+https://www.amplifon.com/etc/designs/amplifonsite/amplifon-emea/clientlib-amplifon-emea-vendor.min.js;22.71 ms;90.83500000000008 ms;403.04999999999984 ms
+Unattributable; ms;41.19100000000003 ms;321.4369999999976 ms
+https://www.amplifon.com/it/;1.306 ms;52.306999999999995 ms;289.81 ms
+https://cdn.cookielaw.org/scripttemplates/6.33.0/otBannerSdk.js;9.454 ms;85.13400000000009 ms;157.41100000000012 ms
+https://www.amplifon.com/etc.clientlibs/clientlibs/granite/jquery.min.js;3.032 ms;86.58799999999995 ms;117.04599999999994 ms
+https://www.amplifon.com/etc/designs/amplifonsite/amplifon-emea/clientlib-amplifon-emea.min.css; ms; ms;99.297 ms
+https://www.amplifon.com/etc/designs/amplifonsite/amplifon-emea/clientlib-amplifon-emea.min.js;16.48 ms;48.475000000000016 ms;68.343 ms
+https://amplifon.demdex.net/dest5.html?d_nsid=0;1.1380000000000001 ms;55.530000000000015 ms;66.30700000000002 ms
+
+IMAGE ELEMENTS DO NOT HAVE EXPLICIT `WIDTH` AND `HEIGHT`
+URL
+https://i.ibb.co/k4H9hcW/icon-white.png
+
+REDUCE UNUSED JAVASCRIPT
+URL;TRANSFER SIZE;POTENTIAL SAVINGS
+https://www.amplifon.com/etc/designs/amplifonsite/amplifon-emea/clientlib-amplifon-emea.min.js;231428 bytes;218476 bytes
+https://www.amplifon.com/etc/designs/amplifonsite/amplifon-emea/clientlib-amplifon-emea-vendor.min.js;292851 bytes;173873 bytes
+https://maps.googleapis.com/maps-api-v3/api/js/50/12a/util.js;63240 bytes;50669 bytes
+https://cdn.cookielaw.org/scripttemplates/6.33.0/otBannerSdk.js;82234 bytes;41525 bytes
+https://www.googletagmanager.com/gtag/js?id=DC-8076233;45477 bytes;36026 bytes
+https://assets.adobedtm.com/launch-ENaae529a6352043f5884362eb63ccd197.min.js;149898 bytes;33664 bytes
+https://www.googletagmanager.com/gtag/js?id=AW-971585412;54445 bytes;32885 bytes
+https://maps.googleapis.com/maps/api/js?v=3.45&key=AIzaSyBB2TlZT_ZnO_mLBsf9QIyVSZSSyob7QBg&libraries=places&callback=googleMapController.initAutoCompleteLanding&_=1673733997332;56187 bytes;31960 bytes
+https://www.amplifon.com/etc.clientlibs/clientlibs/granite/jquery.min.js;57991 bytes;21673 bytes
+https://www.amplifon.com/etc/designs/amplifonsite/generic-scripts/optanonWrapper.js;21654 bytes;21654 bytes
+https://maps.googleapis.com/maps-api-v3/api/js/50/12a/common.js;70517 bytes;21445 bytes
+
+SERVE IMAGES IN NEXT-GEN FORMATS
+URL;RESOURCE SIZE;POTENTIAL SAVINGS
+https://www.amplifon.com/content/dam/content-factory/photos/tvc-campaign/smile/ita/smile_2022/Amplifon2022_Testimonial11_1142.jpg/jcr:content/renditions/cq5dam.web.1440.1440.jpeg;132735 bytes;60463.600000000006 bytes
+https://www.amplifon.com/content/dam/content-factory/photos/products/reel/OL_WP_Energy_04.jpg/jcr:content/renditions/cq5dam.web.1280.1280.jpeg;94013 bytes;60218.85 bytes
+https://www.amplifon.com/content/dam/content-factory/photos/Store/shooting/unbranded/_DSC9058.jpg/jcr:content/renditions/cq5dam.web.1440.1440.jpeg;135106 bytes;49992.25 bytes
+https://www.amplifon.com/content/dam/content-factory/photos/lifestyle-stock/507654337.jpg/jcr:content/renditions/cq5dam.web.640.640.jpeg;42261 bytes;16255.75 bytes
+https://www.amplifon.com/content/dam/content-factory/photos/products/reel/Ampli%20Easy_WithoutOyster_Capuccino.jpg/jcr:content/renditions/cq5dam.web.640.640.jpeg;33886 bytes;15752.599999999999 bytes
+https://www.amplifon.com/content/dam/content-factory/photos/products/reel/Ampli%20Connect_WithoutOyster_Smartphone.jpg/jcr:content/renditions/cq5dam.web.640.640.jpeg;27088 bytes;14177.75 bytes
+https://www.amplifon.com/content/dam/content-factory/photos/covid/reel/2019-09-24-AMPLIFON-DSC4315_NO%20COLOR.jpg/jcr:content/renditions/cq5dam.web.700.700.jpeg;30809 bytes;13580.95 bytes
+https://www.amplifon.com/content/dam/content-factory/photos/products/reel/Ampli%20Mini_WithoutOyster_Bedside.jpg/jcr:content/renditions/cq5dam.web.640.640.jpeg;20892 bytes;10793.25 bytes
+https://www.amplifon.com/content/dam/content-factory/photos/tvc-campaign/it/amplifon-noi/amplifon_noi_rosso.jpg/jcr:content/renditions/cq5dam.web.800.800.jpeg;20277 bytes;10627.95 bytes
+https://www.amplifon.com/content/dam/content-factory/photos/tvc-campaign/sp/audiologist_client_hearing_test_woman.jpg/jcr:content/renditions/cq5dam.web.640.640.jpeg;22743 bytes;10270.75 bytes
+https://www.amplifon.com/content/dam/content-factory/photos/products/reel/OL_WP_Energy_04.jpg/jcr:content/renditions/cq5dam.web.700.700.jpeg;18961 bytes;10080 bytes
+
+MINIMIZE MAIN-THREAD WORK
+TIME SPENT;CATEGORY
+1103.916999999998 ms;Script Evaluation text
+574.9989999999926 ms;Other text
+238.67499999999993 ms;Style & Layout text
+166.76899999999983 ms;Parse HTML & CSS text
+132.03900000000002 ms;Script Parsing & Compilation text
+68.87700000000017 ms;Rendering text
+26.681999999999995 ms;Garbage Collection text
+
+PRELOAD LARGEST CONTENTFUL PAINT IMAGE
+URL;POTENTIAL SAVINGS
+https://www.amplifon.com/content/dam/content-factory/photos/tvc-campaign/smile/ita/smile_2022/Amplifon2022_Testimonial11_1142.jpg/jcr:content/renditions/cq5dam.web.1440.1440.jpeg; timespanMs
+
+AVOID ENORMOUS NETWORK PAYLOADS
+URL;TRANSFER SIZE
+https://www.amplifon.com/etc/designs/amplifonsite/amplifon-emea/clientlib-amplifon-emea/fonts/Noto_Sans/NotoSans-Bold.ttf;579009 bytes
+https://www.amplifon.com/etc/designs/amplifonsite/amplifon-emea/clientlib-amplifon-emea/fonts/Noto_Sans/NotoSans-Regular.ttf;577845 bytes
+https://www.amplifon.com/etc/designs/amplifonsite/amplifon-emea/clientlib-amplifon-emea-vendor.min.js;292851 bytes
+https://www.amplifon.com/etc/designs/amplifonsite/amplifon-emea/clientlib-amplifon-emea.min.css;272469 bytes
+https://www.amplifon.com/etc/designs/amplifonsite/amplifon-emea/clientlib-amplifon-emea.min.js;231428 bytes
+https://www.amplifon.com/content/dam/content-factory/photos/Store/shooting/unbranded/_DSC9058.jpg/jcr:content/renditions/cq5dam.web.1440.1440.jpeg;154147 bytes
+https://www.amplifon.com/content/dam/content-factory/photos/tvc-campaign/smile/ita/smile_2022/Amplifon2022_Testimonial11_1142.jpg/jcr:content/renditions/cq5dam.web.1440.1440.jpeg;152769 bytes
+https://assets.adobedtm.com/launch-ENaae529a6352043f5884362eb63ccd197.min.js;149898 bytes
+https://www.amplifon.com/content/dam/content-factory/photos/products/reel/OL_WP_Energy_04.jpg/jcr:content/renditions/cq5dam.web.1280.1280.jpeg;114378 bytes
+https://cdn.cookielaw.org/scripttemplates/6.33.0/otBannerSdk.js;82234 bytes
+
+ENSURE TEXT REMAINS VISIBLE DURING WEBFONT LOAD
+URL;POTENTIAL SAVINGS
+https://www.amplifon.com/etc/designs/amplifonsite/amplifon-emea/clientlib-amplifon-emea/fonts/Value-Regular-Web.woff2;93.33299985155463 ms
+https://www.amplifon.com/etc/designs/amplifonsite/amplifon-emea/clientlib-amplifon-emea/fonts/Value-Bold-Web.woff2;96.57600009813905 ms
+https://www.amplifon.com/etc/designs/amplifonsite/amplifon-emea/clientlib-amplifon-emea/fonts/Noto_Sans/NotoSans-Regular.ttf;124.96399972587824 ms
+https://www.amplifon.com/etc/designs/amplifonsite/amplifon-emea/clientlib-amplifon-emea/fonts/Noto_Sans/NotoSans-Bold.ttf;41.83899983763695 ms
+
+LARGEST CONTENTFUL PAINT IMAGE WAS NOT LAZILY LOADED
+ELEMENT
+{'selector': 'div.m-001-stage-home-wrapper > div.container-full > div.m-001-bg-container > div.focuspoint-bg', 'path': '1,HTML,1,BODY,3,MAIN,1,DIV,0,SECTION,1,DIV,0,DIV,0,DIV,0,DIV', 'boundingRect': {'bottom': 473, 'left': 0, 'top': 97, 'width': 1350, 'height': 376, 'right': 1350}, 'lhId': 'page-25-DIV', 'snippet': '<div class="focuspoint-bg xs-flex-row flex-column justify-content-end d-flex lazy-back…" data-aem-asset-id="b9ac7aaa-1240-4027-a098-2af786bb2c3e" data-trackable="true" style="background-image: url(&quot\\;/content/dam/content-factory/photos/tvc-campaign/sm…&quot\\;)\\;" data-focus-x="0.37" data-focus-y="0.34" data-image-w="1440" data-image-h="960" data-images="[{&quot\\;url&quot\\;:&quot\\;/content/dam/content-factory/photos/tvc-campaign/smile/ita/smile_…">', 'type': 'node', 'nodeLabel': 'Fai prevenzione: il controllo è gratuito\nPrenditi cura di te e del tuo benesser…'} node
+
+MINIFY JAVASCRIPT
+URL;TRANSFER SIZE;POTENTIAL SAVINGS
+inline: 
+if (document.location.href.indexOf('/it...;3514 bytes;3259 bytes
+https://www.amplifon.com/etc/designs/amplifonsite/generic-scripts/optanonWrapper.js;21654 bytes;2240 bytes
+
+AVOID NON-COMPOSITED ANIMATIONS
+ELEMENT
+{'type': 'node', 'boundingRect': {'bottom': 39, 'left': 40, 'width': 1283, 'top': -516, 'right': 1323, 'height': 555}, 'selector': 'nav.main-navigation > ul.main-level-navigation > li.main-level-item > div.second-level-main', 'nodeLabel': 'Apparecchi acustici\nLe famiglie Amplifon\nTipologie e modelli\nTecnologia\nAccesso…', 'lhId': 'page-36-DIV', 'path': '1,HTML,1,BODY,2,HEADER,1,DIV,1,DIV,2,DIV,0,DIV,0,DIV,0,DIV,0,NAV,0,UL,1,LI,3,DIV', 'snippet': '<div class="second-level-main" style="height: 555px\\; top: -555px\\;">'} node
+{'selector': 'nav.main-navigation > ul.main-level-navigation > li.main-level-item > div.second-level-main', 'snippet': '<div class="second-level-main" style="height: 555px\\; top: -555px\\;">', 'boundingRect': {'height': 555, 'bottom': 39, 'left': 40, 'top': -516, 'width': 1283, 'right': 1323}, 'lhId': 'page-37-DIV', 'path': '1,HTML,1,BODY,2,HEADER,1,DIV,1,DIV,2,DIV,0,DIV,0,DIV,0,DIV,0,NAV,0,UL,2,LI,3,DIV', 'type': 'node', 'nodeLabel': 'Chi siamo\nPerché Amplifon\nI nostri audioprotesisti\nAscoltiamo la nuova generazi…'} node
+{'boundingRect': {'right': 1323, 'height': 555, 'left': 40, 'top': -516, 'bottom': 39, 'width': 1283}, 'path': '1,HTML,1,BODY,2,HEADER,1,DIV,1,DIV,2,DIV,0,DIV,0,DIV,0,DIV,0,NAV,0,UL,3,LI,3,DIV', 'snippet': '<div class="second-level-main" style="height: 555px\\; top: -555px\\;">', 'nodeLabel': "Perdita dell'udito\nCome funziona l'udito\nSegni del calo dell'udito\nCause della …", 'type': 'node', 'selector': 'nav.main-navigation > ul.main-level-navigation > li.main-level-item > div.second-level-main', 'lhId': 'page-38-DIV'} node
+
+DEFER OFFSCREEN IMAGES
+URL;RESOURCE SIZE;POTENTIAL SAVINGS
+https://www.amplifon.com/etc/designs/amplifonsite/amplifon-emea/clientlib-amplifon-emea/img/loaders/loading-white-bg.gif;46159 bytes;46159 bytes
+https://cdn.cookielaw.org/logos/static/powered_by_logo.svg;2817 bytes;2817 bytes
+
