@@ -167,11 +167,16 @@ if first_input == "1":
                     f.write(json_data.replace("\n", ""))
 
                 csv_string = create_csv_string(filtered_json)
-                
 
-                with open(("test.csv").replace("/", "-"), "w", encoding="utf-8") as f:
+                path = "results/"
+
+                if not os.path.exists(path):
+                    os.makedirs(path)
+                
+                path = path + (url).replace("/", "-").replace(":", "-") + ".csv"
+                with open(path, "w", encoding="utf-8") as f:
                     f.write(csv_string)
-                    print(os.path.abspath(("test.csv").replace("/", "-")))
+                    print(os.path.abspath(path))
                     
                 print("Generazione csv comnpletata")
         else:

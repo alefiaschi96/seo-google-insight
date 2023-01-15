@@ -1,10 +1,100 @@
-AVOID LONG MAIN-THREAD TASKS
-URL;DURATION;START TIME
-https://it.wikipedia.org/wiki/Pagina_principale;67 ms;249 ms
+INITIAL SERVER RESPONSE TIME WAS SHORT
+URL;TIME SPENT
+https://it.wikipedia.org/wiki/Pagina_principale;22.074 timespanMs
+
+KEEP REQUEST COUNTS LOW AND TRANSFER SIZES SMALL
+RESOURCE TYPE;REQUESTS;TRANSFER SIZE
+Total text;70 numeric;1235419 bytes
+Script text;11 numeric;979969 bytes
+Image text;49 numeric;187438 bytes
+Stylesheet text;5 numeric;36118 bytes
+Document text;3 numeric;29481 bytes
+Other text;2 numeric;2413 bytes
+Media text; numeric; bytes
+Font text; numeric; bytes
+Third-party text;47 numeric;187197 bytes
+
+REDUCE UNUSED CSS
+URL;TRANSFER SIZE;POTENTIAL SAVINGS
+.mw-parser-output{counter-reset:mw-numbered-ext-link} ...;102879 bytes;102748 bytes
+.mw-editfont-monospace{font-family:monospace,monospace} ...;24057 bytes;24009 bytes
+.mw-upload-bookletLayout-filePreview{width:100%\;height:1em\;background-color:#eaecf0\; ... } ...;12258 bytes;12258 bytes
+
+AVOIDS ENORMOUS NETWORK PAYLOADS
+URL;TRANSFER SIZE
+https://it.wikipedia.org/w/load.php?lang=it&modules=ext.visualEditor.articleTarget%2Cbase%2Ccore%2CdesktopTarget%2Cdiffing%2Cicons%2Clanguage%2Cmediawiki%2Cmwalienextension%2Cmwcore%2Cmwextensions%2Cmwformatting%2Cmwgallery%2Cmwimage%2Cmwlanguage%2Cmwlink%2Cmwmeta%2Cmwsave%2Cmwsignature%2Cmwtransclusion%2Cmwwikitext%2Csanitize%2Cswitching%2Cwelcome%7Cext.visualEditor.core.desktop%2Cutils%7Cext.visualEditor.mwextensions.desktop%7Cext.visualEditor.mwimage.core&skin=vector&version=1qcil;350569 bytes
+https://it.wikipedia.org/w/load.php?lang=it&modules=ext.centralNotice.choiceData%2Cdisplay%2CgeoIP%2CimpressionDiet%2CkvStore%2ClegacySupport%2CstartUp%7Cext.centralauth.centralautologin%7Cext.cx.eventlogging.campaigns%7Cext.discussionTools.init%7Cext.discussionTools.init.styles%7Cext.echo.centralauth%7Cext.eventLogging%2CnavigationTiming%2Cpopups%2CwikimediaEvents%7Cext.growthExperiments.SuggestedEditSession%7Cext.uls.interface%2Cpreferences%2Cwebfonts%7Cjquery%2Cmoment%2Coojs%2Coojs-router%2Coojs-ui-core%2Coojs-ui-windows%2Crangefix%2Csite%7Cjquery.client%2Ccookie%2CtextSelection%7Cmediawiki.String%2CTitle%2CUri%2Capi%2Cbase%2Ccldr%2Ccookie%2Cexperiments%2CjqueryMsg%2Clanguage%2Cstorage%2Cuser%2Cutil%2CvisibleTimeout%7Cmediawiki.editfont.styles%7Cmediawiki.libs.pluralruleparser%7Cmediawiki.page.ready%7Cmediawiki.ui.button%2Cicon%7Cmmv.bootstrap%2Chead%7Cmmv.bootstrap.autostart%7Coojs-ui-core.icons%2Cstyles%7Coojs-ui-windows.icons%7Coojs-ui.styles.indicators%7Cskins.vector.legacy.js&skin=vector&version=1beuc;277270 bytes
+https://it.wikipedia.org/w/load.php?lang=it&modules=diffMatchPatch%2Cdompurify%2Coojs-ui%2Coojs-ui-toolbars%2Coojs-ui-widgets%2Cpapaparse%2Cspark-md5%2CtreeDiffer%2Cunicodejs%7Cext.CodeMirror.visualEditor%7Cext.CodeMirror.visualEditor.init%7Cext.TemplateSandbox.visualeditor%7Cext.abuseFilter.visualEditor%7Cext.centralauth.ForeignApi%7Cext.cite.style%2Cstyles%2CvisualEditor%7Cext.cite.visualEditor.core%7Cext.citoid.visualEditor%7Cext.citoid.visualEditor.data%7Cext.confirmEdit.CaptchaInputWidget%2CvisualEditor%7Cext.disambiguator.visualEditor%7Cext.discussionTools.ReplyWidget%2CReplyWidgetVisual%7Cext.geshi.visualEditor%7Cext.graph.data%2CvisualEditor%7Cext.kartographer%7Cext.kartographer.editing%2Cutil%2CvisualEditor%7Cext.math.styles%2CvisualEditor%7Cext.score.visualEditor%7Cext.score.visualEditor.icons%7Cext.spamBlacklist.visualEditor%7Cext.templateDataGenerator.editPage%7Cext.titleblacklist.visualEditor%7Cext.visualEditor.data%2CmoduleIcons%2CmoduleIndicators%7Cext.wikihiero.visualEditor%7Cext.wikimediaEvents.visualEditor%7Cjquery.lengthLimit%2Cspinner%2Ctablesorter%7Cjquery.spinner.styles%7Cjquery.tablesorter.styles%7Cjquery.uls.data%7Cmediawiki.ForeignApi%2CForeignUpload%2CUpload%2Cdiff%2Cpulsatingdot%2Cwidgets%7Cmediawiki.ForeignApi.core%7Cmediawiki.ForeignStructuredUpload.BookletLayout%7Cmediawiki.Upload.BookletLayout%7Cmediawiki.action.view.redirectPage%7Cmediawiki.diff.styles%7Cmediawiki.interface.helpers.styles%7Cmediawiki.language.months%2Cnames%7Cmediawiki.libs.jpegmeta%7Cmediawiki.page.gallery.styles%7Cmediawiki.skinning.content.parsoid%7Cmediawiki.widgets.AbandonEditDialog%2CCategoryMultiselectWidget%2CDateInputWidget%2CMediaSearch%2CTable%2CUserInputWidget%2Cstyles%2CvisibleLengthLimit%7Cmediawiki.widgets.DateInputWidget.styles%7Coojs-ui-toolbars.icons%7Coojs-ui-widgets.icons%7Coojs-ui.styles.icons-accessibility%2Cicons-alerts%2Cicons-content%2Cicons-editing-advanced%2Cicons-editing-citation%2Cicons-editing-core%2Cicons-editing-list%2Cicons-editing-styling%2Cicons-interactions%2Cicons-layout%2Cicons-location%2Cicons-media%2Cicons-moderation%2Cicons-movement%2Cicons-user%2Cicons-wikimedia&skin=vector&version=vbxg6;265718 bytes
+https://it.wikipedia.org/wiki/Pagina_principale;26831 bytes
+https://it.wikipedia.org/w/load.php?lang=it&modules=startup&only=scripts&raw=1&skin=vector;20923 bytes
+https://it.wikipedia.org/w/load.php?lang=it&modules=ext.math.popup%7Cext.popups.icons%2Cimages%2Cmain%7Cmediawiki.ui.checkbox&skin=vector&version=1vfdh;20881 bytes
+https://it.wikipedia.org/w/load.php?lang=it&modules=ext.visualEditor.core.utils.parsing%7Cext.visualEditor.desktopArticleTarget.init%7Cext.visualEditor.progressBarWidget%2CsupportCheck%2CtargetLoader%2CtempWikitextEditorWidget%2Ctrack%2Cve&skin=vector&version=1k9ls;18947 bytes
+https://www.wikipedia.it/sharedheader.css;18360 bytes
+https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Spedizione_in_sicilia_it.svg/150px-Spedizione_in_sicilia_it.svg.png;17586 bytes
+https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Vicenza_banner2.jpg/260px-Vicenza_banner2.jpg;13028 bytes
 
 MINIMIZE THIRD-PARTY USAGE
 MAIN-THREAD BLOCKING TIME;THIRD-PARTY;TRANSFER SIZE
- ms;{'text': 'Google Analytics', 'url': 'https://marketingplatform.google.com/about/analytics/', 'type': 'link'} link; bytes
+ ms;{'type': 'link', 'text': 'Google Analytics', 'url': 'https://marketingplatform.google.com/about/analytics/'} link; bytes
+
+USER TIMING MARKS AND MEASURES
+DURATION;NAME;START TIME;TYPE
+ ms;mwStartup text;151.851 ms;Mark text
+
+LARGEST CONTENTFUL PAINT ELEMENT
+ELEMENT
+{'nodeLabel': 'La spedizione ateniese in Sicilia — anche seconda spedizione ateniese in Sicili…', 'lhId': 'page-63-P', 'snippet': '<p>', 'selector': 'div.main-page-body > div > div > p', 'boundingRect': {'height': 224, 'bottom': 569, 'width': 670, 'right': 902, 'top': 345, 'left': 232}, 'path': '1,HTML,1,BODY,2,DIV,4,DIV,6,DIV,0,DIV,2,DIV,0,DIV,2,DIV,1,P', 'type': 'node'} node
+
+TASKS
+END TIME;START TIME
+11.02 ms;-2404.789 ms
+10.761 ms;-2393.411 ms
+9.654 ms;-2261.24 ms
+7.525 ms;-2190.747 ms
+23.682 ms;68.883 ms
+8.42 ms;93.11 ms
+12.605 ms;107.045 ms
+11.25 ms;149.398 ms
+16.413 ms;244.2 ms
+24.875 ms;261.495 ms
+51.86 ms;286.451 ms
+218.842 ms;517.908 ms
+9.576 ms;748.741 ms
+11.274 ms;758.328 ms
+7.769 ms;776.585 ms
+13.282 ms;784.362 ms
+23.743 ms;799.203 ms
+11.877 ms;830.335 ms
+8.674 ms;849.028 ms
+34.371 ms;859.539 ms
+12.13 ms;902.227 ms
+7.786 ms;947.774 ms
+25.91 ms;975.952 ms
+25.194 ms;1001.923 ms
+29.166 ms;1029.886 ms
+34.109 ms;1059.065 ms
+30.085 ms;1093.489 ms
+37.422 ms;1123.911 ms
+37.861 ms;1161.369 ms
+12.769 ms;1200.547 ms
+9.971 ms;1221.761 ms
+5.403 ms;1231.782 ms
+84.427 ms;1237.198 ms
+5.495 ms;1329.942 ms
+7.5 ms;1346.622 ms
+8.471 ms;1354.162 ms
+23.516 ms;1363.425 ms
+11.235 ms;1388.803 ms
+
+MINIMIZES MAIN-THREAD WORK
+TIME SPENT;CATEGORY
+458.58199999999954 ms;Script Evaluation text
+258.6559999999999 ms;Style & Layout text
+200.37899999999973 ms;Other text
+105.522 ms;Script Parsing & Compilation text
+41.56500000000004 ms;Rendering text
+37.11099999999999 ms;Parse HTML & CSS text
+12.684999999999999 ms;Garbage Collection text
 
 AVOID MULTIPLE PAGE REDIRECTS
 URL;TIME SPENT
@@ -13,249 +103,168 @@ http://it.wikipedia.org/;190 timespanMs
 https://it.wikipedia.org/;150 timespanMs
 https://it.wikipedia.org/wiki/Pagina_principale; timespanMs
 
-TASKS
-END TIME;START TIME
-6.874 ms;-2970.936 ms
-10.673 ms;-2963.865 ms
-6.675 ms;-2535.014 ms
-10.222 ms;-2149.281 ms
-13.85 ms;75.83 ms
-6.106 ms;90.07 ms
-8.688 ms;101.2 ms
-133.297 ms;121.111 ms
-5.494 ms;268.96 ms
-7.731 ms;277.535 ms
-5.287 ms;344.959 ms
-17.209 ms;350.291 ms
-36.238 ms;367.549 ms
-21.385 ms;403.807 ms
-6.787 ms;427.193 ms
-6.986 ms;440.937 ms
-14.013 ms;448.839 ms
-5.803 ms;463.037 ms
-6.311 ms;473.511 ms
-21.264 ms;484.377 ms
-7.091 ms;515.615 ms
-18.631 ms;565.803 ms
-5.928 ms;584.526 ms
-6.872 ms;591.12 ms
-21.494 ms;598.871 ms
-23.097 ms;621.982 ms
-17.346 ms;645.328 ms
-19.775 ms;663.596 ms
-6.737 ms;683.979 ms
-50.477 ms;701.791 ms
-5.907 ms;782.433 ms
-13.694 ms;798.982 ms
-6.95 ms;815.816 ms
-5.425 ms;832.347 ms
-
-REDUCE UNUSED JAVASCRIPT
-URL;TRANSFER SIZE;POTENTIAL SAVINGS
-https://it.wikipedia.org/w/load.php?lang=it&modules=ext.visualEditor.articleTarget%2Cbase%2Ccore%2CdesktopTarget%2Cdiffing%2Cicons%2Clanguage%2Cmediawiki%2Cmwalienextension%2Cmwcore%2Cmwextensions%2Cmwformatting%2Cmwgallery%2Cmwimage%2Cmwlanguage%2Cmwlink%2Cmwmeta%2Cmwsave%2Cmwsignature%2Cmwtransclusion%2Cmwwikitext%2Csanitize%2Cswitching%2Cwelcome%7Cext.visualEditor.core.desktop%2Cutils%7Cext.visualEditor.mwextensions.desktop%7Cext.visualEditor.mwimage.core&skin=vector&version=1qcil;350567 bytes;248013 bytes
-https://it.wikipedia.org/w/load.php?lang=it&modules=ext.centralNotice.choiceData%2Cdisplay%2CgeoIP%2CimpressionDiet%2CkvStore%2ClegacySupport%2CstartUp%7Cext.centralauth.centralautologin%7Cext.cx.eventlogging.campaigns%7Cext.discussionTools.init%7Cext.discussionTools.init.styles%7Cext.echo.centralauth%7Cext.eventLogging%2CnavigationTiming%2Cpopups%2CwikimediaEvents%7Cext.growthExperiments.SuggestedEditSession%7Cext.uls.interface%2Cpreferences%2Cwebfonts%7Cjquery%2Cmoment%2Coojs%2Coojs-router%2Coojs-ui-core%2Coojs-ui-windows%2Crangefix%2Csite%7Cjquery.client%2Ccookie%2CtextSelection%7Cmediawiki.String%2CTitle%2CUri%2Capi%2Cbase%2Ccldr%2Ccookie%2Cexperiments%2CjqueryMsg%2Clanguage%2Cstorage%2Cuser%2Cutil%2CvisibleTimeout%7Cmediawiki.editfont.styles%7Cmediawiki.libs.pluralruleparser%7Cmediawiki.page.ready%7Cmediawiki.ui.button%2Cicon%7Cmmv.bootstrap%2Chead%7Cmmv.bootstrap.autostart%7Coojs-ui-core.icons%2Cstyles%7Coojs-ui-windows.icons%7Coojs-ui.styles.indicators%7Cskins.vector.legacy.js&skin=vector&version=1n3s8;277130 bytes;133873 bytes
-https://it.wikipedia.org/w/load.php?lang=it&modules=diffMatchPatch%2Cdompurify%2Coojs-ui%2Coojs-ui-toolbars%2Coojs-ui-widgets%2Cpapaparse%2Cspark-md5%2CtreeDiffer%2Cunicodejs%7Cext.CodeMirror.visualEditor%7Cext.CodeMirror.visualEditor.init%7Cext.TemplateSandbox.visualeditor%7Cext.abuseFilter.visualEditor%7Cext.centralauth.ForeignApi%7Cext.cite.style%2Cstyles%2CvisualEditor%7Cext.cite.visualEditor.core%7Cext.citoid.visualEditor%7Cext.citoid.visualEditor.data%7Cext.confirmEdit.CaptchaInputWidget%2CvisualEditor%7Cext.disambiguator.visualEditor%7Cext.discussionTools.ReplyWidget%2CReplyWidgetVisual%7Cext.geshi.visualEditor%7Cext.graph.data%2CvisualEditor%7Cext.kartographer%7Cext.kartographer.editing%2Cutil%2CvisualEditor%7Cext.math.styles%2CvisualEditor%7Cext.score.visualEditor%7Cext.score.visualEditor.icons%7Cext.spamBlacklist.visualEditor%7Cext.templateDataGenerator.editPage%7Cext.titleblacklist.visualEditor%7Cext.visualEditor.data%2CmoduleIcons%2CmoduleIndicators%7Cext.wikihiero.visualEditor%7Cext.wikimediaEvents.visualEditor%7Cjquery.lengthLimit%2Cspinner%2Ctablesorter%7Cjquery.spinner.styles%7Cjquery.tablesorter.styles%7Cjquery.uls.data%7Cmediawiki.ForeignApi%2CForeignUpload%2CUpload%2Cdiff%2Cpulsatingdot%2Cwidgets%7Cmediawiki.ForeignApi.core%7Cmediawiki.ForeignStructuredUpload.BookletLayout%7Cmediawiki.Upload.BookletLayout%7Cmediawiki.action.view.redirectPage%7Cmediawiki.diff.styles%7Cmediawiki.interface.helpers.styles%7Cmediawiki.language.months%2Cnames%7Cmediawiki.libs.jpegmeta%7Cmediawiki.page.gallery.styles%7Cmediawiki.skinning.content.parsoid%7Cmediawiki.widgets.AbandonEditDialog%2CCategoryMultiselectWidget%2CDateInputWidget%2CMediaSearch%2CTable%2CUserInputWidget%2Cstyles%2CvisibleLengthLimit%7Cmediawiki.widgets.DateInputWidget.styles%7Coojs-ui-toolbars.icons%7Coojs-ui-widgets.icons%7Coojs-ui.styles.icons-accessibility%2Cicons-alerts%2Cicons-content%2Cicons-editing-advanced%2Cicons-editing-citation%2Cicons-editing-core%2Cicons-editing-list%2Cicons-editing-styling%2Cicons-interactions%2Cicons-layout%2Cicons-location%2Cicons-media%2Cicons-moderation%2Cicons-movement%2Cicons-user%2Cicons-wikimedia&skin=vector&version=vbxg6;265717 bytes;93627 bytes
-
-SERVE STATIC ASSETS WITH AN EFFICIENT CACHE POLICY
-URL;CACHE TTL;TRANSFER SIZE
-https://www.wikipedia.it/sharedheader.css; ms;18360 bytes
-https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/%D0%97%D0%B0%D0%BA%D0%B0%D1%82_%D0%BD%D0%B0_%D0%BE%D0%B7%D0%B5%D1%80%D0%B5_%D0%91%D0%B0%D1%81%D0%BA%D1%83%D0%BD%D1%87%D0%B0%D0%BA.jpg/260px-%D0%97%D0%B0%D0%BA%D0%B0%D1%82_%D0%BD%D0%B0_%D0%BE%D0%B7%D0%B5%D1%80%D0%B5_%D0%91%D0%B0%D1%81%D0%BA%D1%83%D0%BD%D1%87%D0%B0%D0%BA.jpg; ms;14306 bytes
-https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Vicenza_banner2.jpg/260px-Vicenza_banner2.jpg; ms;13027 bytes
-https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/The_day_after_Kristallnacht.jpg/150px-The_day_after_Kristallnacht.jpg; ms;9002 bytes
-https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Le_Petit_Journal_-_25_August_1907%2C_Vere_St._Leger_Goold_%28cropped%29.jpg/106px-Le_Petit_Journal_-_25_August_1907%2C_Vere_St._Leger_Goold_%28cropped%29.jpg; ms;8109 bytes
-https://upload.wikimedia.org/wikipedia/commons/8/8c/Bluebg_rounded_croped.png; ms;8089 bytes
-https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Isla_del_Coco-chatham_beach.jpg/150px-Isla_del_Coco-chatham_beach.jpg; ms;7762 bytes
-https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Serao_-_La_conquista_di_Roma.djvu/page9-170px-Serao_-_La_conquista_di_Roma.djvu.jpg; ms;7512 bytes
-https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Denis_Bourez_-_Madame_Tussauds%2C_London_%288748150092%29.jpg/100px-Denis_Bourez_-_Madame_Tussauds%2C_London_%288748150092%29.jpg; ms;5282 bytes
-https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/HSWikimedia.svg/38px-HSWikimedia.svg.png; ms;4351 bytes
-https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Text-x-generic_with_pencil-2.svg/38px-Text-x-generic_with_pencil-2.svg.png; ms;3519 bytes
-https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/HSTools.svg/38px-HSTools.svg.png; ms;3401 bytes
-https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Wiktionary-logo.svg/30px-Wiktionary-logo.svg.png; ms;3332 bytes
-https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikispecies-logo.svg/30px-Wikispecies-logo.svg.png; ms;3254 bytes
-https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/HS_geo.svg/38px-HS_geo.svg.png; ms;3112 bytes
-https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/HSDagensdatum.svg/38px-HSDagensdatum.svg.png; ms;2987 bytes
-https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Wikimedia-logo-circle.svg/38px-Wikimedia-logo-circle.svg.png; ms;2964 bytes
-https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/PL_Wiki_Aktualnosci_ikona.svg/38px-PL_Wiki_Aktualnosci_ikona.svg.png; ms;2940 bytes
-https://www.wikipedia.it/images/logo_yepa_txt.png; ms;2919 bytes
-https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/HSUtvald.svg/38px-HSUtvald.svg.png; ms;2902 bytes
-https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Wikinews-logo.svg/30px-Wikinews-logo.svg.png; ms;2818 bytes
-https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Nuvola_apps_bookcase_simplified.svg/15px-Nuvola_apps_bookcase_simplified.svg.png; ms;2747 bytes
-https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/HS_VdQ.svg/38px-HS_VdQ.svg.png; ms;2734 bytes
-https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Wikibooks-logo.svg/30px-Wikibooks-logo.svg.png; ms;2729 bytes
-https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/HSContribs.svg/38px-HSContribs.svg.png; ms;2722 bytes
-https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/PL_Wiki_CzyWiesz_ikona.svg/38px-PL_Wiki_CzyWiesz_ikona.svg.png; ms;2717 bytes
-https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wikisource-logo.svg/30px-Wikisource-logo.svg.png; ms;2694 bytes
-https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Wikimedia_Community_Logo.svg/30px-Wikimedia_Community_Logo.svg.png; ms;2583 bytes
-https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Wikimedia-logo-meta.svg/18px-Wikimedia-logo-meta.svg.png; ms;2541 bytes
-https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Wikiquote-logo.svg/30px-Wikiquote-logo.svg.png; ms;2494 bytes
-https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Commons-logo.svg/30px-Commons-logo.svg.png; ms;2307 bytes
-https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/W-circle.svg/38px-W-circle.svg.png; ms;2279 bytes
-https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wikisource-logo.svg/19px-Wikisource-logo.svg.png; ms;2186 bytes
-https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Wikinews-logo.svg/25px-Wikinews-logo.svg.png; ms;2179 bytes
-https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Wikiversity-logo.svg/30px-Wikiversity-logo.svg.png; ms;2048 bytes
-https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Wikiquote-logo.svg/18px-Wikiquote-logo.svg.png; ms;2012 bytes
-https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Commons-logo.svg/18px-Commons-logo.svg.png; ms;1978 bytes
-https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Crystal_Clear_app_xmag.svg/15px-Crystal_Clear_app_xmag.svg.png; ms;1939 bytes
-https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Wikivoyage-Logo-v3-icon.svg/30px-Wikivoyage-Logo-v3-icon.svg.png; ms;1901 bytes
-https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/1rightarrow.png/15px-1rightarrow.png; ms;1838 bytes
-https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Wikivoyage-Logo-v3-icon.svg/19px-Wikivoyage-Logo-v3-icon.svg.png; ms;1765 bytes
-https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Wikidata-logo.svg/32px-Wikidata-logo.svg.png; ms;1591 bytes
-https://www.kataweb.it/static/shared/cf_bg_network_newbg.gif;3600000 ms;715 bytes
+JAVASCRIPT EXECUTION TIME
+URL;SCRIPT PARSE;SCRIPT EVALUATION;TOTAL CPU TIME
+https://it.wikipedia.org/wiki/Pagina_principale;4.001 ms;149.596 ms;467.24399999999997 ms
+https://it.wikipedia.org/w/load.php?lang=it&modules=startup&only=scripts&raw=1&skin=vector;1.661 ms;232.60599999999997 ms;258.702 ms
+Unattributable; ms;2.2749999999999964 ms;160.5400000000001 ms
+https://it.wikipedia.org/w/load.php?lang=it&modules=ext.centralNotice.choiceData%2Cdisplay%2CgeoIP%2CimpressionDiet%2CkvStore%2ClegacySupport%2CstartUp%7Cext.centralauth.centralautologin%7Cext.cx.eventlogging.campaigns%7Cext.discussionTools.init%7Cext.discussionTools.init.styles%7Cext.echo.centralauth%7Cext.eventLogging%2CnavigationTiming%2Cpopups%2CwikimediaEvents%7Cext.growthExperiments.SuggestedEditSession%7Cext.uls.interface%2Cpreferences%2Cwebfonts%7Cjquery%2Cmoment%2Coojs%2Coojs-router%2Coojs-ui-core%2Coojs-ui-windows%2Crangefix%2Csite%7Cjquery.client%2Ccookie%2CtextSelection%7Cmediawiki.String%2CTitle%2CUri%2Capi%2Cbase%2Ccldr%2Ccookie%2Cexperiments%2CjqueryMsg%2Clanguage%2Cstorage%2Cuser%2Cutil%2CvisibleTimeout%7Cmediawiki.editfont.styles%7Cmediawiki.libs.pluralruleparser%7Cmediawiki.page.ready%7Cmediawiki.ui.button%2Cicon%7Cmmv.bootstrap%2Chead%7Cmmv.bootstrap.autostart%7Coojs-ui-core.icons%2Cstyles%7Coojs-ui-windows.icons%7Coojs-ui.styles.indicators%7Cskins.vector.legacy.js&skin=vector&version=1beuc;22.958 ms;62.016000000000034 ms;97.95300000000003 ms
 
 ELIMINATE RENDER-BLOCKING RESOURCES
 URL;TRANSFER SIZE;POTENTIAL SAVINGS
 https://it.wikipedia.org/w/load.php?lang=it&modules=ext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediaBadges%7Cskins.vector.styles.legacy&only=styles&skin=vector;10473 bytes;70 timespanMs
-https://it.wikipedia.org/w/load.php?lang=it&modules=ext.gadget.PDCStriker&only=styles&skin=vector;1563 bytes;150 timespanMs
-https://it.wikipedia.org/w/load.php?lang=it&modules=site.styles&only=styles&skin=vector;3025 bytes;150 timespanMs
-
-AVOIDS ENORMOUS NETWORK PAYLOADS
-URL;TRANSFER SIZE
-https://it.wikipedia.org/w/load.php?lang=it&modules=ext.visualEditor.articleTarget%2Cbase%2Ccore%2CdesktopTarget%2Cdiffing%2Cicons%2Clanguage%2Cmediawiki%2Cmwalienextension%2Cmwcore%2Cmwextensions%2Cmwformatting%2Cmwgallery%2Cmwimage%2Cmwlanguage%2Cmwlink%2Cmwmeta%2Cmwsave%2Cmwsignature%2Cmwtransclusion%2Cmwwikitext%2Csanitize%2Cswitching%2Cwelcome%7Cext.visualEditor.core.desktop%2Cutils%7Cext.visualEditor.mwextensions.desktop%7Cext.visualEditor.mwimage.core&skin=vector&version=1qcil;350567 bytes
-https://it.wikipedia.org/w/load.php?lang=it&modules=ext.centralNotice.choiceData%2Cdisplay%2CgeoIP%2CimpressionDiet%2CkvStore%2ClegacySupport%2CstartUp%7Cext.centralauth.centralautologin%7Cext.cx.eventlogging.campaigns%7Cext.discussionTools.init%7Cext.discussionTools.init.styles%7Cext.echo.centralauth%7Cext.eventLogging%2CnavigationTiming%2Cpopups%2CwikimediaEvents%7Cext.growthExperiments.SuggestedEditSession%7Cext.uls.interface%2Cpreferences%2Cwebfonts%7Cjquery%2Cmoment%2Coojs%2Coojs-router%2Coojs-ui-core%2Coojs-ui-windows%2Crangefix%2Csite%7Cjquery.client%2Ccookie%2CtextSelection%7Cmediawiki.String%2CTitle%2CUri%2Capi%2Cbase%2Ccldr%2Ccookie%2Cexperiments%2CjqueryMsg%2Clanguage%2Cstorage%2Cuser%2Cutil%2CvisibleTimeout%7Cmediawiki.editfont.styles%7Cmediawiki.libs.pluralruleparser%7Cmediawiki.page.ready%7Cmediawiki.ui.button%2Cicon%7Cmmv.bootstrap%2Chead%7Cmmv.bootstrap.autostart%7Coojs-ui-core.icons%2Cstyles%7Coojs-ui-windows.icons%7Coojs-ui.styles.indicators%7Cskins.vector.legacy.js&skin=vector&version=1n3s8;277130 bytes
-https://it.wikipedia.org/w/load.php?lang=it&modules=diffMatchPatch%2Cdompurify%2Coojs-ui%2Coojs-ui-toolbars%2Coojs-ui-widgets%2Cpapaparse%2Cspark-md5%2CtreeDiffer%2Cunicodejs%7Cext.CodeMirror.visualEditor%7Cext.CodeMirror.visualEditor.init%7Cext.TemplateSandbox.visualeditor%7Cext.abuseFilter.visualEditor%7Cext.centralauth.ForeignApi%7Cext.cite.style%2Cstyles%2CvisualEditor%7Cext.cite.visualEditor.core%7Cext.citoid.visualEditor%7Cext.citoid.visualEditor.data%7Cext.confirmEdit.CaptchaInputWidget%2CvisualEditor%7Cext.disambiguator.visualEditor%7Cext.discussionTools.ReplyWidget%2CReplyWidgetVisual%7Cext.geshi.visualEditor%7Cext.graph.data%2CvisualEditor%7Cext.kartographer%7Cext.kartographer.editing%2Cutil%2CvisualEditor%7Cext.math.styles%2CvisualEditor%7Cext.score.visualEditor%7Cext.score.visualEditor.icons%7Cext.spamBlacklist.visualEditor%7Cext.templateDataGenerator.editPage%7Cext.titleblacklist.visualEditor%7Cext.visualEditor.data%2CmoduleIcons%2CmoduleIndicators%7Cext.wikihiero.visualEditor%7Cext.wikimediaEvents.visualEditor%7Cjquery.lengthLimit%2Cspinner%2Ctablesorter%7Cjquery.spinner.styles%7Cjquery.tablesorter.styles%7Cjquery.uls.data%7Cmediawiki.ForeignApi%2CForeignUpload%2CUpload%2Cdiff%2Cpulsatingdot%2Cwidgets%7Cmediawiki.ForeignApi.core%7Cmediawiki.ForeignStructuredUpload.BookletLayout%7Cmediawiki.Upload.BookletLayout%7Cmediawiki.action.view.redirectPage%7Cmediawiki.diff.styles%7Cmediawiki.interface.helpers.styles%7Cmediawiki.language.months%2Cnames%7Cmediawiki.libs.jpegmeta%7Cmediawiki.page.gallery.styles%7Cmediawiki.skinning.content.parsoid%7Cmediawiki.widgets.AbandonEditDialog%2CCategoryMultiselectWidget%2CDateInputWidget%2CMediaSearch%2CTable%2CUserInputWidget%2Cstyles%2CvisibleLengthLimit%7Cmediawiki.widgets.DateInputWidget.styles%7Coojs-ui-toolbars.icons%7Coojs-ui-widgets.icons%7Coojs-ui.styles.icons-accessibility%2Cicons-alerts%2Cicons-content%2Cicons-editing-advanced%2Cicons-editing-citation%2Cicons-editing-core%2Cicons-editing-list%2Cicons-editing-styling%2Cicons-interactions%2Cicons-layout%2Cicons-location%2Cicons-media%2Cicons-moderation%2Cicons-movement%2Cicons-user%2Cicons-wikimedia&skin=vector&version=vbxg6;265717 bytes
-https://it.wikipedia.org/wiki/Pagina_principale;27550 bytes
-https://it.wikipedia.org/w/load.php?lang=it&modules=startup&only=scripts&raw=1&skin=vector;20923 bytes
-https://it.wikipedia.org/w/load.php?lang=it&modules=ext.math.popup%7Cext.popups.icons%2Cimages%2Cmain%7Cmediawiki.ui.checkbox&skin=vector&version=1vfdh;20882 bytes
-https://it.wikipedia.org/w/load.php?lang=it&modules=ext.visualEditor.core.utils.parsing%7Cext.visualEditor.desktopArticleTarget.init%7Cext.visualEditor.progressBarWidget%2CsupportCheck%2CtargetLoader%2CtempWikitextEditorWidget%2Ctrack%2Cve&skin=vector&version=1k9ls;18946 bytes
-https://www.wikipedia.it/sharedheader.css;18360 bytes
-https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/%D0%97%D0%B0%D0%BA%D0%B0%D1%82_%D0%BD%D0%B0_%D0%BE%D0%B7%D0%B5%D1%80%D0%B5_%D0%91%D0%B0%D1%81%D0%BA%D1%83%D0%BD%D1%87%D0%B0%D0%BA.jpg/260px-%D0%97%D0%B0%D0%BA%D0%B0%D1%82_%D0%BD%D0%B0_%D0%BE%D0%B7%D0%B5%D1%80%D0%B5_%D0%91%D0%B0%D1%81%D0%BA%D1%83%D0%BD%D1%87%D0%B0%D0%BA.jpg;14306 bytes
-https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Vicenza_banner2.jpg/260px-Vicenza_banner2.jpg;13027 bytes
-
-LARGEST CONTENTFUL PAINT ELEMENT
-ELEMENT
-{'lhId': 'page-63-P', 'nodeLabel': "Fin dall'inizio dell'autunno 1938 la brutalizzazione dell'antisemitismo in Germ…", 'boundingRect': {'right': 902, 'top': 464, 'height': 313, 'bottom': 778, 'left': 232, 'width': 670}, 'path': '1,HTML,1,BODY,2,DIV,4,DIV,6,DIV,0,DIV,2,DIV,0,DIV,2,DIV,2,P', 'type': 'node', 'snippet': '<p>', 'selector': 'div.main-page-body > div > div > p'} node
-
-MINIFY JAVASCRIPT
-URL;TRANSFER SIZE;POTENTIAL SAVINGS
-https://en.wikipedia.org/w/index.php?title=MediaWiki:Gadget-ReferenceTooltips.js&action=raw&ctype=text/javascript;8933 bytes;3082 bytes
-
-AVOID AN EXCESSIVE DOM SIZE
-ELEMENT;STATISTIC;VALUE
- node;Total DOM Elements text;1449 numeric
-{'path': '1,HTML,1,BODY,2,DIV,4,DIV,6,DIV,0,DIV,2,DIV,0,DIV,9,DIV,3,DIV,2,DIV,0,DIV,0,TABLE,0,TBODY,0,TR,0,TD,0,FIGURE,0,A,0,IMG', 'snippet': '<img alt="Commons-logo.svg" src="//upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Commons-logo.svg/30px-…" decoding="async" width="30" height="40" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Commons-logo.svg/45px-…" data-file-width="1024" data-file-height="1376">', 'lhId': '9-40-IMG', 'nodeLabel': 'Commons-logo.svg', 'boundingRect': {'width': 30, 'left': 236, 'top': 2520, 'height': 40, 'bottom': 2560, 'right': 266}, 'type': 'node', 'selector': 'td > figure.noresize > a > img'} node;Maximum DOM Depth text;18 numeric
-{'selector': 'div#mw-panel > nav#p-lang > div.vector-menu-content > ul.vector-menu-content-list', 'type': 'node', 'lhId': '9-41-UL', 'boundingRect': {'left': 27, 'width': 131, 'top': 1076, 'height': 1383, 'right': 158, 'bottom': 2459}, 'path': '1,HTML,1,BODY,3,DIV,2,DIV,6,NAV,2,DIV,0,UL', 'snippet': '<ul class="vector-menu-content-list">', 'nodeLabel': 'Afrikaans\nالعربية\nمصرى\nAsturianu\nAzərbaycanca\nتۆرکجه\nБеларуская\nБългарски\nবাংলা…'} node;Maximum Child Elements text;70 numeric
-
-INITIAL SERVER RESPONSE TIME WAS SHORT
-URL;TIME SPENT
-https://it.wikipedia.org/wiki/Pagina_principale;36.649 timespanMs
-
-USER TIMING MARKS AND MEASURES
-DURATION;NAME;START TIME;TYPE
- ms;mwStartup text;279.14 ms;Mark text
-
-REDUCE UNUSED CSS
-URL;TRANSFER SIZE;POTENTIAL SAVINGS
-.mw-parser-output{counter-reset:mw-numbered-ext-link} ...;102975 bytes;102844 bytes
-.mw-editfont-monospace{font-family:monospace,monospace} ...;24057 bytes;24009 bytes
-.mw-upload-bookletLayout-filePreview{width:100%\;height:1em\;background-color:#eaecf0\; ... } ...;12258 bytes;12258 bytes
-
-KEEP REQUEST COUNTS LOW AND TRANSFER SIZES SMALL
-RESOURCE TYPE;REQUESTS;TRANSFER SIZE
-Total text;70 numeric;1231798 bytes
-Script text;11 numeric;979826 bytes
-Image text;49 numeric;183260 bytes
-Stylesheet text;5 numeric;36117 bytes
-Document text;3 numeric;30199 bytes
-Other text;2 numeric;2396 bytes
-Media text; numeric; bytes
-Font text; numeric; bytes
-Third-party text;47 numeric;183009 bytes
+https://it.wikipedia.org/w/load.php?lang=it&modules=ext.gadget.PDCStriker&only=styles&skin=vector;1562 bytes;70 timespanMs
+https://it.wikipedia.org/w/load.php?lang=it&modules=site.styles&only=styles&skin=vector;3025 bytes;70 timespanMs
 
 AVOID LARGE LAYOUT SHIFTS
 ELEMENT;CLS CONTRIBUTION
-{'boundingRect': {'right': 158, 'width': 139, 'height': 312, 'left': 19, 'bottom': 1046, 'top': 734}, 'snippet': '<nav id="p-wikibase-otherprojects" class="vector-menu mw-portlet mw-portlet-wikibase-otherprojects vector-menu-porta…" aria-labelledby="p-wikibase-otherprojects-label" role="navigation">', 'type': 'node', 'path': '1,HTML,1,BODY,3,DIV,2,DIV,5,NAV', 'selector': 'body.skin-vector-legacy > div#mw-navigation > div#mw-panel > nav#p-wikibase-otherprojects', 'nodeLabel': 'In altri progetti\nWikimedia Commons\nMediaWiki\nMeta-Wiki\nMultilingual Wikisource…', 'lhId': 'page-64-NAV'} node;0.0003150699144733135 numeric
-{'type': 'node', 'selector': 'body.skin-vector-legacy > div#mw-navigation > div#mw-panel > nav#p-coll-print_export', 'path': '1,HTML,1,BODY,3,DIV,2,DIV,4,NAV', 'lhId': 'page-65-NAV', 'boundingRect': {'bottom': 734, 'left': 19, 'height': 97, 'top': 637, 'width': 139, 'right': 158}, 'snippet': '<nav id="p-coll-print_export" class="vector-menu mw-portlet mw-portlet-coll-print_export vector-menu-portal por…" aria-labelledby="p-coll-print_export-label" role="navigation">', 'nodeLabel': 'Stampa/esporta\nCrea un libro\nScarica come PDF\nVersione stampabile'} node;0.000163836355526123 numeric
-{'selector': 'nav#p-tb > div.vector-menu-content > ul.vector-menu-content-list > li#t-permalink', 'boundingRect': {'top': 574, 'right': 158, 'bottom': 594, 'left': 27, 'width': 131, 'height': 20}, 'lhId': 'page-66-LI', 'path': '1,HTML,1,BODY,3,DIV,2,DIV,3,NAV,1,DIV,0,UL,4,LI', 'type': 'node', 'nodeLabel': 'Link permanente', 'snippet': '<li id="t-permalink" class="mw-list-item">'} node;5.1468974997415136e-05 numeric
-{'boundingRect': {'right': 158, 'bottom': 613, 'top': 594, 'width': 131, 'height': 20, 'left': 27}, 'nodeLabel': 'Informazioni pagina', 'lhId': 'page-67-LI', 'selector': 'nav#p-tb > div.vector-menu-content > ul.vector-menu-content-list > li#t-info', 'path': '1,HTML,1,BODY,3,DIV,2,DIV,3,NAV,1,DIV,0,UL,5,LI', 'type': 'node', 'snippet': '<li id="t-info" class="mw-list-item">'} node;5.1468974997415136e-05 numeric
-{'lhId': 'page-68-LI', 'path': '1,HTML,1,BODY,3,DIV,2,DIV,3,NAV,1,DIV,0,UL,7,LI', 'selector': 'nav#p-tb > div.vector-menu-content > ul.vector-menu-content-list > li#t-wikibase', 'nodeLabel': 'Elemento Wikidata', 'type': 'node', 'boundingRect': {'right': 158, 'width': 131, 'top': 613, 'bottom': 633, 'height': 20, 'left': 27}, 'snippet': '<li id="t-wikibase" class="mw-list-item">'} node;5.1468974997415136e-05 numeric
+{'type': 'node', 'selector': 'body.skin-vector-legacy > div#mw-navigation > div#mw-panel > nav#p-wikibase-otherprojects', 'boundingRect': {'bottom': 1046, 'width': 139, 'top': 734, 'right': 158, 'height': 312, 'left': 19}, 'nodeLabel': 'In altri progetti\nWikimedia Commons\nMediaWiki\nMeta-Wiki\nMultilingual Wikisource…', 'lhId': 'page-64-NAV', 'snippet': '<nav id="p-wikibase-otherprojects" class="vector-menu mw-portlet mw-portlet-wikibase-otherprojects vector-menu-porta…" aria-labelledby="p-wikibase-otherprojects-label" role="navigation">', 'path': '1,HTML,1,BODY,3,DIV,2,DIV,5,NAV'} node;0.0003150699144733135 numeric
+{'snippet': '<nav id="p-coll-print_export" class="vector-menu mw-portlet mw-portlet-coll-print_export vector-menu-portal por…" aria-labelledby="p-coll-print_export-label" role="navigation">', 'type': 'node', 'lhId': 'page-65-NAV', 'boundingRect': {'bottom': 734, 'height': 97, 'top': 637, 'left': 19, 'width': 139, 'right': 158}, 'selector': 'body.skin-vector-legacy > div#mw-navigation > div#mw-panel > nav#p-coll-print_export', 'path': '1,HTML,1,BODY,3,DIV,2,DIV,4,NAV', 'nodeLabel': 'Stampa/esporta\nCrea un libro\nScarica come PDF\nVersione stampabile'} node;0.000163836355526123 numeric
+{'boundingRect': {'left': 27, 'top': 574, 'height': 20, 'right': 158, 'bottom': 594, 'width': 131}, 'path': '1,HTML,1,BODY,3,DIV,2,DIV,3,NAV,1,DIV,0,UL,4,LI', 'type': 'node', 'lhId': 'page-66-LI', 'selector': 'nav#p-tb > div.vector-menu-content > ul.vector-menu-content-list > li#t-permalink', 'snippet': '<li id="t-permalink" class="mw-list-item">', 'nodeLabel': 'Link permanente'} node;5.1468974997415136e-05 numeric
+{'snippet': '<li id="t-info" class="mw-list-item">', 'nodeLabel': 'Informazioni pagina', 'type': 'node', 'path': '1,HTML,1,BODY,3,DIV,2,DIV,3,NAV,1,DIV,0,UL,5,LI', 'boundingRect': {'bottom': 613, 'right': 158, 'height': 20, 'top': 594, 'left': 27, 'width': 131}, 'selector': 'nav#p-tb > div.vector-menu-content > ul.vector-menu-content-list > li#t-info', 'lhId': 'page-67-LI'} node;5.1468974997415136e-05 numeric
+{'type': 'node', 'path': '1,HTML,1,BODY,3,DIV,2,DIV,3,NAV,1,DIV,0,UL,7,LI', 'nodeLabel': 'Elemento Wikidata', 'selector': 'nav#p-tb > div.vector-menu-content > ul.vector-menu-content-list > li#t-wikibase', 'boundingRect': {'left': 27, 'width': 131, 'top': 613, 'bottom': 633, 'right': 158, 'height': 20}, 'snippet': '<li id="t-wikibase" class="mw-list-item">', 'lhId': 'page-68-LI'} node;5.1468974997415136e-05 numeric
 
-JAVASCRIPT EXECUTION TIME
-URL;SCRIPT PARSE;SCRIPT EVALUATION;TOTAL CPU TIME
-https://it.wikipedia.org/wiki/Pagina_principale;2.719 ms;95.72500000000014 ms;318.7880000000001 ms
-https://it.wikipedia.org/w/load.php?lang=it&modules=startup&only=scripts&raw=1&skin=vector;1.055 ms;150.645 ms;162.073 ms
-Unattributable; ms;1.6460000000000001 ms;74.4680000000001 ms
-https://it.wikipedia.org/w/load.php?lang=it&modules=ext.centralNotice.choiceData%2Cdisplay%2CgeoIP%2CimpressionDiet%2CkvStore%2ClegacySupport%2CstartUp%7Cext.centralauth.centralautologin%7Cext.cx.eventlogging.campaigns%7Cext.discussionTools.init%7Cext.discussionTools.init.styles%7Cext.echo.centralauth%7Cext.eventLogging%2CnavigationTiming%2Cpopups%2CwikimediaEvents%7Cext.growthExperiments.SuggestedEditSession%7Cext.uls.interface%2Cpreferences%2Cwebfonts%7Cjquery%2Cmoment%2Coojs%2Coojs-router%2Coojs-ui-core%2Coojs-ui-windows%2Crangefix%2Csite%7Cjquery.client%2Ccookie%2CtextSelection%7Cmediawiki.String%2CTitle%2CUri%2Capi%2Cbase%2Ccldr%2Ccookie%2Cexperiments%2CjqueryMsg%2Clanguage%2Cstorage%2Cuser%2Cutil%2CvisibleTimeout%7Cmediawiki.editfont.styles%7Cmediawiki.libs.pluralruleparser%7Cmediawiki.page.ready%7Cmediawiki.ui.button%2Cicon%7Cmmv.bootstrap%2Chead%7Cmmv.bootstrap.autostart%7Coojs-ui-core.icons%2Cstyles%7Coojs-ui-windows.icons%7Coojs-ui.styles.indicators%7Cskins.vector.legacy.js&skin=vector&version=1n3s8;15.737 ms;33.214999999999996 ms;55.12499999999999 ms
+AVOID LONG MAIN-THREAD TASKS
+URL;DURATION;START TIME
+https://it.wikipedia.org/w/load.php?lang=it&modules=startup&only=scripts&raw=1&skin=vector;109 ms;1767 ms
+https://it.wikipedia.org/w/load.php?lang=it&modules=ext.centralNotice.choiceData%2Cdisplay%2CgeoIP%2CimpressionDiet%2CkvStore%2ClegacySupport%2CstartUp%7Cext.centralauth.centralautologin%7Cext.cx.eventlogging.campaigns%7Cext.discussionTools.init%7Cext.discussionTools.init.styles%7Cext.echo.centralauth%7Cext.eventLogging%2CnavigationTiming%2Cpopups%2CwikimediaEvents%7Cext.growthExperiments.SuggestedEditSession%7Cext.uls.interface%2Cpreferences%2Cwebfonts%7Cjquery%2Cmoment%2Coojs%2Coojs-router%2Coojs-ui-core%2Coojs-ui-windows%2Crangefix%2Csite%7Cjquery.client%2Ccookie%2CtextSelection%7Cmediawiki.String%2CTitle%2CUri%2Capi%2Cbase%2Ccldr%2Ccookie%2Cexperiments%2CjqueryMsg%2Clanguage%2Cstorage%2Cuser%2Cutil%2CvisibleTimeout%7Cmediawiki.editfont.styles%7Cmediawiki.libs.pluralruleparser%7Cmediawiki.page.ready%7Cmediawiki.ui.button%2Cicon%7Cmmv.bootstrap%2Chead%7Cmmv.bootstrap.autostart%7Coojs-ui-core.icons%2Cstyles%7Coojs-ui-windows.icons%7Coojs-ui.styles.indicators%7Cskins.vector.legacy.js&skin=vector&version=1beuc;52 ms;1715 ms
 
-MINIMIZES MAIN-THREAD WORK
-TIME SPENT;CATEGORY
-288.36999999999944 ms;Script Evaluation text
-178.12600000000003 ms;Style & Layout text
-103.01800000000037 ms;Other text
-66.758 ms;Script Parsing & Compilation text
-28.23900000000001 ms;Rendering text
-28.081999999999994 ms;Parse HTML & CSS text
-6.663999999999999 ms;Garbage Collection text
+AVOID AN EXCESSIVE DOM SIZE
+ELEMENT;STATISTIC;VALUE
+ node;Total DOM Elements text;1455 numeric
+{'nodeLabel': 'Commons-logo.svg', 'lhId': '9-40-IMG', 'selector': 'td > figure.noresize > a > img', 'path': '1,HTML,1,BODY,2,DIV,4,DIV,6,DIV,0,DIV,2,DIV,0,DIV,9,DIV,3,DIV,2,DIV,0,DIV,0,TABLE,0,TBODY,0,TR,0,TD,0,FIGURE,0,A,0,IMG', 'type': 'node', 'snippet': '<img alt="Commons-logo.svg" src="//upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Commons-logo.svg/30px-…" decoding="async" width="30" height="40" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Commons-logo.svg/45px-…" data-file-width="1024" data-file-height="1376">', 'boundingRect': {'top': 2334, 'right': 266, 'width': 30, 'height': 40, 'bottom': 2374, 'left': 236}} node;Maximum DOM Depth text;18 numeric
+{'lhId': '9-41-UL', 'snippet': '<ul class="vector-menu-content-list">', 'nodeLabel': 'Afrikaans\nالعربية\nمصرى\nAsturianu\nAzərbaycanca\nتۆرکجه\nБеларуская\nБългарски\nবাংলা…', 'selector': 'div#mw-panel > nav#p-lang > div.vector-menu-content > ul.vector-menu-content-list', 'path': '1,HTML,1,BODY,3,DIV,2,DIV,6,NAV,2,DIV,0,UL', 'type': 'node', 'boundingRect': {'width': 131, 'right': 158, 'height': 1383, 'bottom': 2459, 'top': 1076, 'left': 27}} node;Maximum Child Elements text;70 numeric
 
 NETWORK REQUESTS
 URL;END TIME;MIME TYPE;PROTOCOL;RESOURCE SIZE;RESOURCE TYPE;START TIME;STATUS CODE;TRANSFER SIZE
-https://www.wikipedia.it/;268.42199987731874 ms;text/html text;http/1.1 text;265 bytes;Document text; ms;200 text;704 bytes
-https://www.wikipedia.it/header.html;703.8829999510199 ms;text/html text;http/1.1 text;1505 bytes;Document text;284.8859999794513 ms;200 text;1945 bytes
-https://www.wikipedia.it/sharedheader.css;1088.8310000300407 ms;text/css text;http/1.1 text;17920 bytes;Stylesheet text;712.2329999692738 ms;200 text;18360 bytes
-https://www.wikipedia.it/images/logo_yepa_txt.png;955.9179998468608 ms;image/png text;http/1.1 text;2479 bytes;Image text;712.4610000755638 ms;200 text;2919 bytes
-http://www.google-analytics.com/urchin.js;1091.4089998696 ms; text; text; bytes;Script text;1091.3650000002235 ms;-1 text; bytes
-https://www.kataweb.it/static/shared/cf_bg_network_newbg.gif;1239.6149998530746 ms;image/gif text;http/1.1 text;43 bytes;Image text;1098.7350000068545 ms;200 text;715 bytes
-http://it.wikipedia.org/;3256.58499985002 ms;text/plain text;http/1.1 text; bytes; text;3242.7439999300987 ms;301 text;630 bytes
-https://it.wikipedia.org/;3278.8819998968393 ms;text/html text;http/1.1 text; bytes; text;3256.883000023663 ms;301 text;1766 bytes
-https://it.wikipedia.org/wiki/Pagina_principale;3314.99099987559 ms;text/html text;h2 text;122826 bytes;Document text;3279.334999853745 ms;200 text;27550 bytes
-https://it.wikipedia.org/w/load.php?lang=it&modules=ext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediaBadges%7Cskins.vector.styles.legacy&only=styles&skin=vector;3333.3850000053644 ms;text/css text;h2 text;41239 bytes;Stylesheet text;3322.734999936074 ms;200 text;10473 bytes
-https://it.wikipedia.org/w/load.php?lang=it&modules=startup&only=scripts&raw=1&skin=vector;3353.688000002876 ms;text/javascript text;h2 text;60322 bytes;Script text;3322.8489998728037 ms;200 text;20923 bytes
-https://it.wikipedia.org/w/load.php?lang=it&modules=ext.gadget.PDCStriker&only=styles&skin=vector;3352.944999933243 ms;text/css text;h2 text;862 bytes;Stylesheet text;3323.0190000031143 ms;200 text;1563 bytes
-https://it.wikipedia.org/w/load.php?lang=it&modules=site.styles&only=styles&skin=vector;3343.707999913022 ms;text/css text;h2 text;6019 bytes;Stylesheet text;3323.1399999931455 ms;200 text;3025 bytes
-https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Crystal_Clear_app_xmag.svg/15px-Crystal_Clear_app_xmag.svg.png;3345.5779999494553 ms;image/webp text;h2 text;564 bytes;Image text;3333.886999869719 ms;200 text;1939 bytes
-https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/1rightarrow.png/15px-1rightarrow.png;3349.0659999661148 ms;image/webp text;h2 text;464 bytes;Image text;3333.9990000240505 ms;200 text;1838 bytes
-https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Nuvola_apps_bookcase_simplified.svg/15px-Nuvola_apps_bookcase_simplified.svg.png;3347.679999889806 ms;image/png text;h2 text;1287 bytes;Image text;3334.080999949947 ms;200 text;2747 bytes
-https://upload.wikimedia.org/wikipedia/commons/8/8c/Bluebg_rounded_croped.png;3348.028999986127 ms;image/png text;h2 text;6655 bytes;Image text;3334.205999970436 ms;200 text;8089 bytes
-https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/W-circle.svg/38px-W-circle.svg.png;3349.6119999326766 ms;image/webp text;h2 text;904 bytes;Image text;3334.3319999985397 ms;200 text;2279 bytes
-https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/HSTools.svg/38px-HSTools.svg.png;3350.0609998591244 ms;image/png text;h2 text;2027 bytes;Image text;3334.4550000038 ms;200 text;3401 bytes
-https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Text-x-generic_with_pencil-2.svg/38px-Text-x-generic_with_pencil-2.svg.png;3348.6399999819696 ms;image/png text;h2 text;2086 bytes;Image text;3334.5870000775903 ms;200 text;3519 bytes
-https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/HSUtvald.svg/38px-HSUtvald.svg.png;3348.435000050813 ms;image/webp text;h2 text;1462 bytes;Image text;3334.70100001432 ms;200 text;2902 bytes
-https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/The_day_after_Kristallnacht.jpg/150px-The_day_after_Kristallnacht.jpg;3349.3409999646246 ms;image/webp text;h2 text;7544 bytes;Image text;3334.838999900967 ms;200 text;9002 bytes
-https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/HS_VdQ.svg/38px-HS_VdQ.svg.png;3351.190999848768 ms;image/webp text;h2 text;1358 bytes;Image text;3335.0179998669773 ms;200 text;2734 bytes
-https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Isla_del_Coco-chatham_beach.jpg/150px-Isla_del_Coco-chatham_beach.jpg;3350.4929998889565 ms;image/webp text;h2 text;6304 bytes;Image text;3335.2009998634458 ms;200 text;7762 bytes
-https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/PL_Wiki_CzyWiesz_ikona.svg/38px-PL_Wiki_CzyWiesz_ikona.svg.png;3348.846999928355 ms;image/webp text;h2 text;1262 bytes;Image text;3335.4859999381006 ms;200 text;2717 bytes
-https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Le_Petit_Journal_-_25_August_1907%2C_Vere_St._Leger_Goold_%28cropped%29.jpg/106px-Le_Petit_Journal_-_25_August_1907%2C_Vere_St._Leger_Goold_%28cropped%29.jpg;3351.835999870673 ms;image/jpeg text;h2 text;6613 bytes;Image text;3335.713000036776 ms;200 text;8109 bytes
-https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/HSDagensdatum.svg/38px-HSDagensdatum.svg.png;3351.5959999058396 ms;image/webp text;h2 text;1544 bytes;Image text;3335.8680000528693 ms;200 text;2987 bytes
-https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Denis_Bourez_-_Madame_Tussauds%2C_London_%288748150092%29.jpg/100px-Denis_Bourez_-_Madame_Tussauds%2C_London_%288748150092%29.jpg;3359.314000001177 ms;image/jpeg text;h2 text;3800 bytes;Image text;3335.9910000581294 ms;200 text;5282 bytes
-https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/HS_geo.svg/38px-HS_geo.svg.png;3352.4629999883473 ms;image/webp text;h2 text;1674 bytes;Image text;3336.151999887079 ms;200 text;3112 bytes
-https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Wikimedia-logo-circle.svg/38px-Wikimedia-logo-circle.svg.png;3356.1159998644143 ms;image/webp text;h2 text;1512 bytes;Image text;3336.3530000206083 ms;200 text;2964 bytes
-https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Commons-logo.svg/30px-Commons-logo.svg.png;3358.9459999930114 ms;image/webp text;h2 text;862 bytes;Image text;3336.5100000519305 ms;200 text;2307 bytes
-https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Wikiquote-logo.svg/30px-Wikiquote-logo.svg.png;3352.2389999125153 ms;image/webp text;h2 text;1046 bytes;Image text;3336.6539999842644 ms;200 text;2494 bytes
-https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Wiktionary-logo.svg/30px-Wiktionary-logo.svg.png;3350.681999931112 ms;image/webp text;h2 text;1956 bytes;Image text;3336.752000031993 ms;200 text;3332 bytes
-https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Wikinews-logo.svg/30px-Wikinews-logo.svg.png;3352.701999945566 ms;image/png text;h2 text;1446 bytes;Image text;3336.9020000100136 ms;200 text;2818 bytes
-https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikispecies-logo.svg/30px-Wikispecies-logo.svg.png;3350.8440000005066 ms;image/webp text;h2 text;1876 bytes;Image text;3337.0159999467432 ms;200 text;3254 bytes
-https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Wikimedia_Community_Logo.svg/30px-Wikimedia_Community_Logo.svg.png;3352.0179998595268 ms;image/webp text;h2 text;1126 bytes;Image text;3337.152000050992 ms;200 text;2583 bytes
-https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Wikibooks-logo.svg/30px-Wikibooks-logo.svg.png;3349.811000050977 ms;image/webp text;h2 text;1352 bytes;Image text;3337.271000025794 ms;200 text;2729 bytes
-https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wikisource-logo.svg/30px-Wikisource-logo.svg.png;3350.2809999044985 ms;image/webp text;h2 text;1316 bytes;Image text;3337.4929998535663 ms;200 text;2694 bytes
-https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Wikiversity-logo.svg/30px-Wikiversity-logo.svg.png;3353.182999882847 ms;image/webp text;h2 text;674 bytes;Image text;3338.095000013709 ms;200 text;2048 bytes
-https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Wikidata-logo.svg/32px-Wikidata-logo.svg.png;3809.9640000145882 ms;image/webp text;h2 text;216 bytes;Image text;3338.1950000766665 ms;200 text;1591 bytes
-https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Wikivoyage-Logo-v3-icon.svg/30px-Wikivoyage-Logo-v3-icon.svg.png;3351.395000005141 ms;image/webp text;h2 text;446 bytes;Image text;3338.3509998675436 ms;200 text;1901 bytes
-https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/PL_Wiki_Aktualnosci_ikona.svg/38px-PL_Wiki_Aktualnosci_ikona.svg.png;3355.085999937728 ms;image/webp text;h2 text;1482 bytes;Image text;3338.618000037968 ms;200 text;2940 bytes
-https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/HSContribs.svg/38px-HSContribs.svg.png;3353.963000001386 ms;image/webp text;h2 text;1346 bytes;Image text;3338.8499999418855 ms;200 text;2722 bytes
-https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/HSWikimedia.svg/38px-HSWikimedia.svg.png;3355.354999890551 ms;image/png text;h2 text;2911 bytes;Image text;3338.9649998862296 ms;200 text;4351 bytes
-https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Wikimedia-logo-meta.svg/18px-Wikimedia-logo-meta.svg.png;3351.0239999741316 ms;image/png text;h2 text;1093 bytes;Image text;3339.0760000329465 ms;200 text;2541 bytes
-https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Wikiquote-logo.svg/18px-Wikiquote-logo.svg.png;3358.5299998521805 ms;image/webp text;h2 text;566 bytes;Image text;3339.234999846667 ms;200 text;2012 bytes
-https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Commons-logo.svg/18px-Commons-logo.svg.png;3357.4870000593364 ms;image/webp text;h2 text;532 bytes;Image text;3339.3540000543 ms;200 text;1978 bytes
-https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/%D0%97%D0%B0%D0%BA%D0%B0%D1%82_%D0%BD%D0%B0_%D0%BE%D0%B7%D0%B5%D1%80%D0%B5_%D0%91%D0%B0%D1%81%D0%BA%D1%83%D0%BD%D1%87%D0%B0%D0%BA.jpg/260px-%D0%97%D0%B0%D0%BA%D0%B0%D1%82_%D0%BD%D0%B0_%D0%BE%D0%B7%D0%B5%D1%80%D0%B5_%D0%91%D0%B0%D1%81%D0%BA%D1%83%D0%BD%D1%87%D0%B0%D0%BA.jpg;3356.7800000309944 ms;image/jpeg text;h2 text;12751 bytes;Image text;3339.727999875322 ms;200 text;14306 bytes
-https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Wikinews-logo.svg/25px-Wikinews-logo.svg.png;3355.7579999323934 ms;image/webp text;h2 text;806 bytes;Image text;3339.8740000557154 ms;200 text;2179 bytes
-https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wikisource-logo.svg/19px-Wikisource-logo.svg.png;3358.7410000618547 ms;image/webp text;h2 text;810 bytes;Image text;3340.0230000261217 ms;200 text;2186 bytes
-https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Serao_-_La_conquista_di_Roma.djvu/page9-170px-Serao_-_La_conquista_di_Roma.djvu.jpg;3357.8569998499006 ms;image/webp text;h2 text;6052 bytes;Image text;3340.153999859467 ms;200 text;7512 bytes
-https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Wikivoyage-Logo-v3-icon.svg/19px-Wikivoyage-Logo-v3-icon.svg.png;3359.9159999284893 ms;image/webp text;h2 text;310 bytes;Image text;3340.377999935299 ms;200 text;1765 bytes
-https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Vicenza_banner2.jpg/260px-Vicenza_banner2.jpg;3353.415000019595 ms;image/webp text;h2 text;11652 bytes;Image text;3340.519999852404 ms;200 text;13027 bytes
-https://it.wikipedia.org/static/images/project-logos/itwiki.png;3354.3119998648763 ms;image/png text;h2 text;7914 bytes;Image text;3341.042999876663 ms;200 text;9225 bytes
-https://it.wikipedia.org/w/skins/Vector/resources/common/images/bullet-icon.svg?d4515;3381.1510000377893 ms;image/svg+xml text;h2 text;159 bytes;Image text;3366.935000056401 ms;200 text;1521 bytes
-https://it.wikipedia.org/w/skins/Vector/resources/skins.vector.styles.legacy/images/user-avatar.svg?b7f58;3377.290999982506 ms;image/svg+xml text;h2 text;254 bytes;Image text;3369.0229998901486 ms;200 text;1588 bytes
-https://it.wikipedia.org/w/skins/Vector/resources/common/images/search.svg?ac00d;3379.727999912575 ms;image/svg+xml text;h2 text;251 bytes;Image text;3371.0630000568926 ms;200 text;1572 bytes
-https://it.wikipedia.org/static/images/footer/wikimedia-button.png;3503.9180000312626 ms;image/png text;h2 text;2360 bytes;Image text;3493.38599992916 ms;200 text;3672 bytes
-https://it.wikipedia.org/static/images/footer/poweredby_mediawiki_88x31.png;3502.1420000120997 ms;image/png text;h2 text;2205 bytes;Image text;3493.6049999669194 ms;200 text;3517 bytes
-https://it.wikipedia.org/w/load.php?lang=it&modules=ext.gadget.ExternalSearch%2CForm-valutazione-enc%2CHiddenCat%2CInterProject%2CMainPageWikiList%2CNewSection%2COpenStreetMap%2CReferenceTooltips%2CRequests-Wizard%2CRichiediRevisioneBozza%2CWikiMiniAtlas%2Cstru-commonsupload&skin=vector&version=ij9gi;3536.3499999511987 ms;text/javascript text;h2 text;30900 bytes;Script text;3525.4100000020117 ms;200 text;10523 bytes
-https://it.wikipedia.org/w/load.php?lang=it&modules=ext.visualEditor.core.utils.parsing%7Cext.visualEditor.desktopArticleTarget.init%7Cext.visualEditor.progressBarWidget%2CsupportCheck%2CtargetLoader%2CtempWikitextEditorWidget%2Ctrack%2Cve&skin=vector&version=1k9ls;3540.2150000445545 ms;text/javascript text;h2 text;64536 bytes;Script text;3525.90600005351 ms;200 text;18946 bytes
-https://it.wikipedia.org/w/load.php?lang=it&modules=ext.centralNotice.choiceData%2Cdisplay%2CgeoIP%2CimpressionDiet%2CkvStore%2ClegacySupport%2CstartUp%7Cext.centralauth.centralautologin%7Cext.cx.eventlogging.campaigns%7Cext.discussionTools.init%7Cext.discussionTools.init.styles%7Cext.echo.centralauth%7Cext.eventLogging%2CnavigationTiming%2Cpopups%2CwikimediaEvents%7Cext.growthExperiments.SuggestedEditSession%7Cext.uls.interface%2Cpreferences%2Cwebfonts%7Cjquery%2Cmoment%2Coojs%2Coojs-router%2Coojs-ui-core%2Coojs-ui-windows%2Crangefix%2Csite%7Cjquery.client%2Ccookie%2CtextSelection%7Cmediawiki.String%2CTitle%2CUri%2Capi%2Cbase%2Ccldr%2Ccookie%2Cexperiments%2CjqueryMsg%2Clanguage%2Cstorage%2Cuser%2Cutil%2CvisibleTimeout%7Cmediawiki.editfont.styles%7Cmediawiki.libs.pluralruleparser%7Cmediawiki.page.ready%7Cmediawiki.ui.button%2Cicon%7Cmmv.bootstrap%2Chead%7Cmmv.bootstrap.autostart%7Coojs-ui-core.icons%2Cstyles%7Coojs-ui-windows.icons%7Coojs-ui.styles.indicators%7Cskins.vector.legacy.js&skin=vector&version=1n3s8;3556.2159998808056 ms;text/javascript text;h2 text;1234201 bytes;Script text;3526.425000047311 ms;200 text;277130 bytes
-https://en.wikipedia.org/w/index.php?title=MediaWiki:Gadget-ReferenceTooltips.css&action=raw&ctype=text/css;3659.482999937609 ms;text/css text;h2 text;3426 bytes;Stylesheet text;3650.7170000113547 ms;200 text;2696 bytes
-https://en.wikipedia.org/w/index.php?title=MediaWiki:Gadget-ReferenceTooltips.js&action=raw&ctype=text/javascript;3673.612999962643 ms;text/javascript text;h2 text;25859 bytes;Script text;3653.294999850914 ms;200 text;8933 bytes
-https://login.wikimedia.org/wiki/Special:CentralAutoLogin/checkLoggedIn?type=script&wikiid=itwiki&proto=https;3673.79799997434 ms;text/javascript text;h2 text;236 bytes;Script text;3654.1039999574423 ms;200 text;1713 bytes
-https://it.wikipedia.org/w/extensions/UniversalLanguageSelector/resources/images/cog-sprite.svg?cca73;3673.907999880612 ms;image/svg+xml text;h2 text;861 bytes;Image text;3664.7729999385774 ms;200 text;1878 bytes
-https://it.wikipedia.org/w/load.php?lang=it&modules=ext.visualEditor.articleTarget%2Cbase%2Ccore%2CdesktopTarget%2Cdiffing%2Cicons%2Clanguage%2Cmediawiki%2Cmwalienextension%2Cmwcore%2Cmwextensions%2Cmwformatting%2Cmwgallery%2Cmwimage%2Cmwlanguage%2Cmwlink%2Cmwmeta%2Cmwsave%2Cmwsignature%2Cmwtransclusion%2Cmwwikitext%2Csanitize%2Cswitching%2Cwelcome%7Cext.visualEditor.core.desktop%2Cutils%7Cext.visualEditor.mwextensions.desktop%7Cext.visualEditor.mwimage.core&skin=vector&version=1qcil;3770.4829999711365 ms;text/javascript text;h2 text;1723340 bytes;Script text;3740.3170000761747 ms;200 text;350567 bytes
-https://it.wikipedia.org/w/load.php?lang=it&modules=diffMatchPatch%2Cdompurify%2Coojs-ui%2Coojs-ui-toolbars%2Coojs-ui-widgets%2Cpapaparse%2Cspark-md5%2CtreeDiffer%2Cunicodejs%7Cext.CodeMirror.visualEditor%7Cext.CodeMirror.visualEditor.init%7Cext.TemplateSandbox.visualeditor%7Cext.abuseFilter.visualEditor%7Cext.centralauth.ForeignApi%7Cext.cite.style%2Cstyles%2CvisualEditor%7Cext.cite.visualEditor.core%7Cext.citoid.visualEditor%7Cext.citoid.visualEditor.data%7Cext.confirmEdit.CaptchaInputWidget%2CvisualEditor%7Cext.disambiguator.visualEditor%7Cext.discussionTools.ReplyWidget%2CReplyWidgetVisual%7Cext.geshi.visualEditor%7Cext.graph.data%2CvisualEditor%7Cext.kartographer%7Cext.kartographer.editing%2Cutil%2CvisualEditor%7Cext.math.styles%2CvisualEditor%7Cext.score.visualEditor%7Cext.score.visualEditor.icons%7Cext.spamBlacklist.visualEditor%7Cext.templateDataGenerator.editPage%7Cext.titleblacklist.visualEditor%7Cext.visualEditor.data%2CmoduleIcons%2CmoduleIndicators%7Cext.wikihiero.visualEditor%7Cext.wikimediaEvents.visualEditor%7Cjquery.lengthLimit%2Cspinner%2Ctablesorter%7Cjquery.spinner.styles%7Cjquery.tablesorter.styles%7Cjquery.uls.data%7Cmediawiki.ForeignApi%2CForeignUpload%2CUpload%2Cdiff%2Cpulsatingdot%2Cwidgets%7Cmediawiki.ForeignApi.core%7Cmediawiki.ForeignStructuredUpload.BookletLayout%7Cmediawiki.Upload.BookletLayout%7Cmediawiki.action.view.redirectPage%7Cmediawiki.diff.styles%7Cmediawiki.interface.helpers.styles%7Cmediawiki.language.months%2Cnames%7Cmediawiki.libs.jpegmeta%7Cmediawiki.page.gallery.styles%7Cmediawiki.skinning.content.parsoid%7Cmediawiki.widgets.AbandonEditDialog%2CCategoryMultiselectWidget%2CDateInputWidget%2CMediaSearch%2CTable%2CUserInputWidget%2Cstyles%2CvisibleLengthLimit%7Cmediawiki.widgets.DateInputWidget.styles%7Coojs-ui-toolbars.icons%7Coojs-ui-widgets.icons%7Coojs-ui.styles.icons-accessibility%2Cicons-alerts%2Cicons-content%2Cicons-editing-advanced%2Cicons-editing-citation%2Cicons-editing-core%2Cicons-editing-list%2Cicons-editing-styling%2Cicons-interactions%2Cicons-layout%2Cicons-location%2Cicons-media%2Cicons-moderation%2Cicons-movement%2Cicons-user%2Cicons-wikimedia&skin=vector&version=vbxg6;3781.8869999609888 ms;text/javascript text;h2 text;1475229 bytes;Script text;3741.0899999085814 ms;200 text;265717 bytes
-https://it.wikipedia.org/w/load.php?lang=it&modules=mediawiki.action.view.postEdit%7Cmediawiki.notification&skin=vector&version=vsxd8;3750.8229999803007 ms;text/javascript text;h2 text;9398 bytes;Script text;3742.528999922797 ms;200 text;4492 bytes
-https://it.wikipedia.org/w/load.php?lang=it&modules=ext.math.popup%7Cext.popups.icons%2Cimages%2Cmain%7Cmediawiki.ui.checkbox&skin=vector&version=1vfdh;3777.3479998577386 ms;text/javascript text;h2 text;73431 bytes;Script text;3766.7229999788105 ms;200 text;20882 bytes
+https://www.wikipedia.it/;400.7180000189692 ms;text/html text;http/1.1 text;265 bytes;Document text; ms;200 text;704 bytes
+https://www.wikipedia.it/header.html;544.908000039868 ms;text/html text;http/1.1 text;1505 bytes;Document text;420.48000008799136 ms;200 text;1946 bytes
+https://www.wikipedia.it/sharedheader.css;614.1230000648648 ms;text/css text;http/1.1 text;17920 bytes;Stylesheet text;556.7890000529587 ms;200 text;18360 bytes
+https://www.wikipedia.it/images/logo_yepa_txt.png;804.8730000155047 ms;image/png text;http/1.1 text;2479 bytes;Image text;557.160000083968 ms;200 text;2919 bytes
+http://www.google-analytics.com/urchin.js;617.1719999983907 ms; text; text; bytes;Script text;617.1310000354424 ms;-1 text; bytes
+https://www.kataweb.it/static/shared/cf_bg_network_newbg.gif;761.2470000749454 ms;image/gif text;http/1.1 text;43 bytes;Image text;619.4760000798851 ms;200 text;718 bytes
+http://it.wikipedia.org/;2829.880000092089 ms;text/plain text;http/1.1 text; bytes; text;2811.3190000876784 ms;301 text;645 bytes
+https://it.wikipedia.org/;2852.045000065118 ms;text/html text;http/1.1 text; bytes; text;2830.2930000936612 ms;301 text;1768 bytes
+https://it.wikipedia.org/wiki/Pagina_principale;2873.585000052117 ms;text/html text;h2 text;121311 bytes;Document text;2852.504000067711 ms;200 text;26831 bytes
+https://it.wikipedia.org/w/load.php?lang=it&modules=ext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediaBadges%7Cskins.vector.styles.legacy&only=styles&skin=vector;2917.5510000204667 ms;text/css text;h2 text;41239 bytes;Stylesheet text;2887.228000094183 ms;200 text;10473 bytes
+https://it.wikipedia.org/w/load.php?lang=it&modules=startup&only=scripts&raw=1&skin=vector;2915.0810000719503 ms;text/javascript text;h2 text;60322 bytes;Script text;2887.3910000547767 ms;200 text;20923 bytes
+https://it.wikipedia.org/w/load.php?lang=it&modules=ext.gadget.PDCStriker&only=styles&skin=vector;3324.0140000125393 ms;text/css text;h2 text;862 bytes;Stylesheet text;2887.747000087984 ms;200 text;1562 bytes
+https://it.wikipedia.org/w/load.php?lang=it&modules=site.styles&only=styles&skin=vector;2910.528000094928 ms;text/css text;h2 text;6019 bytes;Stylesheet text;2888.027000008151 ms;200 text;3025 bytes
+https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Crystal_Clear_app_xmag.svg/15px-Crystal_Clear_app_xmag.svg.png;2918.5700000962242 ms;image/png text;h2 text;640 bytes;Image text;2906.089000054635 ms;200 text;2072 bytes
+https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/1rightarrow.png/15px-1rightarrow.png;2921.9600000651553 ms;image/webp text;h2 text;464 bytes;Image text;2906.6400000592694 ms;200 text;1838 bytes
+https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Nuvola_apps_bookcase_simplified.svg/15px-Nuvola_apps_bookcase_simplified.svg.png;2922.4140000296757 ms;image/png text;h2 text;1287 bytes;Image text;2906.7760000471026 ms;200 text;2747 bytes
+https://upload.wikimedia.org/wikipedia/commons/8/8c/Bluebg_rounded_croped.png;2924.3200001074 ms;image/png text;h2 text;6655 bytes;Image text;2906.985000008717 ms;200 text;8090 bytes
+https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/W-circle.svg/38px-W-circle.svg.png;3349.244000040926 ms;image/png text;h2 text;1247 bytes;Image text;2907.1500001009554 ms;200 text;2621 bytes
+https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/HSTools.svg/38px-HSTools.svg.png;2927.3700000485405 ms;image/png text;h2 text;2027 bytes;Image text;2907.281000050716 ms;200 text;3400 bytes
+https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Text-x-generic_with_pencil-2.svg/38px-Text-x-generic_with_pencil-2.svg.png;2922.819000086747 ms;image/png text;h2 text;2086 bytes;Image text;2907.465000054799 ms;200 text;3519 bytes
+https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/HSUtvald.svg/38px-HSUtvald.svg.png;2923.966000089422 ms;image/webp text;h2 text;1462 bytes;Image text;2907.7140000881627 ms;200 text;2902 bytes
+https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Spedizione_in_sicilia_it.svg/150px-Spedizione_in_sicilia_it.svg.png;2926.738000009209 ms;image/png text;h2 text;16075 bytes;Image text;2907.8580000204965 ms;200 text;17586 bytes
+https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/HS_VdQ.svg/38px-HS_VdQ.svg.png;2927.992000011727 ms;image/png text;h2 text;2023 bytes;Image text;2907.950000022538 ms;200 text;3455 bytes
+https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Tizian_Portrait_Papst_Sixtus_IV_ca._1545-46_Uffizien_Florenz-01_%28cropped%29.jpg/118px-Tizian_Portrait_Papst_Sixtus_IV_ca._1545-46_Uffizien_Florenz-01_%28cropped%29.jpg;2931.516000069678 ms;image/jpeg text;h2 text;6561 bytes;Image text;2908.144999993965 ms;200 text;8062 bytes
+https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/PL_Wiki_CzyWiesz_ikona.svg/38px-PL_Wiki_CzyWiesz_ikona.svg.png;2923.6190000083297 ms;image/webp text;h2 text;1262 bytes;Image text;2908.3570000948384 ms;200 text;2716 bytes
+https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Jeanne_Barret.jpg/85px-Jeanne_Barret.jpg;3360.6610000133514 ms;image/jpeg text;h2 text;5182 bytes;Image text;2908.5520000662655 ms;200 text;6621 bytes
+https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/HSDagensdatum.svg/38px-HSDagensdatum.svg.png;2924.6260001091287 ms;image/png text;h2 text;2749 bytes;Image text;2908.80900004413 ms;200 text;4190 bytes
+https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Rosa_Luxemburg.jpg/100px-Rosa_Luxemburg.jpg;2924.82200008817 ms;image/webp text;h2 text;3590 bytes;Image text;2908.938000095077 ms;200 text;5035 bytes
+https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/HS_geo.svg/38px-HS_geo.svg.png;2923.268000013195 ms;image/png text;h2 text;2456 bytes;Image text;2909.1150000458583 ms;200 text;3891 bytes
+https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Wikimedia-logo-circle.svg/38px-Wikimedia-logo-circle.svg.png;2929.2820000555366 ms;image/webp text;h2 text;1512 bytes;Image text;2909.230999997817 ms;200 text;2965 bytes
+https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Commons-logo.svg/30px-Commons-logo.svg.png;2925.294000073336 ms;image/webp text;h2 text;862 bytes;Image text;2909.373000031337 ms;200 text;2308 bytes
+https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Wikiquote-logo.svg/30px-Wikiquote-logo.svg.png;2928.601000108756 ms;image/webp text;h2 text;1046 bytes;Image text;2909.4880000920966 ms;200 text;2494 bytes
+https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Wiktionary-logo.svg/30px-Wiktionary-logo.svg.png;2928.9510000962764 ms;image/webp text;h2 text;1956 bytes;Image text;2909.8370000720024 ms;200 text;3332 bytes
+https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Wikinews-logo.svg/30px-Wikinews-logo.svg.png;2928.340000100434 ms;image/webp text;h2 text;1098 bytes;Image text;2910.0300000282004 ms;200 text;2475 bytes
+https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikispecies-logo.svg/30px-Wikispecies-logo.svg.png;3358.9950000168756 ms;image/webp text;h2 text;1876 bytes;Image text;2910.2120000170544 ms;200 text;3251 bytes
+https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Wikimedia_Community_Logo.svg/30px-Wikimedia_Community_Logo.svg.png;2925.0089999986812 ms;image/webp text;h2 text;1126 bytes;Image text;2910.370000055991 ms;200 text;2583 bytes
+https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Wikibooks-logo.svg/30px-Wikibooks-logo.svg.png;2929.549000109546 ms;image/webp text;h2 text;1352 bytes;Image text;2911.287000053562 ms;200 text;2729 bytes
+https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wikisource-logo.svg/30px-Wikisource-logo.svg.png;2930.136000039056 ms;image/webp text;h2 text;1316 bytes;Image text;2911.422000033781 ms;200 text;2694 bytes
+https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Wikiversity-logo.svg/30px-Wikiversity-logo.svg.png;2929.831000044942 ms;image/webp text;h2 text;674 bytes;Image text;2911.610000068322 ms;200 text;2048 bytes
+https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Wikidata-logo.svg/32px-Wikidata-logo.svg.png;2926.077000098303 ms;image/webp text;h2 text;216 bytes;Image text;2911.740000010468 ms;200 text;1592 bytes
+https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Wikivoyage-Logo-v3-icon.svg/30px-Wikivoyage-Logo-v3-icon.svg.png;2927.7260000817478 ms;image/webp text;h2 text;446 bytes;Image text;2911.9050001027063 ms;200 text;1901 bytes
+https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/PL_Wiki_Aktualnosci_ikona.svg/38px-PL_Wiki_Aktualnosci_ikona.svg.png;2934.305000002496 ms;image/webp text;h2 text;1482 bytes;Image text;2912.0410000905395 ms;200 text;2939 bytes
+https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/HSContribs.svg/38px-HSContribs.svg.png;2932.334000011906 ms;image/png text;h2 text;2258 bytes;Image text;2912.8250000067055 ms;200 text;3632 bytes
+https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/HSWikimedia.svg/38px-HSWikimedia.svg.png;2930.712000001222 ms;image/png text;h2 text;2911 bytes;Image text;2912.906000041403 ms;200 text;4350 bytes
+https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Wikimedia-logo-meta.svg/18px-Wikimedia-logo-meta.svg.png;2931.1190000735223 ms;image/png text;h2 text;1093 bytes;Image text;2913.042000029236 ms;200 text;2541 bytes
+https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Wikiquote-logo.svg/18px-Wikiquote-logo.svg.png;2932.785000069998 ms;image/webp text;h2 text;566 bytes;Image text;2913.1550000747666 ms;200 text;2012 bytes
+https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Commons-logo.svg/18px-Commons-logo.svg.png;2925.500000012107 ms;image/webp text;h2 text;532 bytes;Image text;2913.2440000539646 ms;200 text;1977 bytes
+https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Lago_Bernard%2C_Columbia_Brit%C3%A1nica%2C_Canad%C3%A1%2C_2017-08-26%2C_DD_68-75_PAN.jpg/260px-Lago_Bernard%2C_Columbia_Brit%C3%A1nica%2C_Canad%C3%A1%2C_2017-08-26%2C_DD_68-75_PAN.jpg;2926.3580000260845 ms;image/webp text;h2 text;5546 bytes;Image text;2913.3430001093075 ms;200 text;7062 bytes
+https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Wikinews-logo.svg/25px-Wikinews-logo.svg.png;3062.4330000719056 ms;image/png text;h2 text;1343 bytes;Image text;2913.45100000035 ms;200 text;2717 bytes
+https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wikisource-logo.svg/19px-Wikisource-logo.svg.png;2927.058000001125 ms;image/webp text;h2 text;810 bytes;Image text;2913.5530000785366 ms;200 text;2184 bytes
+https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Serao_-_La_conquista_di_Roma.djvu/page9-170px-Serao_-_La_conquista_di_Roma.djvu.jpg;2925.796000054106 ms;image/webp text;h2 text;6052 bytes;Image text;2913.8130000792444 ms;200 text;7513 bytes
+https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Wikivoyage-Logo-v3-icon.svg/19px-Wikivoyage-Logo-v3-icon.svg.png;2932.050000061281 ms;image/webp text;h2 text;310 bytes;Image text;2913.918000063859 ms;200 text;1764 bytes
+https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Vicenza_banner2.jpg/260px-Vicenza_banner2.jpg;2933.115000021644 ms;image/webp text;h2 text;11652 bytes;Image text;2914.0400000615045 ms;200 text;13028 bytes
+https://it.wikipedia.org/static/images/project-logos/itwiki.png;2962.906000087969 ms;image/png text;h2 text;7914 bytes;Image text;2933.6090000579134 ms;200 text;9224 bytes
+https://it.wikipedia.org/w/load.php?lang=it&modules=ext.gadget.ExternalSearch%2CForm-valutazione-enc%2CHiddenCat%2CInterProject%2CMainPageWikiList%2CNewSection%2COpenStreetMap%2CReferenceTooltips%2CRequests-Wizard%2CRichiediRevisioneBozza%2CWikiMiniAtlas%2Cstru-commonsupload&skin=vector&version=ij9gi;2984.595000045374 ms;text/javascript text;h2 text;30900 bytes;Script text;2967.8400000557303 ms;200 text;10523 bytes
+https://it.wikipedia.org/w/load.php?lang=it&modules=ext.visualEditor.core.utils.parsing%7Cext.visualEditor.desktopArticleTarget.init%7Cext.visualEditor.progressBarWidget%2CsupportCheck%2CtargetLoader%2CtempWikitextEditorWidget%2Ctrack%2Cve&skin=vector&version=1k9ls;2985.1820000912994 ms;text/javascript text;h2 text;64536 bytes;Script text;2968.460000003688 ms;200 text;18947 bytes
+https://it.wikipedia.org/w/load.php?lang=it&modules=ext.centralNotice.choiceData%2Cdisplay%2CgeoIP%2CimpressionDiet%2CkvStore%2ClegacySupport%2CstartUp%7Cext.centralauth.centralautologin%7Cext.cx.eventlogging.campaigns%7Cext.discussionTools.init%7Cext.discussionTools.init.styles%7Cext.echo.centralauth%7Cext.eventLogging%2CnavigationTiming%2Cpopups%2CwikimediaEvents%7Cext.growthExperiments.SuggestedEditSession%7Cext.uls.interface%2Cpreferences%2Cwebfonts%7Cjquery%2Cmoment%2Coojs%2Coojs-router%2Coojs-ui-core%2Coojs-ui-windows%2Crangefix%2Csite%7Cjquery.client%2Ccookie%2CtextSelection%7Cmediawiki.String%2CTitle%2CUri%2Capi%2Cbase%2Ccldr%2Ccookie%2Cexperiments%2CjqueryMsg%2Clanguage%2Cstorage%2Cuser%2Cutil%2CvisibleTimeout%7Cmediawiki.editfont.styles%7Cmediawiki.libs.pluralruleparser%7Cmediawiki.page.ready%7Cmediawiki.ui.button%2Cicon%7Cmmv.bootstrap%2Chead%7Cmmv.bootstrap.autostart%7Coojs-ui-core.icons%2Cstyles%7Coojs-ui-windows.icons%7Coojs-ui.styles.indicators%7Cskins.vector.legacy.js&skin=vector&version=1beuc;3006.775000016205 ms;text/javascript text;h2 text;1234911 bytes;Script text;2969.317000010051 ms;200 text;277270 bytes
+https://en.wikipedia.org/w/index.php?title=MediaWiki:Gadget-ReferenceTooltips.css&action=raw&ctype=text/css;3355.70800001733 ms;text/css text;h2 text;3426 bytes;Stylesheet text;3334.8840000107884 ms;200 text;2698 bytes
+https://en.wikipedia.org/w/index.php?title=MediaWiki:Gadget-ReferenceTooltips.js&action=raw&ctype=text/javascript;3360.50300009083 ms;text/javascript text;h2 text;25859 bytes;Script text;3338.724000030197 ms;200 text;8932 bytes
+https://login.wikimedia.org/wiki/Special:CentralAutoLogin/checkLoggedIn?type=script&wikiid=itwiki&proto=https;3361.2710000015795 ms;text/javascript text;h2 text;236 bytes;Script text;3340.864000027068 ms;200 text;1714 bytes
+https://it.wikipedia.org/w/skins/Vector/resources/common/images/bullet-icon.svg?d4515;3360.9960000030696 ms;image/svg+xml text;h2 text;159 bytes;Image text;3352.4550000438467 ms;200 text;1520 bytes
+https://it.wikipedia.org/w/skins/Vector/resources/skins.vector.styles.legacy/images/user-avatar.svg?b7f58;3793.157000094652 ms;image/svg+xml text;h2 text;254 bytes;Image text;3356.4180000685155 ms;200 text;1586 bytes
+https://it.wikipedia.org/w/skins/Vector/resources/common/images/search.svg?ac00d;3367.9840000113472 ms;image/svg+xml text;h2 text;251 bytes;Image text;3359.648000099696 ms;200 text;1571 bytes
+https://it.wikipedia.org/static/images/footer/wikimedia-button.png;3550.5400000838563 ms;image/png text;h2 text;2360 bytes;Image text;3540.7760000089183 ms;200 text;3671 bytes
+https://it.wikipedia.org/static/images/footer/poweredby_mediawiki_88x31.png;3549.701000098139 ms;image/png text;h2 text;2205 bytes;Image text;3541.3810000754893 ms;200 text;3517 bytes
+https://it.wikipedia.org/w/extensions/UniversalLanguageSelector/resources/images/cog-sprite.svg?cca73;3674.1120000369847 ms;image/svg+xml text;h2 text;861 bytes;Image text;3644.1930000437424 ms;200 text;1876 bytes
+https://it.wikipedia.org/w/load.php?lang=it&modules=ext.visualEditor.articleTarget%2Cbase%2Ccore%2CdesktopTarget%2Cdiffing%2Cicons%2Clanguage%2Cmediawiki%2Cmwalienextension%2Cmwcore%2Cmwextensions%2Cmwformatting%2Cmwgallery%2Cmwimage%2Cmwlanguage%2Cmwlink%2Cmwmeta%2Cmwsave%2Cmwsignature%2Cmwtransclusion%2Cmwwikitext%2Csanitize%2Cswitching%2Cwelcome%7Cext.visualEditor.core.desktop%2Cutils%7Cext.visualEditor.mwextensions.desktop%7Cext.visualEditor.mwimage.core&skin=vector&version=1qcil;3728.9910000981763 ms;text/javascript text;h2 text;1723340 bytes;Script text;3696.6150000225753 ms;200 text;350569 bytes
+https://it.wikipedia.org/w/load.php?lang=it&modules=diffMatchPatch%2Cdompurify%2Coojs-ui%2Coojs-ui-toolbars%2Coojs-ui-widgets%2Cpapaparse%2Cspark-md5%2CtreeDiffer%2Cunicodejs%7Cext.CodeMirror.visualEditor%7Cext.CodeMirror.visualEditor.init%7Cext.TemplateSandbox.visualeditor%7Cext.abuseFilter.visualEditor%7Cext.centralauth.ForeignApi%7Cext.cite.style%2Cstyles%2CvisualEditor%7Cext.cite.visualEditor.core%7Cext.citoid.visualEditor%7Cext.citoid.visualEditor.data%7Cext.confirmEdit.CaptchaInputWidget%2CvisualEditor%7Cext.disambiguator.visualEditor%7Cext.discussionTools.ReplyWidget%2CReplyWidgetVisual%7Cext.geshi.visualEditor%7Cext.graph.data%2CvisualEditor%7Cext.kartographer%7Cext.kartographer.editing%2Cutil%2CvisualEditor%7Cext.math.styles%2CvisualEditor%7Cext.score.visualEditor%7Cext.score.visualEditor.icons%7Cext.spamBlacklist.visualEditor%7Cext.templateDataGenerator.editPage%7Cext.titleblacklist.visualEditor%7Cext.visualEditor.data%2CmoduleIcons%2CmoduleIndicators%7Cext.wikihiero.visualEditor%7Cext.wikimediaEvents.visualEditor%7Cjquery.lengthLimit%2Cspinner%2Ctablesorter%7Cjquery.spinner.styles%7Cjquery.tablesorter.styles%7Cjquery.uls.data%7Cmediawiki.ForeignApi%2CForeignUpload%2CUpload%2Cdiff%2Cpulsatingdot%2Cwidgets%7Cmediawiki.ForeignApi.core%7Cmediawiki.ForeignStructuredUpload.BookletLayout%7Cmediawiki.Upload.BookletLayout%7Cmediawiki.action.view.redirectPage%7Cmediawiki.diff.styles%7Cmediawiki.interface.helpers.styles%7Cmediawiki.language.months%2Cnames%7Cmediawiki.libs.jpegmeta%7Cmediawiki.page.gallery.styles%7Cmediawiki.skinning.content.parsoid%7Cmediawiki.widgets.AbandonEditDialog%2CCategoryMultiselectWidget%2CDateInputWidget%2CMediaSearch%2CTable%2CUserInputWidget%2Cstyles%2CvisibleLengthLimit%7Cmediawiki.widgets.DateInputWidget.styles%7Coojs-ui-toolbars.icons%7Coojs-ui-widgets.icons%7Coojs-ui.styles.icons-accessibility%2Cicons-alerts%2Cicons-content%2Cicons-editing-advanced%2Cicons-editing-citation%2Cicons-editing-core%2Cicons-editing-list%2Cicons-editing-styling%2Cicons-interactions%2Cicons-layout%2Cicons-location%2Cicons-media%2Cicons-moderation%2Cicons-movement%2Cicons-user%2Cicons-wikimedia&skin=vector&version=vbxg6;3734.004000085406 ms;text/javascript text;h2 text;1475229 bytes;Script text;3697.2100000130013 ms;200 text;265718 bytes
+https://it.wikipedia.org/w/load.php?lang=it&modules=mediawiki.action.view.postEdit%7Cmediawiki.notification&skin=vector&version=vsxd8;3719.1130000865087 ms;text/javascript text;h2 text;9398 bytes;Script text;3698.7620000727475 ms;200 text;4492 bytes
+https://it.wikipedia.org/w/load.php?lang=it&modules=ext.math.popup%7Cext.popups.icons%2Cimages%2Cmain%7Cmediawiki.ui.checkbox&skin=vector&version=1vfdh;3759.3800000613555 ms;text/javascript text;h2 text;73431 bytes;Script text;3748.5860000597313 ms;200 text;20881 bytes
+
+SERVE STATIC ASSETS WITH AN EFFICIENT CACHE POLICY
+URL;CACHE TTL;TRANSFER SIZE
+https://www.wikipedia.it/sharedheader.css; ms;18360 bytes
+https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Spedizione_in_sicilia_it.svg/150px-Spedizione_in_sicilia_it.svg.png; ms;17586 bytes
+https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Vicenza_banner2.jpg/260px-Vicenza_banner2.jpg; ms;13028 bytes
+https://upload.wikimedia.org/wikipedia/commons/8/8c/Bluebg_rounded_croped.png; ms;8090 bytes
+https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Tizian_Portrait_Papst_Sixtus_IV_ca._1545-46_Uffizien_Florenz-01_%28cropped%29.jpg/118px-Tizian_Portrait_Papst_Sixtus_IV_ca._1545-46_Uffizien_Florenz-01_%28cropped%29.jpg; ms;8062 bytes
+https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Serao_-_La_conquista_di_Roma.djvu/page9-170px-Serao_-_La_conquista_di_Roma.djvu.jpg; ms;7513 bytes
+https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Lago_Bernard%2C_Columbia_Brit%C3%A1nica%2C_Canad%C3%A1%2C_2017-08-26%2C_DD_68-75_PAN.jpg/260px-Lago_Bernard%2C_Columbia_Brit%C3%A1nica%2C_Canad%C3%A1%2C_2017-08-26%2C_DD_68-75_PAN.jpg; ms;7062 bytes
+https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Jeanne_Barret.jpg/85px-Jeanne_Barret.jpg; ms;6621 bytes
+https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Rosa_Luxemburg.jpg/100px-Rosa_Luxemburg.jpg; ms;5035 bytes
+https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/HSWikimedia.svg/38px-HSWikimedia.svg.png; ms;4350 bytes
+https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/HSDagensdatum.svg/38px-HSDagensdatum.svg.png; ms;4190 bytes
+https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/HS_geo.svg/38px-HS_geo.svg.png; ms;3891 bytes
+https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/HSContribs.svg/38px-HSContribs.svg.png; ms;3632 bytes
+https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Text-x-generic_with_pencil-2.svg/38px-Text-x-generic_with_pencil-2.svg.png; ms;3519 bytes
+https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/HS_VdQ.svg/38px-HS_VdQ.svg.png; ms;3455 bytes
+https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/HSTools.svg/38px-HSTools.svg.png; ms;3400 bytes
+https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Wiktionary-logo.svg/30px-Wiktionary-logo.svg.png; ms;3332 bytes
+https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikispecies-logo.svg/30px-Wikispecies-logo.svg.png; ms;3251 bytes
+https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Wikimedia-logo-circle.svg/38px-Wikimedia-logo-circle.svg.png; ms;2965 bytes
+https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/PL_Wiki_Aktualnosci_ikona.svg/38px-PL_Wiki_Aktualnosci_ikona.svg.png; ms;2939 bytes
+https://www.wikipedia.it/images/logo_yepa_txt.png; ms;2919 bytes
+https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/HSUtvald.svg/38px-HSUtvald.svg.png; ms;2902 bytes
+https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Nuvola_apps_bookcase_simplified.svg/15px-Nuvola_apps_bookcase_simplified.svg.png; ms;2747 bytes
+https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Wikibooks-logo.svg/30px-Wikibooks-logo.svg.png; ms;2729 bytes
+https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Wikinews-logo.svg/25px-Wikinews-logo.svg.png; ms;2717 bytes
+https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/PL_Wiki_CzyWiesz_ikona.svg/38px-PL_Wiki_CzyWiesz_ikona.svg.png; ms;2716 bytes
+https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wikisource-logo.svg/30px-Wikisource-logo.svg.png; ms;2694 bytes
+https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/W-circle.svg/38px-W-circle.svg.png; ms;2621 bytes
+https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Wikimedia_Community_Logo.svg/30px-Wikimedia_Community_Logo.svg.png; ms;2583 bytes
+https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Wikimedia-logo-meta.svg/18px-Wikimedia-logo-meta.svg.png; ms;2541 bytes
+https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Wikiquote-logo.svg/30px-Wikiquote-logo.svg.png; ms;2494 bytes
+https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Wikinews-logo.svg/30px-Wikinews-logo.svg.png; ms;2475 bytes
+https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Commons-logo.svg/30px-Commons-logo.svg.png; ms;2308 bytes
+https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wikisource-logo.svg/19px-Wikisource-logo.svg.png; ms;2184 bytes
+https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Crystal_Clear_app_xmag.svg/15px-Crystal_Clear_app_xmag.svg.png; ms;2072 bytes
+https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Wikiversity-logo.svg/30px-Wikiversity-logo.svg.png; ms;2048 bytes
+https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Wikiquote-logo.svg/18px-Wikiquote-logo.svg.png; ms;2012 bytes
+https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Commons-logo.svg/18px-Commons-logo.svg.png; ms;1977 bytes
+https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Wikivoyage-Logo-v3-icon.svg/30px-Wikivoyage-Logo-v3-icon.svg.png; ms;1901 bytes
+https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/1rightarrow.png/15px-1rightarrow.png; ms;1838 bytes
+https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Wikivoyage-Logo-v3-icon.svg/19px-Wikivoyage-Logo-v3-icon.svg.png; ms;1764 bytes
+https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Wikidata-logo.svg/32px-Wikidata-logo.svg.png; ms;1592 bytes
+https://www.kataweb.it/static/shared/cf_bg_network_newbg.gif;3600000 ms;718 bytes
+
+SERVE IMAGES IN NEXT-GEN FORMATS
+URL;RESOURCE SIZE;POTENTIAL SAVINGS
+https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Spedizione_in_sicilia_it.svg/150px-Spedizione_in_sicilia_it.svg.png;16075 bytes;12753.5 bytes
+
+MINIFY JAVASCRIPT
+URL;TRANSFER SIZE;POTENTIAL SAVINGS
+https://en.wikipedia.org/w/index.php?title=MediaWiki:Gadget-ReferenceTooltips.js&action=raw&ctype=text/javascript;8932 bytes;3082 bytes
+
+REDUCE UNUSED JAVASCRIPT
+URL;TRANSFER SIZE;POTENTIAL SAVINGS
+https://it.wikipedia.org/w/load.php?lang=it&modules=ext.visualEditor.articleTarget%2Cbase%2Ccore%2CdesktopTarget%2Cdiffing%2Cicons%2Clanguage%2Cmediawiki%2Cmwalienextension%2Cmwcore%2Cmwextensions%2Cmwformatting%2Cmwgallery%2Cmwimage%2Cmwlanguage%2Cmwlink%2Cmwmeta%2Cmwsave%2Cmwsignature%2Cmwtransclusion%2Cmwwikitext%2Csanitize%2Cswitching%2Cwelcome%7Cext.visualEditor.core.desktop%2Cutils%7Cext.visualEditor.mwextensions.desktop%7Cext.visualEditor.mwimage.core&skin=vector&version=1qcil;350569 bytes;248014 bytes
+https://it.wikipedia.org/w/load.php?lang=it&modules=ext.centralNotice.choiceData%2Cdisplay%2CgeoIP%2CimpressionDiet%2CkvStore%2ClegacySupport%2CstartUp%7Cext.centralauth.centralautologin%7Cext.cx.eventlogging.campaigns%7Cext.discussionTools.init%7Cext.discussionTools.init.styles%7Cext.echo.centralauth%7Cext.eventLogging%2CnavigationTiming%2Cpopups%2CwikimediaEvents%7Cext.growthExperiments.SuggestedEditSession%7Cext.uls.interface%2Cpreferences%2Cwebfonts%7Cjquery%2Cmoment%2Coojs%2Coojs-router%2Coojs-ui-core%2Coojs-ui-windows%2Crangefix%2Csite%7Cjquery.client%2Ccookie%2CtextSelection%7Cmediawiki.String%2CTitle%2CUri%2Capi%2Cbase%2Ccldr%2Ccookie%2Cexperiments%2CjqueryMsg%2Clanguage%2Cstorage%2Cuser%2Cutil%2CvisibleTimeout%7Cmediawiki.editfont.styles%7Cmediawiki.libs.pluralruleparser%7Cmediawiki.page.ready%7Cmediawiki.ui.button%2Cicon%7Cmmv.bootstrap%2Chead%7Cmmv.bootstrap.autostart%7Coojs-ui-core.icons%2Cstyles%7Coojs-ui-windows.icons%7Coojs-ui.styles.indicators%7Cskins.vector.legacy.js&skin=vector&version=1beuc;277270 bytes;133810 bytes
+https://it.wikipedia.org/w/load.php?lang=it&modules=diffMatchPatch%2Cdompurify%2Coojs-ui%2Coojs-ui-toolbars%2Coojs-ui-widgets%2Cpapaparse%2Cspark-md5%2CtreeDiffer%2Cunicodejs%7Cext.CodeMirror.visualEditor%7Cext.CodeMirror.visualEditor.init%7Cext.TemplateSandbox.visualeditor%7Cext.abuseFilter.visualEditor%7Cext.centralauth.ForeignApi%7Cext.cite.style%2Cstyles%2CvisualEditor%7Cext.cite.visualEditor.core%7Cext.citoid.visualEditor%7Cext.citoid.visualEditor.data%7Cext.confirmEdit.CaptchaInputWidget%2CvisualEditor%7Cext.disambiguator.visualEditor%7Cext.discussionTools.ReplyWidget%2CReplyWidgetVisual%7Cext.geshi.visualEditor%7Cext.graph.data%2CvisualEditor%7Cext.kartographer%7Cext.kartographer.editing%2Cutil%2CvisualEditor%7Cext.math.styles%2CvisualEditor%7Cext.score.visualEditor%7Cext.score.visualEditor.icons%7Cext.spamBlacklist.visualEditor%7Cext.templateDataGenerator.editPage%7Cext.titleblacklist.visualEditor%7Cext.visualEditor.data%2CmoduleIcons%2CmoduleIndicators%7Cext.wikihiero.visualEditor%7Cext.wikimediaEvents.visualEditor%7Cjquery.lengthLimit%2Cspinner%2Ctablesorter%7Cjquery.spinner.styles%7Cjquery.tablesorter.styles%7Cjquery.uls.data%7Cmediawiki.ForeignApi%2CForeignUpload%2CUpload%2Cdiff%2Cpulsatingdot%2Cwidgets%7Cmediawiki.ForeignApi.core%7Cmediawiki.ForeignStructuredUpload.BookletLayout%7Cmediawiki.Upload.BookletLayout%7Cmediawiki.action.view.redirectPage%7Cmediawiki.diff.styles%7Cmediawiki.interface.helpers.styles%7Cmediawiki.language.months%2Cnames%7Cmediawiki.libs.jpegmeta%7Cmediawiki.page.gallery.styles%7Cmediawiki.skinning.content.parsoid%7Cmediawiki.widgets.AbandonEditDialog%2CCategoryMultiselectWidget%2CDateInputWidget%2CMediaSearch%2CTable%2CUserInputWidget%2Cstyles%2CvisibleLengthLimit%7Cmediawiki.widgets.DateInputWidget.styles%7Coojs-ui-toolbars.icons%7Coojs-ui-widgets.icons%7Coojs-ui.styles.icons-accessibility%2Cicons-alerts%2Cicons-content%2Cicons-editing-advanced%2Cicons-editing-citation%2Cicons-editing-core%2Cicons-editing-list%2Cicons-editing-styling%2Cicons-interactions%2Cicons-layout%2Cicons-location%2Cicons-media%2Cicons-moderation%2Cicons-movement%2Cicons-user%2Cicons-wikimedia&skin=vector&version=vbxg6;265718 bytes;93627 bytes
 
