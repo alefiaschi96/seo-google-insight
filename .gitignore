@@ -1,2 +1,5 @@
-./results
+build
+dist
+results
 *.json
+*.spec
