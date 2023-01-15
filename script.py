@@ -22,7 +22,6 @@ def create_csv_string(filtered_json):
 def check_keys_in_headings(keys, head):
     for key in keys:
         if key in head.keys():
-            print("YES")
             return True
     return False
 
@@ -30,10 +29,8 @@ def check_keys_in_headings(keys, head):
 def create_headings(headings, keys, included_keys = None):
     headings_list = []
     url_key = None
-    print(headings)
     for head in headings:
         if not included_keys or check_keys_in_headings(included_keys, head):
-            print("\t\tHead: " + "\t\tHead: ".join(head))
             for key in keys:
                 if head.get(key):
                     if head.get(key) in ["url", "URL"]:
@@ -44,33 +41,6 @@ def create_headings(headings, keys, included_keys = None):
         headings_list = [url_key] + headings_list
     return headings_list
 
-
-def create_old_headings():
-    for head in headings:
-        if head.get("key"):
-            old_headings.append(head["key"])
-
-        if "url" in old_headings:
-            url_key = old_headings.pop(old_headings.index("url"))
-            old_headings.insert(0, url_key)
-        elif "URL" in old_headings:
-            url_key = old_headings.pop(old_headings.index("URL"))
-            old_headings.insert(0, url_key)
-
-
-def create_new_headings():
-    for head in headings:
-        if head.get("label"):
-            new_headings.append(head["label"])
-        elif head.get("text"):
-            new_headings.append(head["text"])
-
-    if "url" in new_headings:
-        url_key = new_headings.pop(new_headings.index("url"))
-        new_headings.insert(0, url_key)
-    elif "URL" in new_headings:
-        url_key = new_headings.pop(new_headings.index("URL"))
-        new_headings.insert(0, url_key)
 
 
 def create_json():
@@ -148,44 +118,40 @@ if first_input == "1":
                 f.write(json_data.replace("itemType", "valueType"))
 
             with open("results.json", "r") as f:
+                number = 0
                 data = json.load(f)
+                data = escape_semicolon(data)
                 for key, audit in data.items():
                     headings = audit.get("details", {}).get("headings", [])
                     items = audit.get("details", {}).get("items", [])
 
                     if headings != [] and items != []:
+                        number = number + 1
 
                         filtered_item = {}
                         filtered_item["label"] = audit["title"]
 
-                        new_headings = []
-                        old_headings = []
+                        label_headings = []
+                        key_headings = []
 
                         headings = [
                             d
                             for d in headings
                             if (
                                 d.get("key") is not None
-                                and d.get("label") is not None 
+                                # and d.get("label") is not None 
                                 and d.get("valueType") is not None
                             )
                         ]
                         headings.sort(key=lambda x: x.get("key", ""))
-                        old_headings = create_headings(headings, "key")
+                        
+                        key_headings = create_headings(headings, ["key"], ["label", "text"])
 
-                        new_headings = create_headings(headings, ["label", "text"])
+                        label_headings = create_headings(headings, ["label", "text"])
 
-                        filtered_item["headings"] = new_headings
+                        filtered_item["headings"] = label_headings
 
                         if len(filtered_item["headings"]) > 0:
-                            keys = list(sorted(items[0].keys()))
-                            if "url" in keys:
-                                url_key = keys.pop(keys.index("url"))
-                                keys.insert(0, url_key)
-                            if "URL" in keys:
-                                url_key = keys.pop(keys.index("URL"))
-                                keys.insert(0, url_key)
-
                             new_item = []
 
                             create_json()
@@ -194,19 +160,20 @@ if first_input == "1":
 
                             filtered_json.append(filtered_item)
 
-            json_data = json.dumps(filtered_json, indent=4)
-            with open("new_results.json", "w") as f:
-                f.write(json_data.replace("\n", ""))
+                print(number)
 
-            csv_string = create_csv_string(filtered_json)
-            
-            print(url)
+                json_data = json.dumps(filtered_json, indent=4)
+                with open("new_results.json", "w") as f:
+                    f.write(json_data.replace("\n", ""))
 
-            with open((url+".csv").replace("/", "-"), "w") as f:
-                f.write(csv_string)
-                print(os.path.abspath((url+".csv").replace("/", "-")))
+                csv_string = create_csv_string(filtered_json)
                 
-            print("Generazione csv comnpletata")
+
+                with open(("test.csv").replace("/", "-"), "w", encoding="utf-8") as f:
+                    f.write(csv_string)
+                    print(os.path.abspath(("test.csv").replace("/", "-")))
+                    
+                print("Generazione csv comnpletata")
         else:
             print(f'Errore {response.status_code}')
             sys.exit()
@@ -237,16 +204,11 @@ else:
                         and d.get("valueType") is not None
                     )
                 ]
-                print("\n\n" + key + ": \n\tHeadings: " + str(len(headings)))
                 headings.sort(key=lambda x: x.get("key", ""))
                 
                 key_headings = create_headings(headings, ["key"], ["label", "text"])
-                print("\n\tKeys: ")
-                print("\t" + "\t".join(key_headings))
 
                 label_headings = create_headings(headings, ["label", "text"])
-                print("\n\tLabels: ")
-                print("\t" + "\t".join(label_headings))
 
                 filtered_item["headings"] = label_headings
 
